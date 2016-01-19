@@ -22,9 +22,9 @@
    <property name="imagesURL" value="${webBaseURL}/${projectName}/images" /> 
    <property name="javadocLink" value="http://java.sun.com/javase/7/docs/api/" />
    <!-- The following property will be used by the grader; grader
-	can change it from edtropiax to whomever grader is grading in that
+	can change it from csilusername to whomever grader is grading in that
 	moment. -->
-   <property name="studentName" value="edtropiax"/>
+   <property name="studentName" value="csilusername"/>
    
    <path id="project.class.path">
          <pathelement location="build"/>
