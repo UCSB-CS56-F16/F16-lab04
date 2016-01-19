@@ -132,32 +132,44 @@
   </target>
 
   <!-- ****************** FOR GRADING HERE ************** -->
-  <target name="gradeMPV3" depends="compile" 
-	  description="run MultiPictureViewer from student subdir with arg 3">
-    <java fork="true" classpathref="project.class.path" classname="${packagePrefix}.${studentName}.advanced.MultiPictureViewer">
-      <arg value="3" />
-    </java>
-  </target>
 
-  <target name="gradeMPV2" depends="compile" 
-	  description="run MultiPictureViewer from student subdir with arg 2">
-    <java fork="true" classpathref="project.class.path" classname="${packagePrefix}.${studentName}.advanced.MultiPictureViewer">
-      <arg value="2" />
-    </java>
+  <target name="gradeSimpleGui1" depends="compile" 
+	  description="run simpleGui1 for student in studentName property">
+    <java fork="true" classpathref="project.class.path" 
+	  classname="${packagePrefix}.${studentName}.SimpleGui1" />
   </target>
 
   <target name="gradePV" depends="compile" 
-	  description="run from PictureViewer from student subdirectory">
+	  description="run simple.PictureViewer for student in studentName property">
     <java fork="true" 
 	  classpathref="project.class.path" 
 	  classname="${packagePrefix}.${studentName}.simple.PictureViewer" />
   </target>
 
-  <target name="gradeSimpleGui1" depends="compile" 
-	  description="run simpleGui1 from student subdirectory">
-    <java fork="true" classpathref="project.class.path" 
-	  classname="${packagePrefix}.${studentName}.SimpleGui1" />
+
+  <target name="gradeMPV1" depends="compile" 
+	  description="run MultiPictureViewer for studentName with arg 1">
+    <java fork="true" classpathref="project.class.path" classname="${packagePrefix}.${studentName}.advanced.MultiPictureViewer">
+      <arg value="1" />
+    </java>
   </target>
+
+  <target name="gradeMPV2" depends="compile" 
+	  description="run MultiPictureViewer for studentName with arg 2">
+    <java fork="true" classpathref="project.class.path" classname="${packagePrefix}.${studentName}.advanced.MultiPictureViewer">
+      <arg value="2" />
+    </java>
+  </target>
+
+  <target name="gradeMPV3" depends="compile" 
+	  description="run MultiPictureViewer for studentName with arg 3">
+    <java fork="true" classpathref="project.class.path" classname="${packagePrefix}.${studentName}.advanced.MultiPictureViewer">
+      <arg value="3" />
+    </java>
+  </target>
+
+
+
   <!-- ****************** END GRADING SECTION ************** -->
 
   <target name="pconradWPTF1" depends="compile" 
