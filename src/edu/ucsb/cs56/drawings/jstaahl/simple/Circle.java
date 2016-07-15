@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.jstaahl.simple;
+package edu.ucsb.cs56.drawings.jstaahl.simple;
 
 /**
  * Circle extends Ellipse2D to make it easier to draw circles

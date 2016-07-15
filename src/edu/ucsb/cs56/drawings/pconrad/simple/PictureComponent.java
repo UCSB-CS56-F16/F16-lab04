@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.pconrad.simple;
+package edu.ucsb.cs56.drawings.pconrad.simple;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;

@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.andrewberls.advanced;
+package edu.ucsb.cs56.drawings.andrewberls.advanced;
 
 import javax.swing.JFrame;
 

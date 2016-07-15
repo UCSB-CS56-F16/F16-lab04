@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.pconrad.simple;
+package edu.ucsb.cs56.drawings.pconrad.simple;
 
 /**
  * Circle extends Ellipse2D to make it easier to draw circles

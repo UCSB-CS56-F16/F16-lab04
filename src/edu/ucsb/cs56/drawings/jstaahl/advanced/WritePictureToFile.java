@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.jstaahl.advanced;
+package edu.ucsb.cs56.drawings.jstaahl.advanced;
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
 import java.awt.Color;
@@ -7,8 +7,8 @@ import javax.imageio.ImageIO;
 import java.io.IOException;
 
 
-import edu.ucsb.cs56.w16.drawings.utilities.ShapeTransforms;
-import edu.ucsb.cs56.w16.drawings.utilities.GeneralPathWrapper;
+import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
+import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 
 /**

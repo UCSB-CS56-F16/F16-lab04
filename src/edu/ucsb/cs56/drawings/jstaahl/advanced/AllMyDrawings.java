@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.jstaahl.advanced;
+package edu.ucsb.cs56.drawings.jstaahl.advanced;
 
 import java.awt.BasicStroke;
 import java.awt.Color; // class for Colors
@@ -11,8 +11,8 @@ import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.geom.Line2D;  // single lines
 import java.awt.geom.Rectangle2D; // for the bounding box
 
-import edu.ucsb.cs56.w16.drawings.utilities.ShapeTransforms;
-import edu.ucsb.cs56.w16.drawings.utilities.GeneralPathWrapper;
+import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
+import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
  A class with static methods for drawing various pictures

@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.jstaahl.advanced;
+package edu.ucsb.cs56.drawings.jstaahl.advanced;
 
 import java.awt.Rectangle;
 import java.awt.Shape; // general class for shapes
@@ -10,8 +10,8 @@ import java.awt.geom.PathIterator;
 import java.awt.geom.Point2D; 
 import java.awt.geom.Rectangle2D;
 
-import edu.ucsb.cs56.w16.drawings.utilities.ShapeTransforms;
-import edu.ucsb.cs56.w16.drawings.utilities.GeneralPathWrapper;
+import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
+import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 
 /**

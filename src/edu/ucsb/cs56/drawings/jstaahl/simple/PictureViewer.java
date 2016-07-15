@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.jstaahl.simple;
+package edu.ucsb.cs56.drawings.jstaahl.simple;
 import javax.swing.JFrame;
 
 /** A viewer class to see a picture I drew with 

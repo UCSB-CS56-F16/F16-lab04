@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.jstaahl.advanced;
+package edu.ucsb.cs56.drawings.jstaahl.advanced;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JPanel;
@@ -19,8 +19,8 @@ import java.awt.Shape; // Shape interface
 import java.awt.Stroke; // Stroke interface
 import java.awt.BasicStroke; // class that implements stroke
 
-import edu.ucsb.cs56.w16.drawings.utilities.ShapeTransforms;
-import edu.ucsb.cs56.w16.drawings.utilities.GeneralPathWrapper;
+import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
+import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 
 /**

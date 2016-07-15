@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.jstaahl.advanced;
+package edu.ucsb.cs56.drawings.jstaahl.advanced;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JPanel;

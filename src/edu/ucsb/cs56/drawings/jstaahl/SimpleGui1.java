@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.jstaahl;
+package edu.ucsb.cs56.drawings.jstaahl;
 import javax.swing.*;
 
 /** SimpleGui1 comes from Head First Java 2nd Edition p. 355.

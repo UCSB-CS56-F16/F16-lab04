@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.utilities;
+package edu.ucsb.cs56.drawings.utilities;
 
 import java.awt.geom.Rectangle2D; // for the bounding box
 import java.awt.geom.AffineTransform; // translation, rotation, scale

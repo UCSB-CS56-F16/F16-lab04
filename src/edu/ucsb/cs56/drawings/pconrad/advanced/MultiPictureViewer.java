@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.pconrad.advanced;
+package edu.ucsb.cs56.drawings.pconrad.advanced;
 
 import javax.swing.JFrame;
 

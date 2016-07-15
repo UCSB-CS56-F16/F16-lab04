@@ -1,12 +1,12 @@
-package edu.ucsb.cs56.w16.drawings.pconrad.advanced;
+package edu.ucsb.cs56.drawings.pconrad.advanced;
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.Shape; // general class for shapes
 
 import java.awt.geom.Line2D; 
 import java.awt.geom.Rectangle2D;
 
-import edu.ucsb.cs56.w16.drawings.utilities.ShapeTransforms;
-import edu.ucsb.cs56.w16.drawings.utilities.GeneralPathWrapper;
+import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
+import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
    A vector drawing of a house that implements

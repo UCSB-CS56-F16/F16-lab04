@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.w16.drawings.pconrad.advanced;
+package edu.ucsb.cs56.drawings.pconrad.advanced;
 
 import java.awt.Graphics2D;
 import java.awt.Shape; // general class for shapes
@@ -6,8 +6,8 @@ import java.awt.Color; // class for Colors
 import java.awt.Stroke;
 import java.awt.BasicStroke;
 
-import edu.ucsb.cs56.w16.drawings.utilities.ShapeTransforms;
-import edu.ucsb.cs56.w16.drawings.utilities.GeneralPathWrapper;
+import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
+import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
  * A class with static methods for drawing various pictures
