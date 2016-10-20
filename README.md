@@ -79,7 +79,7 @@ What you should see in the first three cases are three pictures defined by three
 * [drawPicture2()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L49)
 * [drawPicture3()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L70)
 
-Here are screenshots of those pictures:
+Here are screenshots of the images that result from running those commands:
 
 <table>
 <tr>
@@ -108,4 +108,13 @@ All of those are the result of the two pencil images defined in these classes, o
 * [`edu.ucsb.cs56.drawings.jstaahl.advanced.SharpenedPencil`](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/SharpenedPencil.java)
 
 
+Here are screenshots of the images that result from running those commands:
+
+<table>
+<tr>
+<td><img alt="Sample output from ant -DstudentName=jstaahl gradeMPV1" src="README_images/ant-DstudentName_jstaahl_gradeMPV1-30.png"></td>
+<td><img alt="Sample output from ant -DstudentName=jstaahl gradeMPV2" src="README_images/ant-DstudentName_jstaahl_gradeMPV2-30.png"></td>
+<td><img alt="Sample output from ant -DstudentName=jstaahl gradeMPV3" src="README_images/ant-DstudentName_jstaahl_gradeMPV3-30.png"></td>
+</tr>
+</table>
 
