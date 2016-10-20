@@ -43,7 +43,7 @@ Try executing the following:
 
 What you should see will look something like this:
 
-![Sample output from ant -DstudentName=pconrad gradePV](README_drawings/ant-DstudentName_pconrad_gradePV.png)
+![Sample output from ant -DstudentName=pconrad gradePV](README_images/ant-DstudentName_pconrad_gradePV.png)
 
 This is sample output from the program [src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java).
 
