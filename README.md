@@ -1,10 +1,10 @@
-# M16_lab06
+# F16_lab04
 
-Base repository for CS56 W16 lab06 (Open Source)
+Base repository for CS56 F16 lab04 (Open Source)
 
 # Student Instructions
 
-See: https://ucsb-cs56-m16.github.io/lab/lab06/
+See: https://ucsb-cs56-f16.github.io/lab/lab04/
 
 # Grader hints
 
