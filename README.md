@@ -56,9 +56,10 @@ You can test this with studentName set to <code>pconrad</code>, <code>andrewberl
 
 This is sample output from the program [src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java).
 
-It shows code that was drawn by [F16-lab04/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureComponent.java](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureComponent.java), which draws a simple House, and an incomplete snowman.
+It shows code that was drawn by:
+[edu.ucsb.cs56.drawings.pconrad.simple.PictureComponent](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureComponent.java).  This code draws a simple house, and an incomplete snowman.
 
-One of your "warmup exercises" is to try to complete your own version of this snowman (or, if you prefer, "person of snow".)
+One of your "warmup exercises" for the lab is to try to complete your own version of this snowman (or, if you prefer, "person of snow".)  This requires you to understand the Circle class which is in that same directory, and is just a simple wrapper around the built-in Ellipse2D class provided by that Java libraries.
 
 ## Showing examples of three drawings from each of  two  student submissions:
 
@@ -77,6 +78,16 @@ What you should see in the first three cases are three pictures defined by three
 * [drawPicture1()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L31)
 * [drawPicture2()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L49)
 * [drawPicture3()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L70)
+
+Here are screenshots of those pictures:
+
+<table>
+<tr>
+<td><img alt="Sample output from ant -DstudentName=aberls gradeMPV1" src="README_images/ant-DstudentName_aberls_gradeMPV1-30.png"></td>
+<td><img alt="Sample output from ant -DstudentName=aberls gradeMPV2" src="README_images/ant-DstudentName_aberls_gradeMPV2-30.png"></td>
+<td><img alt="Sample output from ant -DstudentName=aberls gradeMPV3" src="README_images/ant-DstudentName_aberls_gradeMPV3-30.png"></td>
+</tr>
+</table>
 
 All of those are the result of the two iPod images defined in these classes, one of which inherits from the other:
 
