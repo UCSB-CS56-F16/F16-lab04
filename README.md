@@ -66,9 +66,9 @@ One of your "warmup exercises" for the lab is to try to complete your own versio
 Now try these commands: 
 
 
-* <code>ant -DstudentName=aberls gradeMPV1 </code>
-* <code>ant -DstudentName=aberls gradeMPV2 </code>
-* <code>ant -DstudentName=aberls gradeMPV3 </code>
+* <code>ant -DstudentName=andrewberls gradeMPV1 </code>
+* <code>ant -DstudentName=andrewberls gradeMPV2 </code>
+* <code>ant -DstudentName=andrewberls gradeMPV3 </code>
 * <code>ant -DstudentName=jstaahl gradeMPV1 </code>
 * <code>ant -DstudentName=jstaahl gradeMPV2 </code>
 * <code>ant -DstudentName=jstaahl gradeMPV3 </code>
@@ -83,9 +83,9 @@ Here are screenshots of those pictures:
 
 <table>
 <tr>
-<td><img alt="Sample output from ant -DstudentName=aberls gradeMPV1" src="README_images/ant-DstudentName_aberls_gradeMPV1-30.png"></td>
-<td><img alt="Sample output from ant -DstudentName=aberls gradeMPV2" src="README_images/ant-DstudentName_aberls_gradeMPV2-30.png"></td>
-<td><img alt="Sample output from ant -DstudentName=aberls gradeMPV3" src="README_images/ant-DstudentName_aberls_gradeMPV3-30.png"></td>
+<td><img alt="Sample output from ant -DstudentName=andrewberls gradeMPV1" src="README_images/ant-DstudentName_andrewberls_gradeMPV1-30.png"></td>
+<td><img alt="Sample output from ant -DstudentName=andrewberls gradeMPV2" src="README_images/ant-DstudentName_andrewberls_gradeMPV2-30.png"></td>
+<td><img alt="Sample output from ant -DstudentName=andrewberls gradeMPV3" src="README_images/ant-DstudentName_andrewberls_gradeMPV3-30.png"></td>
 </tr>
 </table>
 
