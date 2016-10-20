@@ -39,15 +39,20 @@ You can test this with studentName set to <code>pconrad</code>, <code>andrewberl
 
 ## Showing the House and Incomplete Snowman
 
-Try executing the following:
+<table>
+<tr>
+<td style="width:50%">
+<p>Try executing the following:</p>
 
-<code>ant -DstudentName=pconrad gradePV</code>
+<p><code>ant -DstudentName=pconrad gradePV</code></p>
 
-What you should see will look something like this:
-
-<div style="float:right; width:50%;">
+<p>What you should see will look something like the picture shown at right.</p>
+</td>
+<td style="width:40%;">
 <img alt="Sample output from ant -DstudentName=pconrad gradePV" src="README_images/ant-DstudentName_pconrad_gradePV-30.png">
-</div>
+</td>
+</tr>
+</table>
 
 This is sample output from the program [src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java).
 
