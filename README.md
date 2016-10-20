@@ -37,6 +37,8 @@ You can test this with studentName set to <code>pconrad</code>, <code>andrewberl
 
 # Detail
 
+## Showing the House and Incomplete Snowman
+
 Try executing the following:
 
 <code>ant -DstudentName=pconrad gradePV</code>
@@ -51,7 +53,36 @@ It shows code that was drawn by [F16-lab04/src/edu/ucsb/cs56/drawings/pconrad/si
 
 One of your "warmup exercises" is to try to complete your own version of this snowman (or, if you prefer, "person of snow".)
 
+## Showing examples of three drawings from each of  two  student submissions:
+
+Now try these commands: 
 
 
+* <code>ant -DstudentName=aberls gradeMPV1 </code>
+* <code>ant -DstudentName=aberls gradeMPV2 </code>
+* <code>ant -DstudentName=aberls gradeMPV3 </code>
+* <code>ant -DstudentName=jstaahl gradeMPV1 </code>
+* <code>ant -DstudentName=jstaahl gradeMPV2 </code>
+* <code>ant -DstudentName=jstaahl gradeMPV3 </code>
+
+What you should see in the first three cases are three pictures defined by these three files:
+
+* []()
+* []()
+* []()
+
+All of those are the result of the iPod image defined in:
+
+* []()
+
+Similarly, the second three images are the result of this code:
+
+* []()
+* []()
+* []()
+
+From the pencil image defined here:
+
+* []()
 
 
