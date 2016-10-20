@@ -65,24 +65,29 @@ Now try these commands:
 * <code>ant -DstudentName=jstaahl gradeMPV2 </code>
 * <code>ant -DstudentName=jstaahl gradeMPV3 </code>
 
-What you should see in the first three cases are three pictures defined by these three files:
+What you should see in the first three cases are three pictures defined by three methods of the class `edu.ucsb.cs56.drawings.andrewberls.advanced.AllMyDrawings`
 
-* []()
-* []()
-* []()
+* [drawPicture1()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L31)
+* [drawPicture2()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L49)
+* [drawPicture3()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L70)
 
-All of those are the result of the iPod image defined in:
+All of those are the result of the two iPod images defined in these classes, one of which inherits from the other:
 
-* []()
+* [`edu.ucsb.cs56.drawings.andrewberls.advanced.IPod`](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/Ipod.java)
+* [`edu.ucsb.cs56.drawings.andrewberls.advanced.IPodDetail`](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/IpodDetail.java)
 
-Similarly, the second three images are the result of this code:
 
-* []()
-* []()
-* []()
+Similarly, the second three images are the result of the methods of the class
+`edu.ucsb.cs56.drawings.jstaahl.advanced.AllMyDrawings`
 
-From the pencil image defined here:
+* [drawPicture1()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/AllMyDrawings.java#L31)
+* [drawPicture2()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/AllMyDrawings.java#L71)
+* [drawPicture3()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/AllMyDrawings.java#L121)
 
-* []()
+All of those are the result of the two pencil images defined in these classes, one of which inherits from the other:
+
+* [`edu.ucsb.cs56.drawings.jstaahl.advanced.Pencil`](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/Pencil.java)
+* [`edu.ucsb.cs56.drawings.jstaahl.advanced.SharpenedPencil`](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/SharpenedPencil.java)
+
 
 
