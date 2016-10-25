@@ -6,8 +6,8 @@ import javax.swing.*;
     It illustrates a simple GUI with a Button that doesn't do anything yet.
     
     @author Head First Java, 2nd Edition p. 355
-    @author Jingyi_Liao (who only typed it in and added the Javadoc comments)
-    @author TODO: Add additional author here
+    @author P. Conrad (who only typed it in and added the Javadoc comments)
+    @author TODO: Jingyi_Liao
     @version CS56, Spring 2013, UCSB
 */
 
