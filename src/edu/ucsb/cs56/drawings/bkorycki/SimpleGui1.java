@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.drawings.bkorycki97;
+package edu.ucsb.cs56.drawings.bkorycki;
 
 import javax.swing.*;
 
@@ -20,9 +20,9 @@ public class SimpleGui1 {
     public static void main (String[] args) {
 	JFrame frame = new JFrame() ;
 	
-	JButton button = new JButton("button") ;
+	JButton button = new JButton("barb's button") ;
 	
-	java.awt.Color myColor = new java.awt.Color(104,255,000);   // R, G, B values.
+	java.awt.Color myColor = new java.awt.Color(104,200,100);   // R, G, B values.
 	button.setBackground(myColor);
 	button.setOpaque(true);
 	
