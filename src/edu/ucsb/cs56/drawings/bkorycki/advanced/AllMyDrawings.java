@@ -30,13 +30,13 @@ public class AllMyDrawings
 	// and moved over 150 pixels in x direction
 	
 	Shape p2 = ShapeTransforms.scaledCopyOfLL(p1,0.5,0.5);
-	p2 = ShapeTransforms.translatedCopyOf(p2,0,150);
+	p2 = ShapeTransforms.translatedCopyOf(p2,0,80);
 	g2.setColor(Color.BLACK); g2.draw(p2);
 	
 	// Here's a pencil that's 4x as big (2x the original)
 	// and moved over 150 more pixels to right.
 	p2 = ShapeTransforms.scaledCopyOfLL(p2,4,4);
-	p2 = ShapeTransforms.translatedCopyOf(p2,150,250);
+	p2 = ShapeTransforms.translatedCopyOf(p2,-50,190);
 	
 	// We'll draw this with a thicker stroke
 	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
@@ -73,19 +73,19 @@ public class AllMyDrawings
 	g2.setColor(Color.PINK);   g2.draw(small);
 	g2.setColor(Color.ORANGE);    g2.draw(skinny);
 	
-	StripedPencil p1 = new StripedPencil(100,400,250,75);
+	StripedPencil p1 = new StripedPencil(100,300,250,75);
 	g2.setColor(Color.CYAN); g2.draw(p1);
 	
 	// Make a black striped pencil that's quarter the size, 
 	// and moved over 150 pixels in x direction
 	Shape p2 = ShapeTransforms.scaledCopyOfLL(p1,0.25,0.25);
-	p2 = ShapeTransforms.translatedCopyOf(p2,150,80);
+	p2 = ShapeTransforms.translatedCopyOf(p2,0,-100);
 	g2.setColor(Color.BLACK); g2.draw(p2);
 	
 	// Here's a striped pencil that's 2x the original
 	// and moved over 150 more pixels to right.
 	p2 = ShapeTransforms.scaledCopyOfLL(p1,2,2);
-	p2 = ShapeTransforms.translatedCopyOf(p1,150,-200);
+	p2 = ShapeTransforms.translatedCopyOf(p1,180, 0);
 	
 	// We'll draw this with a thicker stroke
 	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
@@ -96,12 +96,11 @@ public class AllMyDrawings
 	
 	Stroke orig=g2.getStroke();
 	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(p2); 
+	g2.setColor(new Color(0x003FA7)); 
       
 	
-	// Rotate the second striped pencil 45 degrees around its center.
-	Shape p3 = ShapeTransforms.rotatedCopyOf(p2, Math.PI/4.0);
+	// Rotate the second striped pencil 90 degrees around its center.
+	Shape p3 = ShapeTransforms.rotatedCopyOf(p2, Math.PI/2.0);
 	
 	g2.draw(p3);
 	
@@ -126,18 +125,18 @@ public class AllMyDrawings
 	// The pencils
 	
 	Pencil large = new Pencil(30,30,450,100);
-	Pencil small = new Pencil(30,400,225,50);
-	Pencil skinny = new Pencil(100, 150, 600, 25);
-	Pencil hefty = new Pencil(100, 250, 200, 75);
+	Pencil small = new Pencil(30,150,225,50);
+	Pencil skinny = new Pencil(30, 200, 600, 25);
+	Pencil hefty = new Pencil(30, 250, 200, 75);
 	
-	//	g2.setColor(Color.RED);     g2.draw(large);
+       	g2.setColor(Color.RED);     g2.draw(large);
        	g2.setColor(Color.PINK);   g2.draw(small);
 	g2.setColor(Color.ORANGE);   g2.draw(skinny);
 	g2.setColor(Color.YELLOW);   g2.draw(hefty);
 
-	StripedPencil stripes = new StripedPencil(300, 300, 225, 50);
-	StripedPencil smalls = new StripedPencil(300, 400, 600, 70);
-	StripedPencil norm = new StripedPencil(150,300, 450, 100);
+	StripedPencil stripes = new StripedPencil(400, 300, 90, 30);
+	StripedPencil smalls = new StripedPencil(30, 450, 600, 70);
+	StripedPencil norm = new StripedPencil(30,340, 450, 100);
 	g2.setColor(Color.RED);     g2.draw(norm);
 	g2.setColor(Color.BLUE);     g2.draw(stripes);
        	g2.setColor(Color.GREEN);     g2.draw(smalls);
