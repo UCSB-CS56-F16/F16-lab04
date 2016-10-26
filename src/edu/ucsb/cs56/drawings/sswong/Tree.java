@@ -23,8 +23,8 @@ public class Tree extends GeneralPathWrapper implements Shape
     /**
        Constructor
        
-       @param x x coord of lower left corner of tree
-       @param y y coord of lower left corner of tree
+       @param x x coord of top left corner of tree
+       @param y y coord of top left corner of tree
        @param trunk_radius radius of tree leaves
        @param trunk_width width of trunk
        @param trunk_height height of trunk
@@ -44,13 +44,12 @@ public class Tree extends GeneralPathWrapper implements Shape
 	// Make the leaves
 
 	Ellipse2D.Double leaves =
-	    new Ellipse2D.Double(x, y-(2*leaves_radius)-trunk_height,
-				 leaves_radius*2, leaves_radius*2);
+	    new Ellipse2D.Double(x, y,leaves_radius*2, leaves_radius*2);
 	
         // Make the trunk
         
         Rectangle2D.Double trunk = 
-            new Rectangle2D.Double(x+leaves_radius-(trunk_width/2),
+            new Rectangle2D.Double(x+2*leaves_radius,
 				   y-trunk_height,
 				   trunk_width, trunk_height);
 	
