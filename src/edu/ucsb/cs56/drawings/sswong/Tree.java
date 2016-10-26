@@ -40,7 +40,11 @@ public class Tree extends GeneralPathWrapper implements Shape
         // hard coded a particular drawing, this may be an easier
         // way.
         
-	
+	// Make the leaves
+
+	Ellipse2D.Double leaves =
+	    new Ellipse2D.Double(x, y-(2*leaves_radius)-trunk_height,
+				 leaves_radius*2, leaves_radius*2);
 	
         // Make the trunk
         
@@ -49,17 +53,11 @@ public class Tree extends GeneralPathWrapper implements Shape
 				   y-trunk_height,
 				   trunk_width, trunk_height);
 	
-        // Make the leaves
-
-	Ellipse2D.Double leaves =
-	    new Ellipse2D.Double(x, y-(2*leaves_radius)-trunk_height,
-				 leaves_radius*2, leaves_radius*2);
-        
        // put the whole tree together
 	
         GeneralPath wholeTree = this.get();
-        wholeTree.append(trunk, false);
         wholeTree.append(leaves, false);
+        wholeTree.append(trunk, false);
        
     }
 }
