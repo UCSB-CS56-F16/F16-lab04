@@ -23,7 +23,7 @@ public class AllMyDrawings
     
     public static void drawPicture1(Graphics2D g2) {
 	
-	House h1 = new House(100,250,50,75);
+	Fish h1 = new Fish(100,250,50,75);
 	g2.setColor(Color.CYAN); g2.draw(h1);
 	
 	// Make a black house that's half the size, 
@@ -52,8 +52,8 @@ public class AllMyDrawings
 	
 	// Draw two houses with Windows
 	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
+	Shark hw1 = new Shark(50,350,40,75);
+	Shark hw2 = new Shark(200,350,200,100);
 	
 	g2.draw(hw1);
 	g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
