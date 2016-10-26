@@ -31,7 +31,8 @@ public class Tree extends GeneralPathWrapper implements Shape
     */
     public Tree(double x, double y,
 		double leaves_radius,
-		double trunk_width, double trunk_height,)
+		double trunk_width, 
+		double trunk_height)
     {
 	
         // Rather than having to scale at the end, we can just
