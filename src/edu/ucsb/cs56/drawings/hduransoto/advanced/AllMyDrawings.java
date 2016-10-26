@@ -34,9 +34,9 @@ public class AllMyDrawings
 	g2.draw(b2);
 	
 	// Here's a bear that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
+	// and moved over 150 more pixels to right & 170 down.
 	b2 = ShapeTransforms.scaledCopyOfLL(b2,4,4);
-	b2 = ShapeTransforms.translatedCopyOf(b2,150,0);
+	b2 = ShapeTransforms.translatedCopyOf(b2,150,170);
 	
 	// We'll draw this with a thicker stroke
 	Stroke thick =
@@ -53,7 +53,7 @@ public class AllMyDrawings
 	g2.setColor(new Color(0xA67B5B)); 
 	g2.draw(b2); 
 	
-	// SIGN AND LABEL YOUR DRAWING
+	// SIGN AND LABEL
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
 	g2.drawString("bears", 20,20);
@@ -73,7 +73,7 @@ public class AllMyDrawings
 	g2.setColor(Color.BLACK);    g2.draw(tallSkinny);
 	g2.setColor(Color.BLACK); g2.draw(shortFat);
 	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
+	//SIGN AND LABEL
 	g2.setColor(Color.BLACK); 
 	g2.drawString("A bunch of panda bears by Hernan Duran", 20,20);
     }
@@ -84,18 +84,16 @@ public class AllMyDrawings
     public static void drawPicture3(Graphics2D g2) {
 	
 	// label the drawing
-	
 	g2.drawString("Drawing 3: A bunch of bears by Hernan Duran", 20,20);
 	
 	
 	// Draw some bears
-	
-	Bear large = new Bear(500,400,75,150);
+	Bear large      = new Bear(500,400,75,150);
 	PandaBear small = new PandaBear(300,300,40,30);
-	Bear b3 = new Bear(150,400,50,200);
-	Shape b3Twin = ShapeTransforms.rotatedCopyOf(b3, Math.PI/-2.0);
-	PandaBear tiny = new PandaBear(150,100,10,10);
-	Shape tinyTwin = ShapeTransforms.rotatedCopyOf(tiny, Math.PI/-3.0);	
+	Bear b3         = new Bear(150,400,50,200);
+	Shape b3Twin    = ShapeTransforms.rotatedCopyOf(b3, Math.PI/-2.0);
+	PandaBear tiny  = new PandaBear(150,100,10,10);
+	Shape tinyTwin  = ShapeTransforms.rotatedCopyOf(tiny, Math.PI/-3.0);	
 	
 	g2.setColor(new Color(0x964B00)); g2.draw(large);
 	g2.setColor(new Color(0x1B1B1B)); g2.draw(small);
