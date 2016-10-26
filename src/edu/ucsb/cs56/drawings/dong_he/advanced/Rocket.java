@@ -2,106 +2,91 @@ package edu.ucsb.cs56.drawings.dong_he.advanced;
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.Shape; // general class for shapes
 
+import java.awt.geom.Line2D;
+import java.awt.geom.Rectangle2D;
+
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
-/**
-
-Size of frame is 640 * 480
-width * height
-
-**/
 
 /**
-   A modified CoffeeCup class that is used to create a rocket ship. 
-      
-   @author Dong He 
-   @version for CS56, F16, UCSB
-   
+A vector drawing of a rocket that implements
+the Shape interface, and so can be drawn, as well as
+rotated, scaled, etc.
+
+@author Phill Conrad
+@author Dong He
+@version for CS56, F16, UCSB
+
 */
-
 public class Rocket extends GeneralPathWrapper implements Shape
-{   
-    /**
-     * Constructor for objects of class Rocket
-     */
-    public Rocket(double x, double y, double width, double height)
-    {
-	
-        // Specify the upper left corner, and the 
-        //  width and height of the original points used to 
-        //  plot the *hard-coded* rocket
-        
-        final double ORIG_ULX = 100.0; 
-        final double ORIG_ULY = 100.0; 
-        final double ORIG_HEIGHT = 600.0;
-        final double ORIG_WIDTH = 200.0;
-        
-        GeneralPath leftSide = new GeneralPath();
-	
-        // left of the rocket
-	
-        leftSide.moveTo(100,700);
-        leftSide.lineTo(100,100);
-        
-        GeneralPath topAndBottom = new GeneralPath();
-       
-        topAndBottom.moveTo(100,100);
-        topAndBottom.lineTo(300,100); // top of rocket
-        
-        topAndBottom.moveTo(100,700);
-        topAndBottom.lineTo(300,700); // bottom of rocket
-        
-        // left fin of the rocket
-        
-        GeneralPath leftFin = new GeneralPath();
-        
-        leftFin.moveTo(100, 700);
-        leftFin.lineTo(50,750);
-        leftFin.lineTo(100,500);
-        
-        //right fin of the rocket
-        Shape rightFin = ShapeTransforms.horizontallyFlippedCopyOf(leftFin);
-        
-        rightFin = ShapeTransforms.translatedCopyOf(rightFin, 300.0, 0.0);
-       
-        //top of the rocket
-        GeneralPath topOfRocket = new GeneralPath();
-        topOfRocket.moveTo(100,100);
-        topOfRocket.lineTo(200,0);
-        topOfRocket.lineTo(300,100);
-        
-        //Drawing right side now
-        GeneralPath rightSide = new GeneralPath();
-       
-        rightSide.moveTo(300,700);
-        rightSide.lineTo(300,100);
-       
-        // now we put the whole thing together ino a single path.
-       
-        GeneralPath wholeRocket = new GeneralPath();
-        wholeRocket.append(topAndBottom, false);
-        wholeRocket.append(leftSide, false);
-        wholeRocket.append(rightSide, false);
-        wholeRocket.append(leftFin, false);
-        wholeRocket.append(rightFin, false);
-        wholeRocket.append(topOfRocket, false);
-        
+{
+/**
+Constructor
 
-        // translate to the origin by subtracting the original upper left x and y
-        // then translate to (x,y) by adding x and y
-        
-        Shape s = ShapeTransforms.translatedCopyOf(wholeRocket, -ORIG_ULX + x, -ORIG_ULY + y);
- 
-	// scale to correct height and width
-        s =  ShapeTransforms.scaledCopyOf(s,
-					  width/ORIG_WIDTH,
-					  height/ORIG_HEIGHT);
-	 
-	// Use the GeneralPath constructor that takes a shape and returns
-	// it as a general path to set our instance variable cup
-        
-	this.set(new GeneralPath(s));
-        
-    }
+@param x x coord of lower left corner of rocket
+@param y y coord of lower left corner of rocket
+@param width width of the rocket
+@param height of rocket (including base and tip)
+*/
+public Rocket(double x, double y, double width, double height)
+{
 
+// Rather than having to scale at the end, we can just
+// draw things the right way to begin with, using the
+// x, y, width and height.   If you haven't already
+// hard coded a particular drawing, this may be an easier
+// way.
+
+double firstStage = .75 * height;
+double tip = height - firstStage;
+
+double firstStageUpperLeftY = y + tip;
+
+// Make the first stage
+
+Rectangle2D.Double base =
+new Rectangle2D.Double(x, firstStageUpperLeftY ,
+width, firstStage);
+
+// make the tip.   Remember that y goes DOWN the page,
+// so we ADD to y to get a "lower" value on the screen
+
+Line2D.Double leftTip =
+new Line2D.Double (x , y + tip,
+x + width/2.0, y);
+
+Line2D.Double rightTip =
+new Line2D.Double (x + width/2.0, y,
+x + width, y + tip);
+
+// make the left fin
+Line2D.Double LeftFin1 =
+new Line2D.Double (x, y + height,
+x - width/2, y + height + width/4);
+    
+Line2D.Double LeftFin2 =
+new Line2D.Double (x - width/2, y + height + width/4,
+x, y + height - height/2);
+
+//make the right fin
+Line2D.Double RightFin1 =
+new Line2D.Double (x + width, y + height,
+x + width + width/2, y + height + width/4);
+    
+Line2D.Double RightFin2 =
+new Line2D.Double (x + width + width/2, y + height + width/4,
+x + width, y + height - height/2);
+
+// put the whole rocket together
+
+GeneralPath wholeRocket = this.get();
+wholeRocket.append(base, false);
+wholeRocket.append(leftTip, false);
+wholeRocket.append(rightTip, false);
+wholeRocket.append(LeftFin1, false);
+wholeRocket.append(LeftFin2, false);
+wholeRocket.append(RightFin1, false);
+wholeRocket.append(RightFin2, false);
+
+}
 }
