@@ -25,13 +25,16 @@ public class Bear extends GeneralPathWrapper implements Shape{
 	double headSize    = bellySize * 0.8; 
 	double feetArmSize = bellySize * 0.2;
 
+	//make belly
 	Circle belly = 
             new Circle(x, y - bellySize, bellySize);
-	
+
+	//make head
         Circle head = 
             new Circle
 	    (x, y - bellySize * 2 - headSize, headSize);
-	
+
+	//make ears
 	Circle ear1 = 
 	    new Circle
 	    (x+feetArmSize*1.5, y - bellySize*2-headSize*2.2, feetArmSize);
@@ -40,6 +43,7 @@ public class Bear extends GeneralPathWrapper implements Shape{
 	    new Circle
 	    (x-feetArmSize*1.5, y - bellySize*2 - headSize*2.2, feetArmSize);
 
+	//make eyes
 	Circle eye1 = 
 	    new Circle
 	    (x+feetArmSize*1.5, y - bellySize*2 - headSize*1.5, feetArmSize);
@@ -47,32 +51,49 @@ public class Bear extends GeneralPathWrapper implements Shape{
 	Circle eye2 = 
 	    new Circle
 	    (x-feetArmSize*1.5, y - bellySize*2 - headSize*1.5, feetArmSize);
-
+	
+	//make nose
 	Circle nose = 
 	    new Circle
 	    (x, y - bellySize*2 - headSize, feetArmSize/2);
-
+	
+	//make mouth
 	Ellipse2D.Double mouth =
 	    new Ellipse2D.Double
-	    (x-feetArmSize*2, y-bellySize*2-headSize/2, feetArmSize*4, feetArmSize);
+	    (x-feetArmSize*2,
+	     y-bellySize*2-headSize/2,
+	     feetArmSize*4,
+	     feetArmSize);
 	
 	//make the feets
 	Ellipse2D.Double feet1 =
 	    new Ellipse2D.Double
-	    (x+feetArmSize*1.5, y-bellySize*0.1, feetArmSize*1.5, feetArmSize*3);
+	    (x+feetArmSize*1.5,
+	     y-bellySize*0.1,
+	     feetArmSize*1.5,
+	     feetArmSize*3);
 	
 	Ellipse2D.Double feet2 =
 	    new Ellipse2D.Double
-	    (x-feetArmSize*3, y-bellySize*0.1, feetArmSize*1.5, feetArmSize*3);
+	    (x-feetArmSize*3,
+	     y-bellySize*0.1,
+	     feetArmSize*1.5,
+	     feetArmSize*3);
 
 	//make the arms
 	Ellipse2D.Double arm1 =
 	    new Ellipse2D.Double
-	    (x-headSize*1.45, y-bellySize*2.1, feetArmSize*3, feetArmSize*2);
+	    (x-headSize*1.45,
+	     y-bellySize*2.1,
+	     feetArmSize*3,
+	     feetArmSize*2);
 
 	Ellipse2D.Double arm2 =
 	    new Ellipse2D.Double
-	    (x+headSize*0.7, y-bellySize*2.1, feetArmSize*3, feetArmSize*2);
+	    (x+headSize*0.7,
+	     y-bellySize*2.1,
+	     feetArmSize*3,
+	     feetArmSize*2);
 	
 	//put the bear together
 	GeneralPath Bear = this.get();

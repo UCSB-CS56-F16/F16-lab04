@@ -43,11 +43,6 @@ public class AllMyDrawings
 	    new BasicStroke
 	    (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
 	
-	/** for hex colors, see (e.g.) 
-	    http://en.wikipedia.org/wiki/List_of_colors
-	    #002FA7 is "International Klein Blue" according to Wikipedia
-	    In HTML we use #, but in Java (and C/C++) its 0x
-	*/
 	Stroke orig=g2.getStroke();
 	g2.setStroke(thick);
 	g2.setColor(new Color(0xA67B5B)); 
@@ -62,9 +57,9 @@ public class AllMyDrawings
 
     
     public static void drawPicture2(Graphics2D g2) {
-	
-	PandaBear big      = new PandaBear(250,450,225,150);
-	PandaBear small    = new PandaBear(220,250,40,30);
+	//make some panda bears
+	PandaBear big        = new PandaBear(250,450,225,150);
+	PandaBear small      = new PandaBear(220,250,40,30);
 	PandaBear tallSkinny = new PandaBear(220,350,20,40);
 	PandaBear shortFat   = new PandaBear(350,250,40,20);
 	
@@ -87,7 +82,7 @@ public class AllMyDrawings
 	g2.drawString("Drawing 3: A bunch of bears by Hernan Duran", 20,20);
 	
 	
-	// Draw some bears
+	// Draw all types of bears
 	Bear large      = new Bear(500,400,75,150);
 	PandaBear small = new PandaBear(300,300,40,30);
 	Bear b3         = new Bear(150,400,50,200);
