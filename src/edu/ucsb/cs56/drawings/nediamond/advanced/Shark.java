@@ -4,8 +4,26 @@ import java.awt.Shape; // general class for shapes
 
 import java.awt.geom.Line2D;
 
+/**
+   A vector drawing of a shark that implements
+   the Shape interface, and so can be drawn, as well as
+   rotated, scaled, etc.
+      
+   @author Nate Diamond
+   @version for CS56, F16, UCSB
+   
+*/
 public class Shark extends Fish implements Shape{
     static double PERCENT_HEIGHT_FIN = .5;
+
+    /**
+       Constructor
+       
+       @param x x coord of middle of shark
+       @param y y coord of middle of shark
+       @param width width of the shark
+       @param height of the shark
+    */
     public Shark(double x, double y, double width, double height) {
         //Note: PERCENT_HEIGHT_FIN is not functioning properly for some reason
         super(x,y,width,height*(1-PERCENT_HEIGHT_FIN));
