@@ -78,7 +78,7 @@ public class Rocket extends GeneralPathWrapper implements Shape
        
         // now we put the whole thing together ino a single path.
        
-        GeneralPath wholeRocket = new GeneralPath ();
+        GeneralPath wholeRocket = new GeneralPath();
         wholeRocket.append(topAndBottom, false);
         wholeRocket.append(leftSide, false);
         wholeRocket.append(rightSide, false);
@@ -95,7 +95,7 @@ public class Rocket extends GeneralPathWrapper implements Shape
 	// scale to correct height and width
         s =  ShapeTransforms.scaledCopyOf(s,
 					  width/ORIG_WIDTH,
-					  height/ORIG_HEIGHT) ;
+					  height/ORIG_HEIGHT);
 	 
 	// Use the GeneralPath constructor that takes a shape and returns
 	// it as a general path to set our instance variable cup

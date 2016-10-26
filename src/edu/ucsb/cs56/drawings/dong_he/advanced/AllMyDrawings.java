@@ -23,7 +23,7 @@ public class AllMyDrawings
     
     public static void drawPicture1(Graphics2D g2) {
 	
-	Rocket r1 = new House(100,250,200,600);
+	Rocket r1 = new Rocket(100,250,200,600);
 	g2.setColor(Color.CYAN); g2.draw(r1);
 	
 	// Make a black rocket that's half the size,
@@ -31,11 +31,12 @@ public class AllMyDrawings
 	
 	Shape r2 = ShapeTransforms.scaledCopyOfLL(r1,0.5,0.5);
 	r2 = ShapeTransforms.translatedCopyOf(r2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(r2);
+	g2.setColor(Color.BLACK);
+    g2.draw(r2);
 	
 	// Here's a rocket that's 4x as big (2x the original)
 	// and moved over 150 more pixels to right.
-	r3 = ShapeTransforms.scaledCopyOfLL(r1,4,4);
+	Shape r3 = ShapeTransforms.scaledCopyOfLL(r1,4,4);
 	r3 = ShapeTransforms.translatedCopyOf(r3,150,0);
 	
 	// We'll draw this with a thicker stroke
@@ -45,7 +46,7 @@ public class AllMyDrawings
 	// #002FA7 is "International Klein Blue" according to Wikipedia
 	// In HTML we use #, but in Java (and C/C++) its 0x
 	
-	Stroke orig=g2.getStroke();
+	Stroke orig = g2.getStroke();
 	g2.setStroke(thick);
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(r3);
@@ -58,11 +59,11 @@ public class AllMyDrawings
 	//g2.draw(hw1);
 	//g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
 	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
+    //@@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	
-	//g2.setStroke(orig);
-	//g2.setColor(Color.BLACK);
-	//g2.drawString("A few houses by Phill Conrad", 20,20);
+	g2.setStroke(orig);
+	g2.setColor(Color.BLACK);
+	g2.drawString("A few rockets by Dong He", 20,20);
     }
     
     
