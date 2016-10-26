@@ -23,24 +23,24 @@ public class AllMyDrawings
     
     public static void drawPicture1(Graphics2D g2) {
 	
-	Rocket r1 = new Rocket(100,250,200,600);
-	g2.setColor(Color.CYAN); g2.draw(r1);
+	Rocket r1 = new Rocket(100,100,200,600);
+	g2.setColor(Color.GREEN); g2.draw(r1);
 	
 	// Make a black rocket that's half the size,
-	// and moved over 150 pixels in x direction
+	// and moved over 350 pixels in x direction
 	
 	Shape r2 = ShapeTransforms.scaledCopyOfLL(r1,0.5,0.5);
-	r2 = ShapeTransforms.translatedCopyOf(r2,150,0);
+	r2 = ShapeTransforms.translatedCopyOf(r2,350,0);
 	g2.setColor(Color.BLACK);
     g2.draw(r2);
 	
-	// Here's a rocket that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	Shape r3 = ShapeTransforms.scaledCopyOfLL(r1,4,4);
-	r3 = ShapeTransforms.translatedCopyOf(r3,150,0);
+	// Here's a rocket that's half of the black rocket
+	// and moved over 250 more pixels to right of the black rocket.
+	Shape r3 = ShapeTransforms.scaledCopyOfLL(r1,.25,.25);
+	r3 = ShapeTransforms.translatedCopyOf(r3,600,0);
 	
 	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
+    Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
 	
 	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
 	// #002FA7 is "International Klein Blue" according to Wikipedia
@@ -48,16 +48,17 @@ public class AllMyDrawings
 	
 	Stroke orig = g2.getStroke();
 	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
+	g2.setColor(new Color(0x002FA7));
 	g2.draw(r3);
 	
-	// Draw two houses with Windows
+	// Draw two rockets with Windows
 	
-	//HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	//HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
+	RocketShip rs1 = new RocketShip(500,500,100,400);
+	RocketShip rs2 = new RocketShip(700,500,100,400);
 	
-	//g2.draw(hw1);
-	//g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
+	g2.draw(rs1);
+	g2.setColor(new Color(0x8F00FF));
+    g2.draw(rs2);
 	
     //@@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	

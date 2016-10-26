@@ -40,41 +40,41 @@ public class Rocket extends GeneralPathWrapper implements Shape
 	
         // left of the rocket
 	
-        leftSide.moveTo(100,600);
+        leftSide.moveTo(100,700);
         leftSide.lineTo(100,100);
         
         GeneralPath topAndBottom = new GeneralPath();
        
         topAndBottom.moveTo(100,100);
-        topAndBottom.lineTo(200,100); // top of rocket
+        topAndBottom.lineTo(300,100); // top of rocket
         
-        topAndBottom.moveTo(100,600);
-        topAndBottom.lineTo(200,600); // bottom of rocket
+        topAndBottom.moveTo(100,700);
+        topAndBottom.lineTo(300,700); // bottom of rocket
         
         // left fin of the rocket
+        
         GeneralPath leftFin = new GeneralPath();
         
-        leftFin.moveTo(100, 600);
-        leftFin.lineTo(50,600);
+        leftFin.moveTo(100, 700);
+        leftFin.lineTo(50,750);
         leftFin.lineTo(100,500);
         
         //right fin of the rocket
         Shape rightFin = ShapeTransforms.horizontallyFlippedCopyOf(leftFin);
         
-        rightFin = ShapeTransforms.translatedCopyOf(rightFin, 200.0, 0.0);
+        rightFin = ShapeTransforms.translatedCopyOf(rightFin, 300.0, 0.0);
        
         //top of the rocket
         GeneralPath topOfRocket = new GeneralPath();
         topOfRocket.moveTo(100,100);
-        topOfRocket.lineTo(150,25);
-        topOfRocket.lineTo(200,100);
+        topOfRocket.lineTo(200,0);
+        topOfRocket.lineTo(300,100);
         
-        Shape rightSide = ShapeTransforms.horizontallyFlippedCopyOf(leftSide);
+        //Drawing right side now
+        GeneralPath rightSide = new GeneralPath();
        
-        // after flipping around the upper left hand corner of the
-        // bounding box, we move this over to the right by 200 pixels
-       
-        rightSide = ShapeTransforms.translatedCopyOf(rightSide, 200.0, 0.0);
+        rightSide.moveTo(300,700);
+        rightSide.lineTo(300,100);
        
         // now we put the whole thing together ino a single path.
        
