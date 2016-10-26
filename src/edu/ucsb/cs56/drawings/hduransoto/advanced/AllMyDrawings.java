@@ -53,14 +53,6 @@ public class AllMyDrawings
 	g2.setColor(new Color(0xA67B5B)); 
 	g2.draw(b2); 
 	
-	// Draw two panda bears
-	PandaBear pb1 = new PandaBear(50,350,40,75);
-	PandaBear pb2 = new PandaBear(200,350,200,100);
-	
-	g2.draw(pb1);
-	g2.setColor(Color.BLACK);
-	g2.draw(pb2);
-	
 	// SIGN AND LABEL YOUR DRAWING
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
@@ -71,13 +63,13 @@ public class AllMyDrawings
     
     public static void drawPicture2(Graphics2D g2) {
 	
-	PandaBear large      = new PandaBear(250,450,225,150);
-	PandaBear smallCC    = new PandaBear(220,250,40,30);
+	PandaBear big      = new PandaBear(250,450,225,150);
+	PandaBear small    = new PandaBear(220,250,40,30);
 	PandaBear tallSkinny = new PandaBear(220,350,20,40);
 	PandaBear shortFat   = new PandaBear(350,250,40,20);
 	
-	g2.setColor(Color.BLACK);     g2.draw(large);
-	g2.setColor(Color.BLACK);   g2.draw(smallCC);
+	g2.setColor(Color.BLACK);     g2.draw(big);
+	g2.setColor(Color.BLACK);   g2.draw(small);
 	g2.setColor(Color.BLACK);    g2.draw(tallSkinny);
 	g2.setColor(Color.BLACK); g2.draw(shortFat);
 	
@@ -86,23 +78,29 @@ public class AllMyDrawings
 	g2.drawString("A bunch of panda bears by Hernan Duran", 20,20);
     }
     
-    /** Draw a different picture with a few houses and coffee cups
+    /** Draw a different picture with a bear and a panda bear
      */
     
     public static void drawPicture3(Graphics2D g2) {
 	
 	// label the drawing
 	
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
+	g2.drawString("Drawing 3: A bunch of bears by Hernan Duran", 20,20);
 	
 	
-	// Draw some coffee cups.
+	// Draw some bears
 	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
+	Bear large = new Bear(500,400,75,150);
+	PandaBear small = new PandaBear(300,300,40,30);
+	Bear b3 = new Bear(150,400,50,200);
+	Shape b3Twin = ShapeTransforms.rotatedCopyOf(b3, Math.PI/-2.0);
+	PandaBear tiny = new PandaBear(150,100,10,10);
+	Shape tinyTwin = ShapeTransforms.rotatedCopyOf(tiny, Math.PI/-3.0);	
 	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
+	g2.setColor(new Color(0x964B00)); g2.draw(large);
+	g2.setColor(new Color(0x1B1B1B)); g2.draw(small);
+	g2.setColor(new Color(0xC2B280)); g2.draw(b3Twin);
+	g2.setColor(new Color(0x696969)); g2.draw(tinyTwin);
 	
     }       
 }
