@@ -4,6 +4,7 @@ import java.awt.Shape; // general class for shapes
 
 import java.awt.geom.Line2D; 
 import java.awt.geom.Rectangle2D;
+import java.awt.geom.Ellipse2D;
 
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
@@ -39,16 +40,13 @@ public class Tree extends GeneralPathWrapper implements Shape
         // hard coded a particular drawing, this may be an easier
         // way.
         
-        double firstStoryHeight = .75 * height;
-        double roofHeight = height - firstStoryHeight;
+	
+	
+        // Make the trunk
         
-        double firstStoryUpperLeftY = y + roofHeight;
-        
-        // Make the first story
-        
-        Rectangle2D.Double firstStory = 
+        Rectangle2D.Double trunk = 
             new Rectangle2D.Double(x, firstStoryUpperLeftY ,
-				   width, firstStoryHeight);
+				   trunk_width, trunk_height);
 	
         // make the roof.   Remember that y goes DOWN the page,
         // so we ADD to y to get a "lower" value on the screen
@@ -61,11 +59,11 @@ public class Tree extends GeneralPathWrapper implements Shape
             new Line2D.Double (x + width/2.0, y,
                                x + width, y + roofHeight);
 	
-        // put the whole house together
+        // put the whole tree together
 	
-        GeneralPath wholeHouse = this.get();
-        wholeHouse.append(firstStory, false);
-        wholeHouse.append(leftRoof, false);
-        wholeHouse.append(rightRoof, false);    
+        GeneralPath wholeTree = this.get();
+        wholeTree.append(leaves, false);
+        wholeTree.append(trunk, false);
+       
     }
 }
