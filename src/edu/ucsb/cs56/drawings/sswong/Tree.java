@@ -30,8 +30,8 @@ public class Tree extends GeneralPathWrapper implements Shape
        @param trunk_height height of trunk
     */
     public Tree(double x, double y,
-		double tree_radius,
-		double trunk_width, double trunk_height)
+		double leaves_radius,
+		double trunk_width, double trunk_height,)
     {
 	
         // Rather than having to scale at the end, we can just
@@ -45,25 +45,21 @@ public class Tree extends GeneralPathWrapper implements Shape
         // Make the trunk
         
         Rectangle2D.Double trunk = 
-            new Rectangle2D.Double(x, firstStoryUpperLeftY ,
+            new Rectangle2D.Double(x+leaves_radius-(trunk_width/2),
+				   y-trunk_height,
 				   trunk_width, trunk_height);
 	
-        // make the roof.   Remember that y goes DOWN the page,
-        // so we ADD to y to get a "lower" value on the screen
+        // Make the leaves
+
+	Ellipse2D.Double leaves =
+	    new Ellipse2D.Double(x, y-(2*leaves_radius)-trunk_height,
+				 leaves_radius*2, leaves_radius*2);
         
-        Line2D.Double leftRoof = 
-            new Line2D.Double (x, y + roofHeight,
-                               x + width/2.0, y);
-	
-        Line2D.Double rightRoof =
-            new Line2D.Double (x + width/2.0, y,
-                               x + width, y + roofHeight);
-	
-        // put the whole tree together
+       // put the whole tree together
 	
         GeneralPath wholeTree = this.get();
-        wholeTree.append(leaves, false);
         wholeTree.append(trunk, false);
+        wholeTree.append(leaves, false);
        
     }
 }
