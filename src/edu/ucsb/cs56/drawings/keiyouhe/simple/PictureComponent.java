@@ -13,8 +13,8 @@ import java.awt.geom.Rectangle2D;
    A component that draws a Picture by Phill Conrad
    
    @author Phill Conrad (original drawing)
-   @author @@@ ADD YOUR NAME (fixed the snowmans's head)
-   @version for UCSB CS56, W16
+   @author Huiyang H(fixed the snowmans's head)
+   @version for UCSB CS56, F16
 */
 
 // Your class should "extend JComponent
@@ -41,7 +41,7 @@ public class PictureComponent extends JComponent
     
     public void paintComponent(Graphics g)
     {  
-        // Recover Graphics2D--we always do this.
+        // Recover Gra phics2D--we always do this.
         // See sections 2.12, p. 60-61 for an explanation
 	
         Graphics2D g2 = (Graphics2D) g;
