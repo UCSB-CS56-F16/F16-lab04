@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.drawings.pconrad.simple;
+package edu.ucsb.cs56.drawings.youxinjie.simple;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -13,8 +13,8 @@ import java.awt.geom.Rectangle2D;
    A component that draws a Picture by Phill Conrad
    
    @author Phill Conrad (original drawing)
-   @author @@@ ADD YOUR NAME (fixed the snowmans's head)
-   @version for UCSB CS56, W16
+   @author Xinjie You
+   @version for UCSB CS56, F16
 */
 
 // Your class should "extend JComponent
@@ -65,7 +65,7 @@ public class PictureComponent extends JComponent
         // it becomes easier.
 	
         final double bottomRadius = 20;
-        final double middleRadius = 15;
+        final double middleRadius = 15; 
         final double topRadius = 10;
         final double snowManCenterBottomX = 400;
         final double snowManCenterBottomY = 300;
@@ -88,14 +88,21 @@ public class PictureComponent extends JComponent
 	     );
         g2.draw(snowManMiddleCircle);
 	
-        // @@@ ADD CODE HERE TO DRAW THE TOP CIRCLE
+        Circle snowManTopCircle = 
+            new Circle
+            (
+         snowManCenterBottomX,
+         snowManCenterBottomY - bottomRadius * 2 - middleRadius * 2 - topRadius,
+         topRadius
+         );
+        g2.draw(snowManTopCircle);
 
 
 
         // @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	// @@@ 20, 20 are suggested coordinates, but you may change them
 
-        // g2.drawString("Description and your name go here", 20,20);
+        g2.drawString("Snowman", 300,20);
 	
     }
 }
