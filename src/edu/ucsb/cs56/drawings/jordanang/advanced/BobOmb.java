@@ -9,8 +9,26 @@ import java.awt.geom.Ellipse2D;
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
+/**
+   A vector drawing of a bob-omb that implements
+   the Shape interface, and so can be drawn, as well as
+   rotated, scaled, etc.
+      
+   @author Jordan Ang 
+   @version for CS56, F16, UCSB
+   
+*/
+
 public class BobOmb extends Bomb implements Shape
 {
+	/**
+       Constructor
+       
+       @param x x coord of lower left corner of bomb
+       @param y y coord of lower left corner of bomb
+       @param diameter diameter of the bomb size
+    */
+	
 	public BobOmb(double x, double y, double diameter){
 		//construct basic bomb shell
 		super(x,y,diameter);
