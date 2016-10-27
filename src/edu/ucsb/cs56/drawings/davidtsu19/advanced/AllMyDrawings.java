@@ -18,7 +18,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw a picture with a few masks 
      */
     
     public static void drawPicture1(Graphics2D g2) {
@@ -26,14 +26,14 @@ public class AllMyDrawings
 	Mask h1 = new Mask(100,250,100,100);
 	g2.setColor(Color.CYAN); g2.draw(h1);
 	
-	// Make a black house that's half the size, 
+	// Make a black mask that's half the size, 
 	// and moved over 150 pixels in x direction
 	
 	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 	g2.setColor(Color.BLACK); g2.draw(h2);
 	
-	// Here's a house that's 4x as big (2x the original)
+	// Here's a mask that's 4x as big (2x the original)
 	// and moved over 150 more pixels to right.
 	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
@@ -50,7 +50,7 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(h2); 
 	
-	// Draw two houses with Windows
+	// Draw two masks with feathers
 	
         MardiGrasMask hw1 = new MardiGrasMask(50,350,40,75);
 	MardiGrasMask hw2 = new MardiGrasMask(200,350,200,100);
@@ -66,11 +66,11 @@ public class AllMyDrawings
     }
     
     
-    /** Draw a picture with a few houses and coffee cups
+    /** Draw a picture with a few masks and Mardi Gras masks
      */
     public static void drawPicture2(Graphics2D g2) {
 	
-	// Draw some coffee cups.
+	// Draw some masks.
 	
 	Mask large = new Mask(100,50,225,150);
 	Mask smallCC = new Mask(20,50,40,30);
@@ -85,13 +85,13 @@ public class AllMyDrawings
 	Mask h1 = new Mask(100,250,50,75);
 	g2.setColor(Color.CYAN); g2.draw(h1);
 	
-	// Make a black house that's half the size, 
+	// Make a black mask that's half the size, 
 	// and moved over 150 pixels in x direction
 	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 	g2.setColor(Color.BLACK); g2.draw(h2);
 	
-	// Here's a house that's 4x as big (2x the original)
+	// Here's a mask that's 4x as big (2x the original)
 	// and moved over 150 more pixels to right.
 	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
@@ -108,7 +108,7 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(h2); 
 	
-	// Draw two houses with Windows
+	// Draw two masks with feathers
 	
 	MardiGrasMask hw1 = new MardiGrasMask(50,350,40,75);
 	MardiGrasMask hw2 = new MardiGrasMask(100,350,200,100);
@@ -116,7 +116,7 @@ public class AllMyDrawings
 	g2.draw(hw1);
 	g2.setColor(new Color(0x8F00FF)); 
 	
-	// Rotate the second house 45 degrees around its center.
+	// Rotate the second mask 45 degrees around its center.
 	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
 	
 	g2.draw(hw3);
@@ -138,7 +138,7 @@ public class AllMyDrawings
 	g2.drawString("Some Masks by David Tsu", 20,20);
 	
 	
-	// Draw some coffee cups.
+	// Draw some masks.
 	
 	Mask large = new Mask(100,50,225,150);
 	Mask smallCC = new Mask(20,50,40,30);
