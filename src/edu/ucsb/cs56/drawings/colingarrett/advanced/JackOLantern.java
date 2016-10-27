@@ -5,7 +5,7 @@ import java.awt.geom.Rectangle2D;
 import java.awt.geom.Ellipse2D;
 
 /**
-   A JackOLantern (i.e. a Pumpkin with a face)
+   A JackOLantern (a Pumpkin with a carved face)
       
    @author Phill Conrad 
    @author Colin Garrett
@@ -14,9 +14,14 @@ import java.awt.geom.Ellipse2D;
 */
 public class JackOLantern extends Pumpkin implements Shape
 {
-    /**
-     * Constructor for objects of class JackOLantern
-     */
+        /**
+       Constructor for objects of class JackOLantern
+       
+       @param x x coord of lower left corner of JackOLantern
+       @param y y coord of lower left corner of JackOLantern
+       @param width width of the JackOLantern
+       @param height of JackOLantern (including circle and stem)
+    */
     public JackOLantern(double x, double y, double width, double height)
     {
 	// construct the basic pumpkin shell
