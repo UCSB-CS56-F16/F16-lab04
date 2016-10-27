@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.drawings.pconrad.advanced;
+package edu.ucsb.cs56.drawings.mchavez00.advanced;
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.Shape; // general class for shapes
 
