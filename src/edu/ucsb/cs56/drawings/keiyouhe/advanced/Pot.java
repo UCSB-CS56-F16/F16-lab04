@@ -10,22 +10,35 @@ import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
- *
+   
+   A vector drawing of a pot that implements
+   the Shape interface, and so can be drawn, as well as
+   rotated, scaled, etc.
+ 
  * @author: keiyou He
+ * @version: CS56 F16
  */
 
 
 public class Pot extends GeneralPathWrapper implements Shape{
+    /**
+       Constructor
+       
+       @param x x coord of lower left corner of handle
+       @param y y coord of lower left corner ofhandle
+       @param width width of the pot body
+       @param height of  the pot body
+    */
 
     public Pot(double x, double y, double width, double height){
 
         double handleLength = width * 1.2; 
         double handleWidth = height * 0.2; 
 
-        // make the pot body
+        // make the handle
         Rectangle2D.Double handle = new Rectangle2D.Double(x, 0.2*handleWidth + y , handleLength, handleWidth);
 
-        // make the handle
+        // make the pot body
         
         Line2D.Double left = new Line2D.Double(x+handleLength, y, x+handleLength, y+0.9*height);
         Line2D.Double right = new Line2D.Double(x+handleLength+width, y, x+handleLength+width, y+0.9*height);
@@ -33,6 +46,7 @@ public class Pot extends GeneralPathWrapper implements Shape{
         Line2D.Double rightSlide = new Line2D.Double(x+handleLength+width*0.8, y+height, x+handleLength+width, y+0.9*height);
         Line2D.Double bottom = new Line2D.Double(x+handleLength+width*0.2, y+height, x+handleLength+width*0.8, y+height);
         
+        // put the handle and body together
 
         GeneralPath wholePot = this.get();
         wholePot.append(handle, false);

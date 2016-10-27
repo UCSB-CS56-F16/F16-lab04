@@ -3,15 +3,33 @@ import java.awt.geom.GeneralPath;
 import java.awt.Shape; 
 import java.awt.geom.Line2D; 
 
+/**
+   A Pot with extra handle
+      
+   @author Huiyang He
+   @version for CS56, F16, UCSB
+   
+*/
 
 public class PotWithExtraHandle extends Pot implements Shape{
 
+    /**
+       Constructor
+       
+       @param x x coord of lower left corner of handle
+       @param y y coord of lower left corner ofhandle
+       @param width width of the pot body
+       @param height of  the pot body
+    */
     public PotWithExtraHandle(double x, double y, double width, double height){
 
+	// construct the basic pot
         super(x, y, width, height);
 
+	// get the GeneralPath that we are going to append stuff to
         GeneralPath gp = this.get();
 
+	// add the extra handle to the pot
         double handleLength = width * 1/4;
         double handleLeftX = width * 2.2 +x;
         double handleRightX = handleLength + width * 2.2 + x;

@@ -26,14 +26,14 @@ public class AllMyDrawings
 	Pot p1 = new Pot(100,250,50,75);
 	g2.setColor(Color.CYAN); g2.draw(p1);
 	
-	// Make a black house that's half the size, 
+	// Make a pot that's half the size, 
 	// and moved over 150 pixels in x direction
 	
 	Shape p2 = ShapeTransforms.scaledCopyOfLL(p1,0.5,0.5);
 	p2 = ShapeTransforms.translatedCopyOf(p2,150,0);
 	g2.setColor(Color.BLACK); g2.draw(p2);
 	
-	// Here's a house that's 4x as big (2x the original)
+	// Here's a pot that's 4x as big (2x the original)
 	// and moved over 150 more pixels to right.
 	p2 = ShapeTransforms.scaledCopyOfLL(p2,4,4);
 	p2 = ShapeTransforms.translatedCopyOf(p2,150,0);
@@ -50,7 +50,7 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(p2); 
 	
-	// Draw two houses with Windows
+	// Draw two pots with extra handle
 	
 	PotWithExtraHandle ph1 = new PotWithExtraHandle(50,350,40,75);
 	PotWithExtraHandle ph2 = new PotWithExtraHandle(200,350,200,100);
@@ -85,13 +85,13 @@ public class AllMyDrawings
 	Pot p1 = new Pot(100,250,50,75);
 	g2.setColor(Color.CYAN); g2.draw(p1);
 	
-	// Make a black house that's half the size, 
+	// Make a black pot that's half the size, 
 	// and moved over 150 pixels in x direction
 	Shape p2 = ShapeTransforms.scaledCopyOfLL(p1,0.5,0.5);
 	p2 = ShapeTransforms.translatedCopyOf(p2,150,0);
 	g2.setColor(Color.BLACK); g2.draw(p2);
 	
-	// Here's a house that's 4x as big (2x the original)
+	// Here's a pot that's 4x as big (2x the original)
 	// and moved over 150 more pixels to right.
 	p2 = ShapeTransforms.scaledCopyOfLL(p2,4,4);
 	p2 = ShapeTransforms.translatedCopyOf(p2,150,0);
@@ -108,7 +108,7 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(p2); 
 	
-	// Draw two houses with Windows
+	// Draw two pots with extra handle
 	
 	PotWithExtraHandle ph1 = new PotWithExtraHandle(50,350,40,75);
 	PotWithExtraHandle ph2 = new PotWithExtraHandle(200,350,200,100);
@@ -138,7 +138,7 @@ public class AllMyDrawings
 	g2.drawString("A bunch of Pots By Huiyang He", 20,20);
 	
 	
-	// Draw some coffee cups.
+	// Draw some pots.
 	
 	Pot large = new Pot(100,50,225,150);
 	Pot small = new Pot(20,50,40,30);
