@@ -10,7 +10,7 @@ import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
-   A vector drawing of a bob-omb that implements
+   A drawing of a bob-omb character that implements
    the Shape interface, and so can be drawn, as well as
    rotated, scaled, etc.
       
@@ -28,7 +28,7 @@ public class BobOmb extends Bomb implements Shape
        @param y y coord of lower left corner of bomb
        @param diameter diameter of the bomb size
     */
-	
+
 	public BobOmb(double x, double y, double diameter){
 		//construct basic bomb shell
 		super(x,y,diameter);

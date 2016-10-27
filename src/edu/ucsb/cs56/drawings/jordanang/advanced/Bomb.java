@@ -18,7 +18,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    @version for CS56, F16, UCSB
    
 */
-   
+
 public class Bomb extends GeneralPathWrapper implements Shape
 {
     /**
@@ -30,13 +30,7 @@ public class Bomb extends GeneralPathWrapper implements Shape
     */
     public Bomb(double x, double y, double diameter)
     {
-    /**
-       Constructor
-       
-       @param x - x coord of upper left corner of bomb
-       @param y - y coord of upper left corner of bomb
-       @param diameter - diameter of bomb
-    */
+
         double totalHeight = diameter/0.7;
         
         double fuseHeight = 0.175 * totalHeight;
