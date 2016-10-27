@@ -13,7 +13,7 @@ import java.awt.geom.Rectangle2D;
    A component that draws a Picture by Phill Conrad
    
    @author Phill Conrad (original drawing)
-   @author @@@ ADD YOUR NAME (fixed the snowmans's head)
+   @author Marco Chavez (fixed the snowmans's head)
    @version for UCSB CS56, W16
 */
 
@@ -51,7 +51,6 @@ public class PictureComponent extends JComponent
 	
         Rectangle2D.Double house = new Rectangle2D.Double(100, 200, 100, 100);
         g2.draw( house);
-	
         // lroof and rroof are the left and right sides of the roof,
         Line2D.Double lroof = new Line2D.Double(100, 200, 150, 150);
         Line2D.Double rroof = new Line2D.Double(150,150, 200,200);
@@ -87,15 +86,22 @@ public class PictureComponent extends JComponent
 	     middleRadius
 	     );
         g2.draw(snowManMiddleCircle);
-	
-        // @@@ ADD CODE HERE TO DRAW THE TOP CIRCLE
+ // @@@ ADD CODE HERE TO DRAW THE TOP CIRCLE
 
+		Circle snowManTopCircle = 
+            new Circle
+            (snowManCenterBottomX,
+	         snowManCenterBottomY - ((bottomRadius + middleRadius) * 2) - topRadius,
+	         topRadius);
+
+        g2.draw(snowManTopCircle);
+       
 
 
         // @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	// @@@ 20, 20 are suggested coordinates, but you may change them
 
-        // g2.drawString("Description and your name go here", 20,20);
+         g2.drawString("Snowman and house, Marco A Chavez", 20,20);
 	
     }
 }
