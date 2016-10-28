@@ -19,10 +19,10 @@ public class BowlingBall extends Ball implements Shape
 
 
 	double hole1x = x;
-	double hole2x = x + radius/2;
-	double hole3x = x - radius/2;
-	double hole1y = y + radius;
-	double hole2y = y + radius/2 + radius;
+	double hole2x = x + 1*radius/5;
+	double hole3x = x - 1*radius/5;
+	double hole1y = y;
+	double hole2y = y - radius/2;
 	double hole3y = hole2y;
 	double smallRadius = radius/8;
 
