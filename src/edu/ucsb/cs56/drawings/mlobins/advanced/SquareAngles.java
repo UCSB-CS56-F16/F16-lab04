@@ -1,0 +1,65 @@
+package edu.ucsb.cs56.drawings.mlobins.advanced;
+
+
+
+import java.awt.geom.GeneralPath; // combinations of lines and curves
+import java.awt.Shape; // general class for shapes
+
+import java.awt.geom.Line2D; 
+import java.awt.geom.Rectangle2D;
+
+import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
+import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
+
+/**
+   A vector drawing of a SquareAngle that implements
+   the Shape interface, and so can be drawn, as well as
+   rotated, scaled, etc.
+      
+   @author Miclos Lobins 
+   @version for CS56, W16, UCSB
+   
+*/
+public class SquareAngles extends GeneralPathWrapper implements Shape
+{
+    /**
+       Constructor
+       
+       @param x x coord of lower left corner of square
+       @param y y coord of lower left corner of square
+       @param side  width and height of the square
+    */
+    public SquareAngles(double x, double y, double side)
+    {
+       
+        Rectangle2D.Double Square  = new Rectangle2D.Double(x, y, side, side);
+	
+        // Make the triangles.   Remember that y goes DOWN the page,
+        // so we ADD to y to get a "lower" value on the screen
+        
+        Line2D.Double bottomLeftLine = new Line2D.Double (x, y + side, x + side/2.0, y+1.25*side);
+        Line2D.Double bottomRightLine = new Line2D.Double (x + side/2.0, y+1.25*side, x + side, y + side);
+
+	Line2D.Double rightTopLine = new Line2D.Double (x + side, y + side, x + 1.25*side, y + 0.5*side);
+        Line2D.Double rightBottomLine = new Line2D.Double (x + 1.25*side, y + 0.5*side, x + side, y);
+
+	Line2D.Double topLeftLine = new Line2D.Double (x, y, x + 0.5*side, y - 0.25*side);
+	Line2D.Double topRightLine = new Line2D.Double (x + 0.5*side, y - 0.25*side, x + side, y);
+	
+	Line2D.Double leftTopLine = new Line2D.Double (x, y + side, x - 0.25*side, y + 0.5*side);
+	Line2D.Double leftBottomLine = new Line2D.Double (x - 0.25*side, y + 0.5*side, x, y);
+	
+        // put the shape together
+	
+        GeneralPath baseShape  = this.get();
+        baseShape.append(Square, false);
+        baseShape.append(topLeftLine, false);
+        baseShape.append(topRightLine, false);    
+	baseShape.append(rightTopLine, false);
+	baseShape.append(rightBottomLine, false);
+	baseShape.append(bottomLeftLine, false); 
+        baseShape.append(bottomRightLine, false);
+        baseShape.append(leftTopLine, false);
+	baseShape.append(leftBottomLine, false); 
+    }
+}
