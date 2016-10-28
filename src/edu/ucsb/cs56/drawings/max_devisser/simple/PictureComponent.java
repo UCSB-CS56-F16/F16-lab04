@@ -13,8 +13,8 @@ import java.awt.geom.Rectangle2D;
    A component that draws a Picture by Phill Conrad
    
    @author Phill Conrad (original drawing)
-   @author @@@ ADD YOUR NAME (fixed the snowmans's head)
-   @version for UCSB CS56, W16
+   @author Max de Visser (fixed the snowmans's head)
+   @version for UCSB CS56, F16
 */
 
 // Your class should "extend JComponent
@@ -102,7 +102,7 @@ public class PictureComponent extends JComponent
         // @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	// @@@ 20, 20 are suggested coordinates, but you may change them
 
-        g2.drawString("Max de Visser. If you're getting rad and no one's around to see it, are you really getting rad?", 20,20);
+        g2.drawString("Max de Visser. Here's an okay snowman", 20,20);
 	
     }
 }
