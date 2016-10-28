@@ -16,6 +16,9 @@ public class Quickball extends Pokeball implements Shape
 {
     /**
      * Constructor for objects of class Quickball
+     @param x x coordinate
+     @param y y coordinate
+     @param radius radius of pokeball
      */
     public Quickball(double x, double y, double radius)
     {

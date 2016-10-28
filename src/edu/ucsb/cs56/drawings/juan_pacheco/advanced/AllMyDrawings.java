@@ -19,6 +19,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 public class AllMyDrawings
 {
     /** Draw a picture with a pokeballs
+	@param g2 takes in g2 to draw shape
      */
     
     public static void drawPicture1(Graphics2D g2) {
@@ -57,6 +58,7 @@ public class AllMyDrawings
     
     
     /** Draw a picture with a few pokeballs and quickballs
+	@param g2 takes in g2 to draw shape
      */
     public static void drawPicture2(Graphics2D g2) {
 	
@@ -119,6 +121,7 @@ public class AllMyDrawings
     }
     
     /** Draw a different picture with a few houses and coffee cups
+	@param g2 takes in g2 to draw shape
      */
     
     public static void drawPicture3(Graphics2D g2) {

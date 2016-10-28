@@ -20,6 +20,10 @@ public class CoffeeCup extends GeneralPathWrapper implements Shape
 {   
     /**
      * Constructor for objects of class CoffeeCup
+     @param x x coordinate
+     @param y y coordinate
+     @param width of cup
+     @param height of cup
      */
     public CoffeeCup(double x, double y, double width, double height)
     {

@@ -14,6 +14,10 @@ public class HouseWithWindows extends House implements Shape
 {
     /**
      * Constructor for objects of class CoffeeCup
+     @param x x coordinate
+     @param y y coordinate
+     @param width of house
+     @param height of house
      */
     public HouseWithWindows(double x, double y, double width, double height)
     {
