@@ -118,7 +118,7 @@ public class AllMyDrawings
 	
 	// Rotate the second house 45 degrees around its center.
 	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
-	
+
 	g2.draw(hw3);
 	
 	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
@@ -135,16 +135,16 @@ public class AllMyDrawings
 	
 	// label the drawing
 	
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
+	g2.drawString("Some buses by Peter Ginty", 20,20);
 	
 	
 	// Draw some coffee cups.
 	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
+	Bus large = new Bus(50,250,300,150);
+	//CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
 	
 	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
+	//g2.setColor(Color.GREEN);   g2.draw(smallCC);
 	
     }       
 }
