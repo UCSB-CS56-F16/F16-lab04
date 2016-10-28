@@ -26,7 +26,7 @@ public class Car extends GeneralPathWrapper implements Shape
        @param x x coord of lower left corner of car
        @param y y coord of lower left corner of car
        @param width width of the car
-       @param height of car (including bottom of tires))
+       @param height height of car (including bottom of tires)
     */
     
     public Car(double x, double y, double width, double height) {
@@ -80,7 +80,12 @@ public class Car extends GeneralPathWrapper implements Shape
                 y);
         
         // Draw in tires
-        double tireDiameter = .4 * height;
+        double multiplier;
+	double tireDiameter;
+	if (width < height)
+	    tireDiameter = .4 * width;
+	else
+	    tireDiameter = .4 * height;
         
         Ellipse2D.Double frontTire = new Ellipse2D.Double(
                 x + hoodWidth - tireDiameter * .5,

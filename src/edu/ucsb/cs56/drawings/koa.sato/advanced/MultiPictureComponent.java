@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 import javax.swing.JComponent;
 
 /**
-   A component that draws a Picture by Koa Sato
+   A component that draws a picture of Cars and RaceCars by Koa Sato
    
    @author Koa Sato
    @version CS56, F16, UCSB

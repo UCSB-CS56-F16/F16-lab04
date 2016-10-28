@@ -9,7 +9,7 @@ import javax.swing.JLabel;
  * Vector drawing of RaceCar which extends Car.
  * Adds a number 1 to side and spoiler.
  *
- * @author koa-sato
+ * @author Koa Sato
  * @version for CS56, F16, UCSB
  */
 public class RaceCar extends Car implements Shape{
