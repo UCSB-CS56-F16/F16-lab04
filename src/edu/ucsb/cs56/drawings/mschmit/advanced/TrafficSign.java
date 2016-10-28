@@ -39,12 +39,12 @@ public class TrafficSign extends trafficCone implements Shape{
 	    
 	    //find coordinates
 	    int horX = x - (lengthCross/2);
-	    int horY = y - (heightCross/2);
+	    int horY = y - (heightCross);
 	    Line2D.Double horCross =
 		new Line2D.Double(horX, horY, (horX+lengthCross), horY);
 
 	    int verX = x;
-	    int verY = y - heightCross;
+	    int verY = y - (3*(heightCross/2));
 	    Line2D.Double verCross = 
 		new Line2D.Double(verX, verY, verX, (verY + heightCross));
 	    wholeSign.append(horCross, false);
@@ -53,6 +53,35 @@ public class TrafficSign extends trafficCone implements Shape{
    
 	}else{
 	    //draw upside down triangle
+	    //blach blach glach
+	    int xlength = rectWidth/3;
+	    int ylength = rectHeight/3;
+	    //how long the top of the triangle is
+
+	    //draw the top line of the triangle
+	    int x1 = x -(xlength/2);
+	    int y1 = y - (2*ylength);
+	    
+	    //bottom point of the triangle
+	    int x2 = x;
+	    int y2 = y1 + ylength;
+
+	    //right point of the triangle
+	    int x3 = x1 + xlength;
+
+	    Line2D.Double topLine =
+		new Line2D.Double(x1, y1, x2, y2);
+
+	    Line2D.Double leftLine = 
+		new Line2D.Double(x2, y2, x3, y1);
+
+	    Line2D.Double rightLine = 
+		new Line2D.Double(x3, y1, x1, y1);
+	    
+	    wholeSign.append(topLine, false);
+	    wholeSign.append(leftLine, false);
+	    wholeSign.append(rightLine, false);
+
 	    
 	}
 

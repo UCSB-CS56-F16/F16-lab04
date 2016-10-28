@@ -52,7 +52,7 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(t2); 
 
-	TrafficSign ts1 = new TrafficSign(300, 300, 50, 50, 50, true);
+	TrafficSign ts1 = new TrafficSign(300, 300, 50, 50, 50, false);
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK);
 	g2.draw(ts1);
