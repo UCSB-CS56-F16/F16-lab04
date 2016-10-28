@@ -54,12 +54,21 @@ public class MrPeanut extends Peanut implements java.awt.Shape
 			      x + height/10, y + height/2);
 
 	Ellipse2D.Double monocle =
-	    new Ellipse2D.Double(x - height/5, y + height/10,
-			       height/20, height/20);
+	    new Ellipse2D.Double(x - height/5-height/45 -height/70,
+				 y + height/10-height/70,
+			       height/15, height/15);
+
+	Ellipse2D.Double LEye =
+	    new Ellipse2D.Double(x - height/5-height/45, y + height/10,
+			       height/30, height/30);
+
+	Ellipse2D.Double REye =
+	    new Ellipse2D.Double(x - height/8, y + height/10,
+			       height/30, height/30);
 
 	Line2D.Double leftLeg =
 	    new Line2D.Double(x-height/4, y + 8*height/10,
-			      x - height/4, y + 5*height/4);
+			      x - height/5 -height/15, y + 5*height/4);
 
 	Line2D.Double rightLeg =
 	    new Line2D.Double(x-height/20, y + 8*height/10,
@@ -72,7 +81,9 @@ public class MrPeanut extends Peanut implements java.awt.Shape
 	MrPeanut.append(leftArmBottom, false);
 	MrPeanut.append(RightArmTop, false);
 	MrPeanut.append(RightArmBottom, false);
-	MrPeanut.append(monocle, false);
+	MrPeanut.append(LEye, false);
+	MrPeanut.append(REye, false);
+	MrPeanut.append(monocle,false);
 	MrPeanut.append(leftLeg, false);
 	MrPeanut.append(rightLeg, false);
     }
