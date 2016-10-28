@@ -18,7 +18,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw a picture with a few balls and bowling balls 
      */
 
     public static void drawPicture1(Graphics2D g2) {
@@ -66,7 +66,7 @@ public class AllMyDrawings
     }
 
 
-    /** Draw a picture with a few houses and coffee cups
+    /** Draw a picture of a bowling ball with bowling balls for finger holes
      */
     public static void drawPicture2(Graphics2D g2) {
 
@@ -97,7 +97,7 @@ public class AllMyDrawings
 	g2.drawString("Inception by Wesley Peery", 20,20);
     }
 
-    /** Draw a different picture with a few houses and coffee cups
+    /** Draw a picture of a bowling ball in motion with arrows to signify motion
      */
 
     public static void drawPicture3(Graphics2D g2) {

@@ -4,6 +4,18 @@ import java.awt.Shape; // general class for shapes
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 import edu.ucsb.cs56.drawings.wpeery.simple.Circle;
 
+/**
+   A Bowling Ball(This class inherits from the ball class and implements shape)
+   The bowling ball is one large ball with 3 circles that make up the 
+   bowling ball's finger holes. The coordinates and size of the bowlingball
+   can be specified.
+
+   @author Wesley Peery
+   @version for CS56, F16, UCSB
+
+*/
+
+
 public class BowlingBall extends Ball implements Shape
 {
     /**
