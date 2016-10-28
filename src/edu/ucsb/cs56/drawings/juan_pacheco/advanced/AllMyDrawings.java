@@ -128,35 +128,40 @@ public class AllMyDrawings
 	g2.drawString("A diamond of Quickballs by Juan Pacheco", 20,20);
 	
 	
-	// Draw some pokeballs.
-	
+	// Draw some quickballs.
+	//first one top
         Quickball q1 = new Quickball(320,10,50);
 	g2.setColor(Color.RED);     g2.draw(q1);
 
+	// top right
 	Shape q2 = ShapeTransforms.scaledCopyOfLL(q1,1,1);
 	q2 = ShapeTransforms.translatedCopyOf(q2,100,100);
 	g2.setColor(Color.BLACK);
 	Shape q22 = ShapeTransforms.rotatedCopyOf(q2, Math.PI/3.0);
 	g2.draw(q22);
-	
+
+	//bottom left
 	q2 = ShapeTransforms.scaledCopyOfLL(q2,1,1);
 	q2 = ShapeTransforms.translatedCopyOf(q2,0,150);
 	g2.setColor(Color.BLUE);
 	Shape q3 = ShapeTransforms.rotatedCopyOf(q2, 2*Math.PI/3.0);
 	g2.draw(q3);
 
+	//bottom
 	q2 = ShapeTransforms.scaledCopyOfLL(q2,1,1);
 	q2 = ShapeTransforms.translatedCopyOf(q2,-100,100);
 	g2.setColor(new Color(0x014121));
 	Shape q4 = ShapeTransforms.rotatedCopyOf(q2, Math.PI);
 	g2.draw(q4);
 
+	//bottom left
 	q2 = ShapeTransforms.scaledCopyOfLL(q2,1,1);
 	q2 = ShapeTransforms.translatedCopyOf(q2,-100,-100);
 	g2.setColor(new Color(0x8B008B));
 	Shape q5 = ShapeTransforms.rotatedCopyOf(q2, 4*Math.PI/3.0);
 	g2.draw(q5);
 
+	//top left
 	q2 = ShapeTransforms.scaledCopyOfLL(q2,1,1);
 	q2 = ShapeTransforms.translatedCopyOf(q2,0,-150);
 	g2.setColor(new Color(0xE25822));
