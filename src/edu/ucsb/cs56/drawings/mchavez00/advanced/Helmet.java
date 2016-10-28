@@ -17,14 +17,14 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    @version for CS56, F16, UCSB
    
 */
-public class CaliHelmet extends Helmet implements Shape
+public class Helmet extends GeneralPathWrapper implements Shape
 {   
     /**
-     * Constructor for objects of class CaliHelmet
+     * Constructor for objects of class Helmet
      */
-    public CaliHelmet(double x, double y, double width, double height)
+    public Helmet(double x, double y, double width, double height)
     {
-		super(x,y,width,height);
+	
         // Specify the upper left corner, and the 
         //  width and height of the original points used to 
         //  plot the *hard-coded* California Helmet
@@ -34,44 +34,51 @@ public class CaliHelmet extends Helmet implements Shape
         final double ORIG_HEIGHT = 300.0; 
         final double ORIG_WIDTH = 400.0; 
         
-        GeneralPath helmetLogo = new GeneralPath();
+        GeneralPath helmet = new GeneralPath();
 	
-        helmetLogo.moveTo(120,101);
-		helmetLogo.lineTo(160,101);
-		helmetLogo.lineTo(160,140);
-		helmetLogo.lineTo(200,180);
-		helmetLogo.lineTo(200,200);
-		helmetLogo.lineTo(160,200);
-		helmetLogo.lineTo(120,140);
-		helmetLogo.lineTo(120,100);
-      /*  //face shield outline
-		helmetLogo.moveTo(340,180);
-		helmetLogo.lineTo(200,140);
-		helmetLogo.lineTo(200,100);
-		helmetLogo.lineTo(240,80);
-     */
+       
+		//helmet outline
+        helmet.moveTo(100,100);
+        helmet.lineTo(140,60);
+		helmet.lineTo(200,60);
+		helmet.lineTo(240,80);
+		helmet.lineTo(340,180);
+		helmet.lineTo(340,220);
+		helmet.lineTo(300,240);
+		helmet.lineTo(160,240);
+		helmet.lineTo(100,190);
+		helmet.lineTo(100,100);
+		//face shield outline
+		helmet.moveTo(340,180);
+		helmet.lineTo(200,140);
+		helmet.lineTo(200,100);
+		helmet.lineTo(240,80);
+		/// california state outline
+		/*helmet.moveTo(120,100);
+		helmet.lineTo(160,100);
+		helmet.lineTo(160,140);
+		helmet.lineTo(200,180);
+		helmet.lineTo(200,200);
+		helmet.lineTo(160,200);
+		helmet.lineTo(120,140);
+		helmet.lineTo(120,100);
+       */ 
+        
+     
         // translate to the origin by subtracting the original upper left x and y
         // then translate to (x,y) by adding x and y
-		
-		//scale it back to original size		
-		GeneralPath newHelmet2 = this.get();
-		Shape s2 =  ShapeTransforms.scaledCopyOf(newHelmet2,
-					  ORIG_WIDTH/width,
-					  ORIG_HEIGHT/height) ;
-		this.set(new GeneralPath(s2));
-
-        GeneralPath newHelmet = this.get();
-		//translate the logo to (x,y) location
-		Shape s = ShapeTransforms.translatedCopyOf(helmetLogo, -ORIG_ULX + x, -ORIG_ULY + y);
-		//append the logo to the helmet		
-		newHelmet.append(s,false);
-		// size the new helmet with the logo to the appropiate width and height
- 		s =  ShapeTransforms.scaledCopyOf(newHelmet,
+        
+        Shape s = ShapeTransforms.translatedCopyOf(helmet, -ORIG_ULX + x, -ORIG_ULY + y);
+ 
+	// scale to correct height and width
+      s =  ShapeTransforms.scaledCopyOf(s,
 					  width/ORIG_WIDTH,
 					  height/ORIG_HEIGHT) ;
-	
+	 
+	// Use the GeneralPath constructor that takes a shape and returns
+	// it as a general path to set our instance variable California Helmet
+       
 	this.set(new GeneralPath(s));
-   
         
     }
 
