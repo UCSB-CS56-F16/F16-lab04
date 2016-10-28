@@ -49,8 +49,8 @@ public class Tree extends GeneralPathWrapper implements Shape
         // Make the trunk
         
         Rectangle2D.Double trunk = 
-            new Rectangle2D.Double(x+2*leaves_radius,
-				   y-trunk_height,
+            new Rectangle2D.Double(x+leaves_radius-(trunk_width/2),
+				   y+2*leaves_radius,
 				   trunk_width, trunk_height);
 	
        // put the whole tree together

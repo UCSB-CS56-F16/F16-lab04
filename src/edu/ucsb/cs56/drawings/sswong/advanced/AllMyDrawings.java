@@ -12,7 +12,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 /**
  * A class with static methods for drawing various pictures
  * 
- * @author Phill Conrad 
+ * @author Simon Wong 
  * @version for UCSB CS56, W16 
  */
 
@@ -137,7 +137,6 @@ public class AllMyDrawings
 	
 	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
 	
-	
 	// Draw some coffee cups.
 	
 	CoffeeCup large = new CoffeeCup(100,50,225,150);
@@ -146,5 +145,29 @@ public class AllMyDrawings
 	g2.setColor(Color.RED);     g2.draw(large);
 	g2.setColor(Color.GREEN);   g2.draw(smallCC);
 	
-    }       
+    }
+    
+    public static void drawPicture4(Graphics2D g2){
+
+	// labeling the drawing
+	g2.drawString("One tree by Simon Wong",20,20);
+
+	// draw a tree
+	Tree t = new Tree(100,50,100,25,50);
+	g2.setColor(Color.GREEN);
+	g2.draw(t);
+
+    }
+    public static void drawPicture5(Graphics2D g2){
+
+	// labeling the drawing
+	g2.drawString("One tree with fruits by Simon Wong",20,20);
+
+	// draw a tree with fruits
+	TreeWithFruits twf = new TreeWithFruits(100,50,100,25,50);
+	g2.setColor(Color.GREEN);
+	g2.draw(twf);
+
+    }
+    
 }

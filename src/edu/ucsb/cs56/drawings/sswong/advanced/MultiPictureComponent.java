@@ -12,11 +12,11 @@ import javax.swing.JComponent;
 */
 
 
-public class MultiPictureComponent extends JComponent
-{  
+public class MultiPictureComponent extends JComponent{
+    
     private int whichPicture = 0;
     
-    public MultiPictureComponent(int whichPicture) {
+    public MultiPictureComponent(int whichPicture){
 	this.whichPicture = whichPicture;
     }
     
@@ -41,6 +41,12 @@ public class MultiPictureComponent extends JComponent
 	    break;
 	case 3:
 	    AllMyDrawings.drawPicture3(g2);
+	    break;
+	case 4:
+	    AllMyDrawings.drawPicture4(g2);
+	    break;
+	case 5:
+	    AllMyDrawings.drawPicture5(g2);
 	    break;
 	default:
 	    throw new IllegalArgumentException("Unknown value for whichPicture in MultiPictureComponent" + this.whichPicture);
