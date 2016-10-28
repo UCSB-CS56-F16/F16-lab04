@@ -17,6 +17,9 @@ public class Ball extends GeneralPathWrapper implements Shape
 {
     /**
      * Constructor for objects of class Ball
+     @param x The x coordinate of the center of the ball
+     @param y The y coordinate for the center of the ball
+     @param radius The radius of the ball
      */
     public Ball(double x, double y, double radius)
     {

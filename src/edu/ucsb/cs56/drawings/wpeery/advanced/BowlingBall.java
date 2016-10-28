@@ -20,6 +20,9 @@ public class BowlingBall extends Ball implements Shape
 {
     /**
      * Constructor for objects of class Bowling Ball
+     @param x The x coordinate of the center of the bowling ball
+     @param y The y coordinate of the center of the bowling ball
+     @param radius The radius of the bowling ball
      */
     public BowlingBall(double x, double y, double radius)
     {
