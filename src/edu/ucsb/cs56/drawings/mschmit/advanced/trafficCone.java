@@ -8,10 +8,10 @@ import java.awt.geom.Rectangle2D;
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
-public class trafficCone extends GeneralPathWrapper implements Shape
+public class TrafficCone extends GeneralPathWrapper implements Shape
 {
 
-    public trafficCone(int x, int y, int height){
+    public TrafficCone(int x, int y, int height){
 	
 	//x, y are the coordinates of the top tip of the traffic cone
 	

@@ -7,7 +7,7 @@ import java.awt.geom.Rectangle2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 
-public class TrafficSign extends trafficCone implements Shape{
+public class TrafficSign extends TrafficCone implements Shape{
    
     public TrafficSign(int x, int y, int height, int rectHeight, int rectWidth, boolean go){
 	//(x,y) is the coordinates of the top point of the traffic cone

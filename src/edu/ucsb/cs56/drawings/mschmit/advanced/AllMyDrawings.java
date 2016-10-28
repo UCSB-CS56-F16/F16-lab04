@@ -18,13 +18,13 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw a picture with a few cones 
      */
     
     public static void drawPicture1(Graphics2D g2) {
 	
 	//make a traffic cone with central point at 300,300 with height 50
-	trafficCone t1 = new trafficCone(300, 300, 50);
+	TrafficCone t1 = new TrafficCone(300, 300, 50);
 	g2.setColor(Color.RED); g2.draw(t1);
        
 	
