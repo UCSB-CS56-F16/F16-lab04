@@ -53,16 +53,7 @@ public class Helmet extends GeneralPathWrapper implements Shape
 		helmet.lineTo(200,140);
 		helmet.lineTo(200,100);
 		helmet.lineTo(240,80);
-		/// california state outline
-		/*helmet.moveTo(120,100);
-		helmet.lineTo(160,100);
-		helmet.lineTo(160,140);
-		helmet.lineTo(200,180);
-		helmet.lineTo(200,200);
-		helmet.lineTo(160,200);
-		helmet.lineTo(120,140);
-		helmet.lineTo(120,100);
-       */ 
+		 
         
      
         // translate to the origin by subtracting the original upper left x and y

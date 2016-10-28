@@ -44,12 +44,7 @@ public class CaliHelmet extends Helmet implements Shape
 		helmetLogo.lineTo(160,200);
 		helmetLogo.lineTo(120,140);
 		helmetLogo.lineTo(120,100);
-      /*  //face shield outline
-		helmetLogo.moveTo(340,180);
-		helmetLogo.lineTo(200,140);
-		helmetLogo.lineTo(200,100);
-		helmetLogo.lineTo(240,80);
-     */
+     
         // translate to the origin by subtracting the original upper left x and y
         // then translate to (x,y) by adding x and y
 		
