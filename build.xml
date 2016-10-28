@@ -24,7 +24,7 @@
    <!-- The following property will be used by the grader; grader
 	can change it from csilusername to whomever grader is grading in that
 	moment. -->
-   <property name="studentName" value="csilusername"/>
+   <property name="studentName" value="jleeong"/>
    
    <path id="project.class.path">
          <pathelement location="build"/>

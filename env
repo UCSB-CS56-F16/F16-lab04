@@ -1,4 +1,4 @@
-#~!/bin/bash
+#!/bin/bash
 
 export T=`pwd`
 export B=$T/src/edu/ucsb/cs56/drawings/jleeong
