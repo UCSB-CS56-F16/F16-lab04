@@ -23,18 +23,18 @@ public class AllMyDrawings
 
     public static void drawPicture1(Graphics2D g2) {
 
-	Star s1 = new Star(10, 10 ,100, 20);
-	g2.setColor(Color.BLACK);
-	g2.draw(s1);
+	//	Star s1 = new Star(10, 10 ,100, 20);
+	//g2.setColor(Color.BLACK);
+	//g2.draw(s1);
 
-	Shape s2 = ShapeTransforms.scaledCopyOfLL(s1, 1.5, 1.2);
-	s2 = ShapeTransforms.translatedCopyOf(s2, 150, 100);
-	g2.setColor(Color.BLUE);
-	g2.draw(s2);
+	//	Shape s2 = ShapeTransforms.scaledCopyOfLL(s1, 1.5, 1.2);
+	//	s2 = ShapeTransforms.translatedCopyOf(s2, 150, 100);
+	//	g2.setColor(Color.BLUE);
+	//	g2.draw(s2);
 
-	Star s3 = new Star(70, 60, 100, 50);
-	g2.setColor(Color.RED);
-	g2.draw(s3); 
+	//Star s3 = new Star(70, 60, 100, 50);
+	//g2.setColor(Color.RED);
+	//g2.draw(s3); 
 
 	// // Make a black house that's half the size,
 	// // and moved over 150 pixels in x direction
@@ -62,6 +62,10 @@ public class AllMyDrawings
 
 	// // Draw two houses with Windows
 
+	ShootingStar ss1 = new ShootingStar(50, 50, 100, 30); 
+	g2.setColor(Color.RED); 
+	g2.draw(ss1);
+	
 	// HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
 	// HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
 

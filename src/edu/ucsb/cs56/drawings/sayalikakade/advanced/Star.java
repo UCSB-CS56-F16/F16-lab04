@@ -44,25 +44,5 @@ public class Star extends GeneralPathWrapper implements Shape
 	    wholeStar.append(new Line2D.Double(innerPoints.get(i), outerPoints.get(0)), false); 
     }
    
-   
-   
-						 
-
-
-
-
-	//Line2D.Double firstLine = new Line2D.Double(x, y + 0.33*(height), x + width, y + 0.33*(height));
-	//Line2D.Double secondLine = new Line2D.Double(x + width, y + 0.33*(height), (x + 0.25*(width)), y + height);
-	//Line2D.Double thirdLine = new Line2D.Double(x + 0.25*(width), y + height, x + 0.5*(width), y);
-	//Line2D.Double fourthLine = new Line2D.Double(x + 0.5*(width), y, x + 0.75*(width), y + height);
-	//Line2D.Double fifthLine = new Line2D.Double(x + 0.75*(width), y + height, x, y + 0.33*(height));
-
-
-	//GeneralPath wholeStar = this.get();
-	//wholeStar.append(firstLine, true);
-	//wholeStar.append(secondLine, true);
-	//wholeStar.append(thirdLine, true);
-	//wholeStar.append(fourthLine, false);
-	//wholeStar.append(fifthLine, false);
     }
 }
