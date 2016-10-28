@@ -21,8 +21,9 @@ public class SimpleGui1 {
 	JFrame frame = new JFrame() ;
 	
 	JButton button = new JButton("Hit me with dat cursor") ;
-	
-	java.awt.Color myColor = new java.awt.Color(204,255,000);   // R, G, B values.
+
+	// Set button color to GOLD
+	java.awt.Color myColor = new java.awt.Color(212,175,55);   // R, G, B values.
 	button.setBackground(myColor);
 	button.setOpaque(true);
 	
