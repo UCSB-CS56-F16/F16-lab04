@@ -1,7 +1,10 @@
 package edu.ucsb.cs56.drawings.jkr.advanced;
 import java.awt.geom.GeneralPath;  
-import java.awt.Shape; 
-import java.awt.geom.Rectangle2D;
+import java.awt.Shape;
+
+import java.awt.geom.Point2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Ellipse2D;
 
 /**
    A Playbutton
@@ -19,11 +22,11 @@ public class BetterPlayButton extends PlayButton implements Shape
      @param y y coord of lower left corner of house
      @param radius radius of button
      */
-    public PlayButton(int x, int y, int radius)
+    public BetterPlayButton(int x, int y, int radius)
     {
         super(x, y, radius);
-        Point2D[] point = {new Point2D(x+radius/3.0+radius/20.0, y+radius/3.0+radius/20.0),
-            new Point2D(x+radius*2.0/3.0-radius/20.0, y+radius/2.0)) };
+        Point2D.Double[] point = {new Point2D.Double(x+radius/3.0+radius/20.0, y+radius/3.0+radius/20.0),
+            new Point2D.Double(x+radius*2.0/3.0-radius/20.0, y+radius/2.0) };
         
         // An extra circle cause it looks cooler
         Ellipse2D.Double innerCircle = new Ellipse2D.Double(x+radius/10.0, y+radius/10.0, radius * 9/10.0, radius * 9/10.0);

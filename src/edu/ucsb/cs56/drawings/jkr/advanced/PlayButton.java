@@ -1,7 +1,7 @@
 package edu.ucsb.cs56.drawings.jkr.advanced;
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.Shape; // general class for shapes
-import java.awt.Point;
+import java.awt.geom.Point2D;
 
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
@@ -31,9 +31,9 @@ public class PlayButton extends GeneralPathWrapper implements Shape
     public PlayButton(int x, int y, int radius)
     {
 	// These points are the top, bottom, and right points respectively of the play button
-	Point2D[] point = {new Point2D(x+radius/3.0, y+radius/3.0),
-			 new Point2D(x+radius/3.0, y+radius*2.0/3.0),
-			 new Point2D(x+radius*2.0/3.0, y+radius/2.0)) };
+	Point2D.Double[] point = {new Point2D.Double(x+radius/3.0, y+radius/3.0),
+			 new Point2D.Double(x+radius/3.0, y+radius*2.0/3.0),
+			 new Point2D.Double(x+radius*2.0/3.0, y+radius/2.0) };
         // The circle that contains the triangle
         Ellipse2D.Double circle = new Ellipse2D.Double(x, y, radius, radius);
         
