@@ -26,8 +26,8 @@ public class ShiningLightBulb extends LightBulb implements Shape{
 	    new Line2D.Double (x + 1.5 * radius, y + -.1* radius,
 			       x + 2 * radius, y + -.1* radius);
 	Line2D.Double bottomVerticalLine =
-	    new Line2D.Double ( x, y + -2 * radius,
-				x, y + -2.4 * radius);
+	    new Line2D.Double ( x, y + -3 * radius,
+				x, y + -3.4 * radius);
 	originalGP.append(upperVerticalLine, false);
 	originalGP.append(leftHorizontalLine, false);
 	originalGP.append(rightHorizontalLine, false);
