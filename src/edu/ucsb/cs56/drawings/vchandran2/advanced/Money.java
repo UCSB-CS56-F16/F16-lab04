@@ -24,7 +24,7 @@ public class Money extends GeneralPathWrapper implements Shape
                                                                                                               
        @param x x coord of lower left corner of paper                                                         
        @param y y coord of lower left corner of paper                                                         
-       @param width width of the paper                                                                        
+       @param height height of the paper                                                            
 
     */
     public Money(double x, double y, double height)

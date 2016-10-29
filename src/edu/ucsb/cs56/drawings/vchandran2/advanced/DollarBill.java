@@ -12,7 +12,11 @@ import java.awt.geom.Line2D;
 */
 public class DollarBill extends Money implements Shape
 {
-
+    /**    
+    @param x x coord of dollar bill corner
+    @param y y coord of dollar bill corner
+    @param height height of dollarbill
+    */
     public DollarBill(double x, double y, double height)
     {
 	// construct the basic bill shell

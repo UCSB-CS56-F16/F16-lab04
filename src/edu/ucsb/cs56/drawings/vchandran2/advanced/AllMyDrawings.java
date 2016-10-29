@@ -19,6 +19,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 public class AllMyDrawings
 {
     /** Draw a picture with a few bills
+	@param g2 allows us to view the picture
      */
     
     public static void drawPicture1(Graphics2D g2) {
@@ -70,7 +71,8 @@ public class AllMyDrawings
     }
     
     
-    /** Draw a picture with a few houses and coffee cups
+    /** Draw a picture with a few dollar bills and unidentified bills
+	@param g2 allows us to view the picture
      */
     public static void drawPicture2(Graphics2D g2) {
 	
@@ -131,7 +133,10 @@ public class AllMyDrawings
 	g2.setColor(Color.BLACK); 
 	g2.drawString("A bunch of unidentified bills and some dollars by Veena Chandran", 20,20);
     }
-    
+
+    /** Draw a picture with a few more dollar bills and unidentified bills                                                 
+        @param g2 allows us to view the picture                                                                       
+    */
     
     public static void drawPicture3(Graphics2D g2) {
 	
