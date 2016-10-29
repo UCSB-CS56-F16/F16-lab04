@@ -119,14 +119,14 @@ public class AllMyDrawings
 	g2.drawString("A few TVs by Jingyi Liao, version2: translated; rotated; scaled", 20,20);
     }
     
-    /** version3: the same color TVWithButtons rotated
+    /** version3: the same red color TVWithButtons rotated
      */
     
     public static void drawPicture3(Graphics2D g2) {
 	
 	// label the drawing
-	
-	g2.drawString("A few TVWithButtons by Jingyi Liao, version3: default color rotated", 20,20);
+	g2.setColor(Color.RED);
+	g2.drawString("A few TVWithButtons by Jingyi Liao, version3: red TV with button rotated!", 20,20);
 	
 	
  	// Draw a TV with buttons

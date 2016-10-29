@@ -24,8 +24,8 @@ public class TV extends GeneralPathWrapper implements Shape
        
        @param x x coord of lower left corner of TV
        @param y y coord of lower left corner of TV
-       @param width width of the TV
-       @param height of TV 
+       @param width width of the whole TV
+       @param height height of TV inculding the aerial 
     */
     public TV(double x, double y, double width, double height)
     {

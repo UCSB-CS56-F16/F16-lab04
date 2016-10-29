@@ -13,7 +13,14 @@ import edu.ucsb.cs56.drawings.jingyi_liao.simple.Circle;
 */
 public class TVWithButton extends TV implements Shape
 {
-
+    /**
+       Constructor
+       
+       @param x x coord of lower left corner of TV
+       @param y y coord of lower left corner of TV
+       @param width width of the whole TV
+       @param height height of TV inculding the aerial 
+    */
     public TVWithButton(double x, double y, double width, double height)
     {
 	// construct the basic TV shell

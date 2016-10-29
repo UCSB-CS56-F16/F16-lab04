@@ -13,7 +13,7 @@ import java.awt.geom.Rectangle2D;
    A component that draws a Picture by Phill Conrad
    
    @author Phill Conrad (original drawing)
-   @author @@@ Jingyi_liao (fixed the snowmans's head)
+   @author Jingyi_liao (fixed the snowmans's head)
    @version for UCSB CS56, F16
 */
 
