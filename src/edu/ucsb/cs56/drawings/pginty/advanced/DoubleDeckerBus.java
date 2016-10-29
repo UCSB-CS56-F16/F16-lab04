@@ -5,8 +5,9 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
 
 /**
- * A vector drawing of a Bus that implements Shape.
- * It can be drawn, scaled, rotated, etc.
+ * A type of bus that has two levels for passengers rather than one.
+ * It constructs a Bus in the lower half of the available area, and
+ * another level in the upper half.
  *
  * @author pginty
  * @version for CS56, W16, UCSB
@@ -14,7 +15,7 @@ import java.awt.geom.Rectangle2D;
 public class DoubleDeckerBus extends Bus implements Shape{
 
     /**
-     * Constructor for a Bus
+     * Constructor for a DoubleDeckerBus
      * @param x x coordinate of lower left corner of bus
      * @param y y coordinate of lower left corner of bus
      * @param width width of bus
