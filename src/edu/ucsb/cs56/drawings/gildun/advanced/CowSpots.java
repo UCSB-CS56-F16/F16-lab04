@@ -17,6 +17,15 @@ import java.awt.geom.Rectangle2D;
  */
 public class CowSpots extends Cow implements Shape {
 
+    /**
+     * Parameters:
+     * @param x x coord of lower left corner of left leg
+     * @param y y coord of lower left corner of left leg
+     * @param width width of the house
+     * @param height how tall the cow is (including legs and body, **not top of head**
+
+     */
+
     public CowSpots(double x, double y, double width, double height){
 
         super (x, y, width, height);
