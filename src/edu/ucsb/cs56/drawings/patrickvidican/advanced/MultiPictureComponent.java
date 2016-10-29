@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 import javax.swing.JComponent;
 
 /**
-   A component that draws a Picture by Patrick Vidican
+   component that draws a Picture by Patrick Vidican
 
    @author Phill Conrad (original drawing)
    @author Patrick Vidican (whitespace)
