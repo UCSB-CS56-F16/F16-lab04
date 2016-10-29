@@ -18,7 +18,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    @version for CS56,F16,UCSB
 */
 
-Public class ToothBrushWithCup extends ToothBrush implements Shape{
+public class ToothBrushWithCup extends ToothBrush implements Shape{
 
     /**
        Constructor
