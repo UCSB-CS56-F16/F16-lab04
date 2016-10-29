@@ -27,12 +27,11 @@ public class TShirtWithLogo extends TShirt implements Shape
 
 	Ellipse2D.Double e1 = new Ellipse2D.Double(x+width/2,
             y +(heightOfSleeves+sleeveHeight)/2, 30, 30);          
-	Ellipse2D.Double e1 = new Ellipse2D.Double(x+width/2,
+	Ellipse2D.Double e2 = new Ellipse2D.Double(x+width/2,
             y +(heightOfSleeves+sleeveHeight)/2, 40, 20);  
 		
-        GeneralPath wholeHouse = this.get();
-        wholeHouse.append(win1, false);
-        wholeHouse.append(win2, false);
-        wholeHouse.append(win3, false); 
+        GeneralPath wholeShirt = this.get();
+        wholeHouse.append(e1, false);
+        wholeHouse.append(e2, false);
     }    
 }
