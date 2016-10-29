@@ -21,7 +21,8 @@ public class Shield extends GeneralPathWrapper implements Shape
 {
     /**
       * Constructor
-      * @param x and y are the center of your Shield
+      * @param x is the x-center of your Shield
+      * @param y is the y-center of your Shield
       * @param radius should be about the length of your forearm
       */
     public Shield(double x, double y, double radius){

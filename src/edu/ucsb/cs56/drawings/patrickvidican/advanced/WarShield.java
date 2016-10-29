@@ -15,7 +15,8 @@ public class WarShield extends Shield implements Shape
 {
   /**
     * Constructor
-    * @param x and y are the center of your WarShield
+    * @param x is the x-center of your Shield
+    * @param y is the y-center of your Shield
     * @param radius should be about the length of your forearm
     */
     public WarShield(double x, double y, double radius)
