@@ -14,7 +14,7 @@ import java.awt.geom.Rectangle2D;
    
    @author Phill Conrad (original drawing)
    @author @@@ Millan Batra (fixed the snowmans's head)
-   @version for UCSB CS56, W16
+   @version for UCSB CS56, F16
 */
 
 // Your class should "extend JComponent
@@ -102,7 +102,7 @@ public class PictureComponent extends JComponent
         // @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	// @@@ 20, 20 are suggested coordinates, but you may change them
 
-        // g2.drawString("Description and your name go here", 20,20);
+         g2.drawString("Snowman with added head by Millan Batra", 20,20);
 	
     }
 }

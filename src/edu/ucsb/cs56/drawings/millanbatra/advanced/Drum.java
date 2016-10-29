@@ -31,24 +31,14 @@ public class Drum extends GeneralPathWrapper implements Shape
     */
     public Drum(double x, double y, double width, double height)
     {	
-	// Rather than having to scale at the end, we can just
-        // draw things the right way to begin with, using the
-        // x, y, width and height.   If you haven't already
-        // hard coded a particular drawing, this may be an easier
-        // way.
-        double wide=4*height;
-        //double firstStoryUpperLeftY = y + roofHeight;
-        // Make the first story
-        
-	Ellipse2D.Double drumportion= new Ellipse2D.Double(x, y, wide, height/2);
 	
-        // make the drum   Remember that y goes DOWN the page,
-        // so we ADD to y to get a "lower" value on the screen
-        
-
+        double wide=4*height;
+	//eliptical portion of the drum (the top)
+	Ellipse2D.Double drumportion= new Ellipse2D.Double(x, y, wide, height/2);        
+	//left right and bottom part of drum skin support 
 	Line2D.Double leftportion = new Line2D.Double (x, y+height/4, x, y+2.5*height);
-	 Line2D.Double rightportion =new Line2D.Double (x+wide, y+height/4, x+wide, y+2.5*height);
-	 Line2D.Double bottompart=new Line2D.Double (x, y+2.5*height,x+wide, y+2.5*height);
+	Line2D.Double rightportion =new Line2D.Double (x+wide, y+height/4, x+wide, y+2.5*height);
+	Line2D.Double bottompart=new Line2D.Double (x, y+2.5*height,x+wide, y+2.5*height);
         // put the whole drum together
 	
         GeneralPath Drum = this.get();

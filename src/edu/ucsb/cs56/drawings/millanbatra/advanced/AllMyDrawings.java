@@ -12,57 +12,45 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 /**
  * A class with static methods for drawing various pictures
  * 
- * @author Phill Conrad 
- * @version for UCSB CS56, W16 
+ * @author Millan Batra 
+ * @version for UCSB CS56, F16 
  */
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** picture with three drums side by side of increasing size 
      */
     
     public static void drawPicture1(Graphics2D g2) {
 	
-	Drum d1 = new Drum(50,150,30,40);
+	Drum d1 = new Drum(10,200,10,10);
 	g2.setColor(Color.CYAN); g2.draw(d1);
-	
-	// Make a black house that's half the size, 
-	// and moved over 150 pixels in x direction
-	
-	Shape d2 = ShapeTransforms.scaledCopyOfLL(d1,0.4,0.4);
-	d2 = ShapeTransforms.translatedCopyOf(d2,150,0);
+	//drum one
+	//drum 2 is .4 size of drum 1
+	Shape d2 = ShapeTransforms.scaledCopyOfLL(d1,2,2);
+	d2 = ShapeTransforms.translatedCopyOf(d2,100,0);
 	g2.setColor(Color.GREEN); g2.draw(d2);
 	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
+	//drum that's 4 times as big and moved
+	// over 200 more pixels to right.
 	d2 = ShapeTransforms.scaledCopyOfLL(d2,4,4);
-	d2 = ShapeTransforms.translatedCopyOf(d2,150,0);
+	d2 = ShapeTransforms.translatedCopyOf(d2,100,0);
 	
-	// We'll draw this with a thicker stroke
+	// thicker stroke
 	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
-	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
 	
 	Stroke orig=g2.getStroke();
 	g2.setStroke(thick);
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(d2); 
+
 	
-	// Draw two houses with Windows
 	
-	/*	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-	
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);*/
-	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
+	//SIGN AND LABEL
 	
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
-	g2.drawString("A drum or two by Millan Batra", 20,20);
+	g2.drawString("3 increasing drums by Millan Batra", 20,20);
     }
     
     
@@ -70,72 +58,64 @@ public class AllMyDrawings
      */
     
     public static void drawPicture2(Graphics2D g2) {
+	//lower left drum	
+	DrumTwo d1 = new DrumTwo(50,200,10,10);
+	g2.setColor(Color.BLACK); g2.draw(d1);
 	
-	// Draw some coffee cups.
-	
-	
-	//g2.setColor(Color.RED);     g2.draw(large);
-	//g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	//g2.setColor(Color.BLUE);    g2.draw(tallSkinny);
-	//g2.setColor(Color.MAGENTA); g2.draw(shortFat);
-	
-	Drum d1 = new Drum(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(d1);
-	
-	// Make a drum that's half the size, 
-	// and moved over 150 pixels in x direction
-	Shape d2 = ShapeTransforms.scaledCopyOfLL(d1,0.5,0.5);
-	d2 = ShapeTransforms.translatedCopyOf(d2,150,0);
+	// drum that should be twice as big and put up and to the right
+	Shape d2 = ShapeTransforms.scaledCopyOfLL(d1,2,2);
+	d2 = ShapeTransforms.translatedCopyOf(d2,40,-20);
 	g2.setColor(Color.BLACK); g2.draw(d2);
 	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	d2 = ShapeTransforms.scaledCopyOfLL(d2,4,4);
-	d2 = ShapeTransforms.translatedCopyOf(d2,150,0);
-	
+	// drum that's same size as previous and moved right
+	d2 = ShapeTransforms.scaledCopyOfLL(d2,1,1);
+	d2 = ShapeTransforms.translatedCopyOf(d2,80,0);
 	// We'll draw this with a thicker stroke
 	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
 	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
 	
 	Stroke orig=g2.getStroke();
 	g2.setStroke(thick);
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(d2); 
 	
-	// Draw two houses with Windows
-	
-	DrumTwo dtwo1 = new DrumTwo(50,350,40,75);
-	//HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-	
-	g2.draw(dtwo1);
+	//final drum
+       
+	//DrumTwo d3 = new DrumTwo(50,50,10,10);
+	Shape d4 = ShapeTransforms.translatedCopyOf(d1,200,0);
+	g2.draw(d4);
 	g2.setColor(new Color(0x8F00FF)); 
 	
-	// Rotate the second house 45 degrees around its center.
-	//Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
-	
-	//g2.draw(hw3);
 	
 	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
-	g2.drawString("Drums2 Millan Batra", 20,20);
+	g2.drawString("Drums on a Stand in a set Millan Batra", 20,20);
     }
     
-    /** Draw a different picture with a few houses and coffee cups
-     */
-    
     public static void drawPicture3(Graphics2D g2) {
+	//drum at 150, middle of window in blue
+	DrumTwo d1= new DrumTwo(150,50,10,10);
+	g2.setColor(Color.BLUE);
+	g2.draw(d1);
+	//rotate d1 by 180 degrees and put underneath first drumm
+        Shape d2= ShapeTransforms.rotatedCopyOf(d1, Math.PI);
+	d2= ShapeTransforms.translatedCopyOf(d2, 0, 50);
+	g2.setColor(Color.RED);
+	g2.draw(d2);
+	//shift d1 down by 100
+	Shape d3= ShapeTransforms.translatedCopyOf(d1,0,100 );
+	g2.setColor(Color.BLUE);
+	g2.draw(d3);
+	//shift d2, a rotated d1 down by 100.
+	Shape d4= ShapeTransforms.translatedCopyOf(d2,0,100); 
+	g2.setColor(Color.RED);
+	g2.draw(d4);
 	
-	// label the drawing
-	
-	g2.drawString("Drums1 by Millan Batra", 20,20);
+	g2.drawString("Drums on Drums on Drums by Millan Batra", 20,20);
 	
 	
-	// Draw some coffee cups.
 	
    
     }       

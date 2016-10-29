@@ -7,7 +7,7 @@ import javax.swing.JComponent;
 /**
    A component that draws a Picture by Phill Conrad
    
-   @author Phill Conrad (original drawing)
+   @author Phil Conrad used by Millan Batra
    @version CS56, W16, UCSB
 */
 
