@@ -1,9 +1,9 @@
-package edu.ucsb.cs56.drawings.pconrad.advanced;
+package edu.ucsb.cs56.drawings.rancher.advanced;
 
-import java.awt.image.BufferedImage;
-import java.awt.Graphics2D;
-import java.io.File;
 import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 
 /**

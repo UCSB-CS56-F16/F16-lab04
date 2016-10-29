@@ -1,13 +1,13 @@
-package edu.ucsb.cs56.drawings.pconrad.advanced;
+package edu.ucsb.cs56.drawings.rancher.advanced;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
-/** A viewer class to see a picture I drew with 
- *  just three simple Java graphics objects, namely
- *  Rectangle, Line2D.Double, Ellipse2D.Double
+/**
+ * A viewer class to see a picture I drew with just three simple Java graphics objects, namely Rectangle,
+ * Line2D.Double, Ellipse2D.Double.
  *  
  * @author P. Conrad 
- * @version for UCSB CS56, W16
+ * @version for UCSB CS56, F16
  */
 
 public class MultiPictureViewer
@@ -19,8 +19,8 @@ public class MultiPictureViewer
        // If user passed a command line argument, 
        // get which picture we want to display from the user
 
-       if (args.length== 1) {
-	   whichPicture = Integer.parseInt(args[0]);
+       if (args.length == 1) {
+           whichPicture = Integer.parseInt(args[0]);
        }
 
        JFrame frame = new JFrame();
@@ -40,8 +40,7 @@ public class MultiPictureViewer
        
        // Instantiate your drawing as a "component"
        
-       MultiPictureComponent component = 
-	   new MultiPictureComponent(whichPicture);
+       MultiPictureComponent component = new MultiPictureComponent(whichPicture);
       
       // Always add your component to the frame 
       // and then make the window visible

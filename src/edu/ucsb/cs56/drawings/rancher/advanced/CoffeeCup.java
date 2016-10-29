@@ -1,9 +1,10 @@
-package edu.ucsb.cs56.drawings.pconrad.advanced;
-import java.awt.geom.GeneralPath; // combinations of lines and curves
-import java.awt.Shape; // general class for shapes
+package edu.ucsb.cs56.drawings.rancher.advanced;
 
-import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
+import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
+
+import java.awt.*;
+import java.awt.geom.GeneralPath;
 
 /**
    A Coffee Cup (wrapper around a General Path, implements Shape)

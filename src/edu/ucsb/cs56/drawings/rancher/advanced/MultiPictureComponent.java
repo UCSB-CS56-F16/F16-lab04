@@ -1,8 +1,7 @@
-package edu.ucsb.cs56.drawings.pconrad.advanced;
+package edu.ucsb.cs56.drawings.rancher.advanced;
 
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import javax.swing.JComponent;
+import javax.swing.*;
+import java.awt.*;
 
 /**
    A component that draws a Picture by Phill Conrad
