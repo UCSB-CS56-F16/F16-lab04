@@ -25,7 +25,7 @@ public class Tree extends GeneralPathWrapper implements Shape
        
        @param x x coord of top left corner of tree
        @param y y coord of top left corner of tree
-       @param trunk_radius radius of tree leaves
+       @param leaves_radius radius of tree leaves
        @param trunk_width width of trunk
        @param trunk_height height of trunk
     */
