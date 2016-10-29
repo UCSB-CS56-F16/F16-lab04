@@ -23,9 +23,7 @@ public class AllMyDrawings
     
     public static void drawPicture1(Graphics2D g2) {
 	
-	//House h1 = new House(100,250,50,75);
-	
-	TShirt T1 = new TShirt(150,150,50,50,7,7);
+	TShirt T1 = new TShirt(150,150,50,50,15,15);
 	g2.setColor(Color.CYAN); g2.draw(T1);
 	// Make a black house that's half the size, 
 	// and moved over 150 pixels in x direction
