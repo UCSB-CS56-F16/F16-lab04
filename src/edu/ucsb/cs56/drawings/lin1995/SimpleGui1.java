@@ -20,9 +20,9 @@ public class SimpleGui1 {
     public static void main (String[] args) {
 	JFrame frame = new JFrame() ;
 	
-	JButton button = new JButton("Click me") ;
-	
-	java.awt.Color myColor = new java.awt.Color(204,255,000);   // R, G, B values.
+	JButton button = new JButton("Touch me") ;
+
+	java.awt.Color myColor = new java.awt.Color(204,255,153);   // R, G, B values.
 	button.setBackground(myColor);
 	button.setOpaque(true);
 	
