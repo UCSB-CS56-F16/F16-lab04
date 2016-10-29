@@ -18,6 +18,8 @@ import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 public class AllMyDrawings {
 	/**
 	 * Draw a picture with a few cakes
+     *
+     * @param g2  command line arguments
 	 */
 
 	public static void drawPicture1(Graphics2D g2) {
