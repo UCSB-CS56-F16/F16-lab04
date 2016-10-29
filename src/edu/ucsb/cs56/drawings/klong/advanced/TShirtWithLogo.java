@@ -31,7 +31,7 @@ public class TShirtWithLogo extends TShirt implements Shape
             y +(heightOfSleeves+sleeveHeight)/2, 40, 20);  
 		
         GeneralPath wholeShirt = this.get();
-        wholeHouse.append(e1, false);
-        wholeHouse.append(e2, false);
+        wholeShirt.append(e1, false);
+        wholeShirt.append(e2, false);
     }    
 }
