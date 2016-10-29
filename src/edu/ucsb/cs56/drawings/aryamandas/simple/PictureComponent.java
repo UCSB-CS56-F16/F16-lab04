@@ -13,8 +13,8 @@ import java.awt.geom.Rectangle2D;
    A component that draws a Picture by Phill Conrad
    
    @author Phill Conrad (original drawing)
-   @author @@@ ADD YOUR NAME (fixed the snowmans's head)
-   @version for UCSB CS56, W16
+   @author Aryaman Das (fixed the snowmans's head)
+   @version for UCSB CS56, F16
 */
 
 // Your class should "extend JComponent
@@ -89,13 +89,18 @@ public class PictureComponent extends JComponent
         g2.draw(snowManMiddleCircle);
 	
         // @@@ ADD CODE HERE TO DRAW THE TOP CIRCLE
-
-
+	Circle snowManHead =
+	    new Circle
+	    (
+	     snowManCenterBottomX,
+	     snowManCenterBottomY - bottomRadius * 3.25 - middleRadius,
+	     topRadius
+	     );
+	g2.draw(snowManHead);
 
         // @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	// @@@ 20, 20 are suggested coordinates, but you may change them
-
-        // g2.drawString("Description and your name go here", 20,20);
+	g2.drawString("Snowman and a Mansion : Aryaman Das", 20,20);
 	
     }
 }
