@@ -18,9 +18,8 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few Shields
+    /** Draws a picture of 4 WarShields in a shieldwall formation
      */
-
     public static void drawPicture1(Graphics2D g2) {
       g2.setColor(Color.BLACK);
       Stroke orig = g2.getStroke();
@@ -38,8 +37,6 @@ public class AllMyDrawings
       WarShield s3 = new WarShield( 350+37.5, 240+4, 60 );
         g2.setColor(new Color(0x663333)); g2.draw(s3);
 
-//      WarShield s4 = new WarShield( 490+37.5, 240-6, 60 );
-//      g2.setColor(new Color(0x333333)); g2.draw(s4);
       Shape s4 = ShapeTransforms.rotatedCopyOf(s1, Math.PI/16.0);
       Shape s5 = ShapeTransforms.translatedCopyOf(s4,420,0);
         g2.draw(s5);
@@ -49,6 +46,8 @@ public class AllMyDrawings
       g2.drawString("Shieldwall! by Patrick Vidican", 20,20);
     }
 
+    /** Draws a picture of a Shield object bashing a WarShield in battle
+     */
     public static void drawPicture2(Graphics2D g2) {
       Stroke orig = g2.getStroke();
       Stroke thinner =
@@ -84,6 +83,8 @@ public class AllMyDrawings
       g2.drawString("Shield Bash! by Patrick Vidican", 20,20);
     }
 
+    /** Draws a picture of three Shield objects in a triangle formation
+     */
     public static void drawPicture3(Graphics2D g2) {
       Stroke orig = g2.getStroke();
       Stroke thin =

@@ -5,17 +5,19 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 
 /**
-   A Shield
-
-   @author Patrick Vidican
-   @version for CS56, F16, UCSB
-
-*/
+  * A Shield with added reinforcements. A rim to prevent splintering and iron
+  * bars to augment the overall structural integrity
+  *
+  * @author Patrick Vidican
+  * @version for CS56, F16, UCSB
+  */
 public class WarShield extends Shield implements Shape
 {
-    /**
-     * Constructor for objects of class WarShield
-     */
+  /**
+    * Constructor
+    * @param x and y are the center of your WarShield
+    * @param radius should be about the length of your forearm
+    */
     public WarShield(double x, double y, double radius)
     {
       super( x, y, radius );
@@ -44,7 +46,7 @@ public class WarShield extends Shield implements Shape
 
       // rivet the bars onto the shield face
       GeneralPath wholeShield = this.get();
-      wholeShield.append(bar1, false);     //false means dont continue the path
+      wholeShield.append(bar1, false); //false means dont continue the path
       wholeShield.append(bar2, false);
       // add a rim to prevent splintering
       wholeShield.append(rim, false);

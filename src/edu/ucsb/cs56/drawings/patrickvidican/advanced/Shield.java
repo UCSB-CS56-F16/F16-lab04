@@ -20,10 +20,10 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 public class Shield extends GeneralPathWrapper implements Shape
 {
     /**
-       Constructor
-
-       @param radius should be about the length of your forearm
-    */
+      * Constructor
+      * @param x and y are the center of your Shield
+      * @param radius should be about the length of your forearm
+      */
     public Shield(double x, double y, double radius){
 
         // Cut the wood out
