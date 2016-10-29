@@ -25,35 +25,34 @@ public class TShirt extends GeneralPathWrapper implements Shape
        @param x x coord of lower left corner of shirt
        @param y y coord of lower left corner of shirt
        @param width width of the shirt
-       @param heightSleeves height from bottom to sleves
+       @param heightOfSleeves height from bottom to sleves
        @param sleeveHeight height of the sleeves themselves
-       @param heightTop height from sleeve bottom to top
        @param sleeveLength length of the sleeve
     */
     public TShirt(double x, double y, double width,
-	 double heightSleeves, double sleeveHeight, double heightTop, double sleeveLength)
+	 double heightOfSleeves, double sleeveHeight, double sleeveLength)
     {	
     	//create the sides and bottom of shirt
     	Line2D.Double leftSide = new 
-		Line2D.Double(x, y, x , y + heightTop);
+		Line2D.Double(x, y, x , y + heightOfSleeves);
     	Line2D.Double Base = new 
 		Line2D.Double(x, y, x + width, y);
     	Line2D.Double rightSide = new 
-		Line2D.Double(x +width, y, x, y+ heightTop);	
+		Line2D.Double(x +width, y, x +width, y+ heightOfSleeves);	
 	//create the sleeves
 	Line2D.Double leftSleeveBase = new 
-		Line2D.Double(x, y+ heightTop, x -sleeveLength, y);
+		Line2D.Double(x, y+ heightOfSleeves, x -sleeveLength, y+ heightOfSleeves);
 	Line2D.Double rightSleeveBase = new 
-		Line2D.Double(x +width, y+ heightTop, x+width+sleeveLength, y+ heightTop);
+		Line2D.Double(x +width, y+ heightOfSleeves, x+width+sleeveLength, y+ heightOfSleeves);
 	//sleeveRise
 	Line2D.Double leftSleeveRise = new 
-		Line2D.Double(x-sleeveLength, y+ heightTop, x -sleeveLength, y+ heightTop+sleeveHeight);
+		Line2D.Double(x-sleeveLength, y+ heightOfSleeves, x -sleeveLength, y+ heightTop+sleeveHeight);
 	Line2D.Double rightSleeveRise = new 
-		Line2D.Double(x +width+sleeveLength, y+ heightTop, x+width+sleeveLength, y+ heightTop+sleeveHeight);		
+		Line2D.Double(x +width+sleeveLength, y+ heightOfSleeves, x+width+sleeveLength, y+ heightOfSleeves+sleeveHeight);		
 	//TopLine
 	Line2D.Double top = new 
 		Line2D.Double(x-sleeveLength, y+ heightTop+sleeveHeight, 
-				x+width+sleeveLength, y+ heightTop+sleeveHeight);
+				x+width+sleeveLength, y+ sleeveHeight+sleeveHeight);
 		
 	GeneralPath wholeShirt = this.get();
 	wholeShirt.append(leftSide, false);
