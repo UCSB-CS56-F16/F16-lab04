@@ -16,7 +16,7 @@ import java.awt.geom.Line2D;
 public class PirateFlag extends TriangularFlag implements Shape
 {
     /**
-     Constructor This constructor will supply flagPoleWidthRatio and flagPoleHeightRatio from default values then draw skull
+     This constructor will supply flagPoleWidthRatio and flagPoleHeightRatio from default values then draw skull
      and crossbones.
      @param x top left corner of the PirateFlag, x coordinate
      @param y top left corner of the PirateFlag, y coordinate
@@ -28,7 +28,7 @@ public class PirateFlag extends TriangularFlag implements Shape
 
     }
     /**
-     Constructor This constructor will draw skull and crossbones.
+     This constructor will draw skull and crossbones.
      @param x top left corner of the PirateFlag, x coordinate
      @param y top left corner of the PirateFlag, y coordinate
      @param width width of PirateFlag image, in pixels

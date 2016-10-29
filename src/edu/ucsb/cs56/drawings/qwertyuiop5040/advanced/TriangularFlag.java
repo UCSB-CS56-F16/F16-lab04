@@ -48,8 +48,8 @@ public class TriangularFlag extends GeneralPathWrapper implements Shape
        @param y y coord of top left corner of flag
        @param width of the flag (including the flag pole, if there is one)
        @param height of flag (including the flag pole, if there is one)
-	@param hasFlagPole determines whether flag will be drawn with a flagpole
-	@param flagPoleHeightRatio ratio of the height of the flag pole to the height of the flag, cannot be negative
+	@param flagPoleWidthRatio ratio of the width of the flag pole to the width of the flag, cannot be negative or zero
+	@param flagPoleHeightRatio ratio of the height of the flag pole to the height of the flag, cannot be negative or zero
     */
     public TriangularFlag(double x, double y, double width, double height, double flagPoleWidthRatio,double flagPoleHeightRatio)
     {
