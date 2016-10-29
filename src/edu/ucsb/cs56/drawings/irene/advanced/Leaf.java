@@ -6,13 +6,20 @@ import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
+    Leaf class(wrapper around a General Path, implements Shape)
+    
+    This Leaf class uses quadratic curves and lines to draw out a symmetrical leaf-shaped object. The leaf is designed in a way to be placed vertically on the page, meaning that its symmetric from left to right.
  
+ @author Irene Pattarachanyakul
+ @version for CS56, F16, UCSB
  */
 public class Leaf extends GeneralPathWrapper implements Shape
 {
     public Leaf(double x, double y, double width, double height)
     {
-        
+        /**
+         * Constructor for objects of class Leaf
+         */
         
         final double OGLX = 0;
         final double OGLY = 0;

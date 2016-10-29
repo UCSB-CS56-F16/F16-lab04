@@ -10,15 +10,19 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 
 /**
-    A Caterpillar class(wrapper around a General Path, implements Shape)
+    A CaterpillarOnLeaf class("is-a" Leaf, implements Shape)
 
-    The caterpillar object in this class is going to be made of 4 circles in total
+    The caterpillar object in this class is going to be made of 4 ellipses. It is then positioned onto a leaf
+    that is implemented by its base class, Leaf.
+ 
+    @author Irene Pattarachanyakul
+    @version for CS56, F16, UCSB
 
 */
 public class CaterpillarOnLeaf extends Leaf implements Shape
 {
     /** 
-    * Constructor for objects of class Caterpillar
+    * Constructor for objects of class CaterpillarOnLeaf 
     */
     public CaterpillarOnLeaf(double x, double y, double width, double height)
     {
