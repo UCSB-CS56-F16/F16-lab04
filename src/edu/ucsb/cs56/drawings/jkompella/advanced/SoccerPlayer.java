@@ -14,6 +14,10 @@ public class SoccerPlayer extends Person implements Shape
 {
     /**
      * Constructor for objects of class SoccerPlayer
+     *
+     * @param x a double for the lower left corner of the player
+     * @param y a double for the lower left corner of the player
+     * @param height a double for the height of the player
      */
     public SoccerPlayer(double x, double y, double height)
     {
