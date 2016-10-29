@@ -12,6 +12,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
  * A class with static methods for drawing various pictures
+ * of Envelopes and SealedEnvelopes.
  * 
  * @author Sean Shelton
  * @version for UCSB CS56, F16 

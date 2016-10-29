@@ -16,7 +16,8 @@ import java.lang.Math;
 public class SealedLetter extends Envelope implements Shape
 {
     /**
-     * Constructor for the SealedLetter
+     * Constructor for the SealedLetter:
+     *
      * Takes location x and y, then size in width and height
      * @param x x coord of lower left corner of envelope
      * @param y y coord of lower left corner of envelope

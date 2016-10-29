@@ -19,7 +19,10 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 public class Envelope extends GeneralPathWrapper implements Shape
 {
     /**
-       Constructor
+       Constructor:
+
+	Takes in the x and y coordinates of the envelope, along with size
+	in width and height.
        
        @param x x coord of lower left corner of envelope
        @param y y coord of lower left corner of envelope
