@@ -1,10 +1,7 @@
 package edu.ucsb.cs56.drawings.xuewenli.advanced;
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.Shape; // general class for shapes
-import java.awt.Stroke;
 import java.awt.geom.Rectangle2D;
-
-import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**

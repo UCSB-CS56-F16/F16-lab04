@@ -1,11 +1,6 @@
 package edu.ucsb.cs56.drawings.xuewenli.advanced;
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.Shape; // general class for shapes
-import java.awt.Stroke;
-import java.awt.geom.Rectangle2D;
-
-import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
-import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
  A Birthday Cake
@@ -37,10 +32,6 @@ public class BirthdayCake extends Cake implements Shape{
         candle3.moveTo(x + (0.55 * width), y - (0.33 * height));
         candle3.lineTo(x + (0.55 * width), y - (0.33 * height) - 20);
 
-
-        // add the windows to the house
-        // Look up the meaning of the second parameter of append
-        // (Hint--is a method of "GeneralPath")
         // get the GeneralPath that we are going to append stuff to
         GeneralPath gp = this.get();
         gp.append(candle1, false);

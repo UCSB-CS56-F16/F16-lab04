@@ -7,7 +7,6 @@ import java.awt.Stroke;
 import java.awt.BasicStroke;
 
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
-import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 /**
  * A class with static methods for drawing various pictures
@@ -97,7 +96,7 @@ public class AllMyDrawings {
         g2.drawString("FALLING CAKES! And normal cakes by Sherry Li", 20,20);
     }
 
-    /** Draw a different picture with a few houses and coffee cups
+    /** Draw a different picture with a cake vs a birthday cake
      */
 
     public static void drawPicture3(Graphics2D g2) {
