@@ -6,7 +6,7 @@ import javax.swing.JFrame;
  *  Rectangle, Line2D.Double, Ellipse2D.Double
  *  
  * @author P. Conrad
- * @author   ADD YOUR NAME @@@
+ * @author   Xuewen Sherry Li
  * @version CS56, W16, UCSB
  */
 
@@ -22,7 +22,7 @@ public class PictureViewer
 	frame.setSize(640,480); // @@@ MODIFY THIS LINE IF YOU LIKE
 	
 	// Set your own title
-	frame.setTitle("YOUR NAME HERE's Drawing"); // @@@ MODIFY THIS LINE
+	frame.setTitle("Sherry Li's Drawing"); // @@@ MODIFY THIS LINE
 	
 	// Always do this so that the red X (or red circle) works
 	// to close the window. 
