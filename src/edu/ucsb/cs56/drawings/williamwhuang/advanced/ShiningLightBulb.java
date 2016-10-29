@@ -8,7 +8,10 @@ import java.awt.geom.Rectangle2D;
 
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
-
+/** 
+    @author William Huang
+    @version for CS56, F16, UCSB
+*/
 public class ShiningLightBulb extends LightBulb implements Shape{
     public ShiningLightBulb(double x, double y,
 			    double width, double height){

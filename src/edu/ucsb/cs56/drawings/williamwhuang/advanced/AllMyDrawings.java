@@ -11,13 +11,13 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 /**
  * A class with static methods for drawing various pictures
  * 
- * @author Phill Conrad 
+ * @author William Huang
  * @version for UCSB CS56, W16 
  */
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw a picture with a few lightbulbs 
      */
     
     public static void drawPicture1(Graphics2D g2) {
@@ -25,14 +25,14 @@ public class AllMyDrawings
 	LightBulb lb1 = new LightBulb(100,250,50,50);
 	g2.setColor(Color.CYAN); g2.draw(lb1);
 	
-	// Make a black house that's one-fourth the size, 
+	// Make a black LightBulb that's one-fourth the size, 
 	// and moved over 100 pixels in x direction
 	
 	Shape lb2 = ShapeTransforms.scaledCopyOfLL(lb1,0.25,0.25);
 	lb2 = ShapeTransforms.translatedCopyOf(lb2,100,0);
 	g2.setColor(Color.BLACK); g2.draw(lb2);
 	
-	// Here's a house that's 4x as big (2x the original) with regards to the x direction
+	// Here's a Lightbulb that's 4x as big (2x the original) with regards to the x direction
 	// and moved over 120 more pixels to right.
 	lb2 = ShapeTransforms.scaledCopyOfLL(lb2,4,2);
 	lb2 = ShapeTransforms.translatedCopyOf(lb2,120,0);
@@ -49,7 +49,7 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(lb2); 
 	
-	// Draw two houses with Windows
+	// Draw two ShiningLightBulbs
 	
 	ShiningLightBulb slb1 = new ShiningLightBulb(50,350,40,75);
 	ShiningLightBulb slb2 = new ShiningLightBulb(200,350,200,100);

@@ -8,6 +8,14 @@ import java.awt.geom.Rectangle2D;
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
+/** 
+    A vector drawing of a lightbulb that implements 
+    the Shape interface, and so can be drawn, as well
+    as scaled, rotated, etc.
+
+    @author William Huang
+    @version for CS56, F16, UCSB
+*/
 public class LightBulb extends GeneralPathWrapper implements Shape{
     public LightBulb(double x, double y,
 		     double width, double height)
