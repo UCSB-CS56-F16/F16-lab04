@@ -23,7 +23,8 @@ import edu.ucsb.cs56.drawings.jkr.advanced.BetterPlayButton;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few PlayButtons 
+    /**
+     Returns Random Color
      */
     public static Color randomColor() {
         int r = (int) (255.0 * Math.random());
@@ -31,6 +32,8 @@ public class AllMyDrawings
 	int b = (int) (255.0 * Math.random());
         return new Color(r, g, b);
     }
+    /** Draw a picture with a few PlayButtons descending in a linear path
+     */
     public static void drawPicture1(Graphics2D g2) {
         Shape playButton = new PlayButton(0,0,50);
         for(int i = 0; i < 20; i++) {
@@ -43,15 +46,12 @@ public class AllMyDrawings
         g2.setColor(AllMyDrawings.randomColor());
         g2.draw(new BetterPlayButton(0, 480-100, 100));
 	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	
-	//g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
 	g2.drawString("PlayButtons by John Rehbein", 20,20);
     }
     
     
-    /** Draw a picture with a few PlayButtons and coffee cups
+    /** Draw a picture with a few PlayButtons following a sine wave path
      */
     public static void drawPicture2(Graphics2D g2) {
         Stroke thickStroke = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
