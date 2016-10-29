@@ -15,6 +15,15 @@ import java.awt.geom.Ellipse2D;
 
 public class TreeWithFruits extends Tree implements Shape{
 
+    /**
+       Constructor
+       
+       @param x x coord of top left corner of tree
+       @param y y coord of top left corner of tree
+       @param leaves_radius radius of tree leaves
+       @param trunk_width width of trunk
+       @param trunk_height height of trunk
+    */
     public TreeWithFruits(double x, double y,
 			  double leaves_radius,
 			  double trunk_width,
