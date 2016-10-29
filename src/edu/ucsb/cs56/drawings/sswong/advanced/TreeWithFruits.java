@@ -20,8 +20,12 @@ public class TreeWithFruits extends Tree implements Shape{
 			  double trunk_width,
 			  double trunk_height)
     {
+	// create the tree
+	    
 	super(x,y,leaves_radius,trunk_width,trunk_height);
 
+	// add three round fruits on the leaves, placed in a triangular fashion
+	    
 	Ellipse2D.Double fruit1 =
 	    new Ellipse2D.Double(x+(0.667*leaves_radius),
 				 y+(0.667*leaves_radius),
