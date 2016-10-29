@@ -39,12 +39,15 @@ public class PirateFlag extends TriangularFlag implements Shape
     public PirateFlag(double x, double y, double width, double height,double flagPoleWidthRatio,double flagPoleHeightRatio)
     {
 	super(x,y,width,height,flagPoleWidthRatio,flagPoleHeightRatio);
-	double fW=this.getFlagWidth();
-	double fH=this.getFlagHeight();
-	double fSX=this.getFlagStartX();
-	double fSY=this.getFlagStartY();
+	//defining variables
+	double fW=this.getFlagWidth();//width of flag, which doesn't include flag pole
+	double fH=this.getFlagHeight();//height of flag, which doesn't include flag pole
+	double fSX=this.getFlagStartX();//starting x value of flag, which doesn't include flag pole
+	double fSY=this.getFlagStartY();//starting y value of flag, which doesn't include flag pole
 	GeneralPath gp = this.get();
 	//skull shapes
+	//to clarify, fSX+fW*0.15 means 15% width to the right of the left side of the flag.
+	//similarly, fSY+fH*0.40 means 40% height below the top of the flag.
 	Ellipse2D.Double upperHead=new Ellipse2D.Double(fSX+fW*0.15,fSY+fH*0.20,fW*0.2,fH*0.3);
 	Ellipse2D.Double lowerHead=new Ellipse2D.Double(fSX+fW*0.19,fSY+fH*0.40,fW*0.12,fH*0.22);
 	Ellipse2D.Double leftEye=new Ellipse2D.Double(fSX+fW*0.18,fSY+fH*0.27,fW*0.06,fH*0.09);

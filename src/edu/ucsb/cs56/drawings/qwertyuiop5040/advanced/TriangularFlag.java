@@ -58,16 +58,18 @@ public class TriangularFlag extends GeneralPathWrapper implements Shape
 	flagStartY=y;
 	flagStartX=x;
 	Rectangle2D.Double pole=null;
-		flagWidth=width*(1.0)/(1.0+flagPoleWidthRatio);
-		flagHeight=height*(1.0)/(1.0+flagPoleHeightRatio);
-		flagStartX+=width*(flagPoleWidthRatio)/(1.0+flagPoleWidthRatio);
-		pole= new Rectangle2D.Double(x,y, width-flagWidth, height);
+	flagWidth=width*(1.0)/(1.0+flagPoleWidthRatio);
+	flagHeight=height*(1.0)/(1.0+flagPoleHeightRatio);
+	flagStartX+=width*(flagPoleWidthRatio)/(1.0+flagPoleWidthRatio);
+	//define shapes
+	pole= new Rectangle2D.Double(x,y, width-flagWidth, height);
 	Line2D.Double flagUpperBoundary=
 	    new Line2D.Double(flagStartX, flagStartY, flagStartX+flagWidth, flagStartY+flagHeight/2.0);
 	Line2D.Double flagLowerBoundary=
 	    new Line2D.Double(flagStartX, flagStartY+flagHeight, flagStartX+flagWidth,flagStartY+flagHeight/2.0);
          Line2D.Double flagLeftBoundary=
 	    new Line2D.Double(flagStartX, flagStartY, flagStartX, flagStartY+flagHeight);
+	//add things to wrapped GeneralPath
 	GeneralPath flagPath=this.get();
 	flagPath.append(pole,false);
 	flagPath.append(flagUpperBoundary,false);
