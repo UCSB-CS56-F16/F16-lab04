@@ -20,7 +20,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 public class Drawer extends GeneralPathWrapper implements Shape
 {
     /**
-       Constructor
+       Constructor of a drawer with a handle in the middle and 2 outlines
        
        @param x x coord of lower left corner of drawer
        @param y y coord of lower left corner of drawer

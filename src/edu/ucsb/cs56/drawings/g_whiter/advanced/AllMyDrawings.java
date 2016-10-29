@@ -18,7 +18,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw a picture with a few drawers and chests of drawers 
      */
     
     public static void drawPicture1(Graphics2D g2) {
@@ -64,9 +64,9 @@ public class AllMyDrawings
 	g2.setColor(Color.BLACK); 
 	g2.drawString("Drawers by Gregory Whiter", 20,20);
     }
-    
-    
-   
+    /**
+		Draw a picture of chest of drawers and drawers, with different colors and stroke thickness
+   */
     public static void drawPicture2(Graphics2D g2) {
 	
 	
@@ -116,7 +116,9 @@ public class AllMyDrawings
 	g2.drawString("Manipulations of Drawers, Gregory Whiter", 20,20);
     }
     
-      
+      /**
+		Draw a few drawers and ChestofDrawers in different sizes and colors
+	  */
     public static void drawPicture3(Graphics2D g2) {
 	
 	// label the drawing

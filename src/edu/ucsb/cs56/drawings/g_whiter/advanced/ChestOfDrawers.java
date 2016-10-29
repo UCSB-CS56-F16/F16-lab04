@@ -20,7 +20,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 public class ChestOfDrawers extends Drawer implements Shape
 {
     /**
-       Constructor
+       Constructor for a collection of 3 drawers in a chest with feet
        
        @param x x coord of lower left corner of drawer
        @param y y coord of lower left corner of drawer
