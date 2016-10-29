@@ -2,7 +2,7 @@ package edu.ucsb.cs56.drawings.g_whiter.advanced;
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.Shape; // general class for shapes
 
-import java.awt.geom.Ellipse2D2D; 
+import java.awt.geom.Ellipse2D; 
 import java.awt.geom.Rectangle2D;
 
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
@@ -17,7 +17,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    @version for CS56, W16, UCSB
    
 */
-public class House extends GeneralPathWrapper implements Shape
+public class Drawer extends GeneralPathWrapper implements Shape
 {
     /**
        Constructor
@@ -27,7 +27,7 @@ public class House extends GeneralPathWrapper implements Shape
        @param width width of the drawer
        @param height of drawer 
     */
-    public House(double x, double y, double width, double height)
+    public Drawer(double x, double y, double width, double height)
     {
 	
         // Rather than having to scale at the end, we can just
@@ -46,16 +46,19 @@ public class House extends GeneralPathWrapper implements Shape
         
         Rectangle2D.Double innerOutline = 
             new Rectangle2D.Double (x + .05 * width, y + .05 * height,
-                               .95 * width, .95 * height);
+                               .90 * width, .90 * height);
 	
-        Ellipse2D2D.Double handle =
-            new Ellipse2D.Double (x + width/2.0, y + height/2,
+        Ellipse2D.Double handle =
+            new Ellipse2D.Double (x + .875*width/2.0, y + .94*height/2,
                                .15 * width, .15 * height);
 							   
 	
         // put the whole drawer together
 	
-        GeneralPath Drawer = this.get();
+        GeneralPath newDrawer = this.get();
+		newDrawer.append(outerOutline, false);
+		newDrawer.append(innerOutline, false);
+		newDrawer.append(handle, false);
          
     }
 }
