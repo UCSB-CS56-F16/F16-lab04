@@ -3,6 +3,7 @@
 .ant-targets-build.xml
 
 images/
+javadoc/
 
 *.class
 
