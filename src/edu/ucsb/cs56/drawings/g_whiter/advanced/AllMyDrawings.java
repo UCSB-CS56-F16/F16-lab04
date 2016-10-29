@@ -99,13 +99,13 @@ public class AllMyDrawings
 	
 	
 	ChestOfDrawers hw1 = new ChestOfDrawers(50,350,40,75);
-	Drawer hw2 = new Drawer(200,350,200,100);
+	Drawer hw2 = new Drawer(100,100,25,40);
 	
 	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); 
-	
-	// Rotate the drawer 45 degrees around its center.
-	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
+	g2.setColor(new Color(0x6000F0)); 
+	g2.setStroke(orig);
+	// Rotate the drawer 60 degrees around its center.
+	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/3.0);
 	
 	g2.draw(hw3);
 	
@@ -113,7 +113,7 @@ public class AllMyDrawings
 	
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
-	g2.drawString("A bunch of manipulations of Drawers, Gregory Whiter", 20,20);
+	g2.drawString("Manipulations of Drawers, Gregory Whiter", 20,20);
     }
     
       
@@ -126,10 +126,10 @@ public class AllMyDrawings
 	
 	// Draw some Drawers.
 	
-	Drawer large = new Drawer(100,50,225,150);
-	Drawer small = new Drawer(20,50,40,30);
+	Drawer large = new Drawer(350, 150, 50,75);
+	Drawer small = new Drawer(350,50,40,30);
 	
-	g2.setColor(Color.RED);     g2.draw(large);
+	g2.setColor(Color.CYAN);     g2.draw(large);
 	g2.setColor(Color.GREEN);   g2.draw(small);
 	
 	ChestOfDrawers largeC = new ChestOfDrawers(100,50,225,150);
