@@ -17,7 +17,7 @@ public class LightBulb extends GeneralPathWrapper implements Shape{
 	double bottomRectangleHeight = .3 * height;
 
 	Rectangle2D.Double bottomRectangle =
-	    new Rectangle2D.Double(x, y - bulbRadius,
+	    new Rectangle2D.Double(x - bottomRectangleWidth / 2.0, y + bulbRadius,
 				   bottomRectangleWidth,
 				   bottomRectangleHeight);
 	Circle bulb =
