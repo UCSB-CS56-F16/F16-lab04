@@ -26,37 +26,44 @@ public class TShirt extends GeneralPathWrapper implements Shape
        @param y y coord of lower left corner of shirt
        @param width width of the shirt
        @param heightSleeves height from bottom to sleves
+       @param sleeveHeight height of the sleeves themselves
        @param heightTop height from sleeve bottom to top
+       @param sleeveLength length of the sleeve
     */
     public TShirt(double x, double y, double width,
-		  double heightSleeves, double heightTop)
-    {
-
-	// Rather than having to scale at the end, we can just
-	// draw things the right way to begin with, using the
-	// x, y, width and height, etc.
-	
-	        Rectangle2D.Double firstStory =
-		    new Rectangle2D.Double(x, firstStoryUpperLeftY ,
-					   width, firstStoryHeight);
-
-		// make the roof.   Remember that y goes DOWN the page,
-		// so we ADD to y to get a "lower" value on the screen
-
-		        Line2D.Double leftRoof =
-			    new Line2D.Double (x, y + roofHeight,
-					       x + width/2.0, y);
-
-			        Line2D.Double rightRoof =
-				    new Line2D.Double (x + width/2.0, y,
-						       x + width, y + roofHeight);
-
-				// put the whole house together
-
-				GeneralPath wholeHouse = this.get();
-				wholeHouse.append(firstStory, false);
-				wholeHouse.append(leftRoof, false);
-				wholeHouse.append(rightRoof, false);
+	 double heightSleeves, double sleeveHeight, double heightTop, double sleeveLength)
+    {	
+    	//create the sides and bottom of shirt
+    	Line2D.Double leftSide = new 
+		Line2D.Double(x, y, x , y + heightTop);
+    	Line2D.Double Base = new 
+		Line2D.Double(x, y, x + width, y);
+    	Line2D.Double rightSide = new 
+		Line2D.Double(x +width, y, x, y+ heightTop);	
+	//create the sleeves
+	Line2D.Double leftSleeveBase = new 
+		Line2D.Double(x, y+ heightTop, x -sleeveLength, y);
+	Line2D.Double rightSleeveBase = new 
+		Line2D.Double(x +width, y+ heightTop, x+width+sleeveLength, y+ heightTop);
+	//sleeveRise
+	Line2D.Double leftSleeveRise = new 
+		Line2D.Double(x-sleeveLength, y+ heightTop, x -sleeveLength, y+ heightTop+sleeveHeight);
+	Line2D.Double rightSleeveRise = new 
+		Line2D.Double(x +width+sleeveLength, y+ heightTop, x+width+sleeveLength, y+ heightTop+sleeveHeight);		
+	//TopLine
+	Line2D.Double top = new 
+		Line2D.Double(x-sleeveLength, y+ heightTop+sleeveHeight, 
+				x+width+sleeveLength, y+ heightTop+sleeveHeight);
+		
+	GeneralPath wholeShirt = this.get();
+	wholeShirt.append(leftSide, false);
+	wholeShirt.append(Base, false);
+	wholeShirt.append(rightSide, false);
+	wholeShirt.append(leftSleeveBase, false);
+	wholeShirt.append(rightSleeveBase, false);
+	wholeShirt.append(leftSleeveRise, false);
+	wholeShirt.append(rightSleeveRise, false);
+	wholeShirt.append(top, false);
     }
 }
 
