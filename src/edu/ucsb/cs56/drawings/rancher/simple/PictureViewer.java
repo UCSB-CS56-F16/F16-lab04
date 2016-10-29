@@ -1,5 +1,6 @@
-package edu.ucsb.cs56.drawings.pconrad.simple;
-import javax.swing.JFrame;
+package edu.ucsb.cs56.drawings.rancher.simple;
+
+import javax.swing.*;
 
 /** A viewer class to see a picture I drew with 
  *  just three simple Java graphics objects, namely
