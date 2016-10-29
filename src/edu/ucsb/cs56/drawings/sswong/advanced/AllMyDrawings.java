@@ -150,23 +150,30 @@ public class AllMyDrawings
     public static void drawPicture4(Graphics2D g2){
 
 	// labeling the drawing
-	g2.drawString("One tree by Simon Wong",20,20);
+	g2.drawString("Tree trees by Simon Wong",20,20);
 
-	// draw a tree
-	Tree t = new Tree(100,50,100,25,50);
+	// draw three trees
+	Tree t1 = new Tree(100,50,100,25,50);
+	Tree t2 = new Tree(200,50,75,20,30);
+	Tree t3 = new Tree(100,200,50,40,25);
 	g2.setColor(Color.GREEN);
-	g2.draw(t);
-
+	g2.draw(t1);
+	g2.draw(t2);
+	g2.draw(t3);
     }
     public static void drawPicture5(Graphics2D g2){
 
 	// labeling the drawing
-	g2.drawString("One tree with fruits by Simon Wong",20,20);
+	g2.drawString("Three trees with fruits by Simon Wong",20,20);
 
-	// draw a tree with fruits
-	TreeWithFruits twf = new TreeWithFruits(100,50,100,25,50);
+	// draw three trees with fruits
+	TreeWithFruits twf1 = new TreeWithFruits(100,50,100,25,50);
+	TreeWithFruits twf2 = new TreeWithFruits(200,50,75,20,30);
+	TreeWithFruits twf3 = new TreeWithFruits(100,200,50,40,25);
 	g2.setColor(Color.GREEN);
-	g2.draw(twf);
+	g2.draw(twf1);
+	g2.draw(twf2);
+	g2.draw(twf3);
 
     }
     
