@@ -33,8 +33,8 @@ Public class ToothBrushWithCup extends ToothBrush implements Shape{
 
 	Point2D.Double upper = new Point2D.Double(x,0.5*y);
 	Point2D.Double lower = new Point2D.Double(x,0);
-	Point2D.Double right = new Point2D.Double(x+0.2*y,0.4y);
-	Point2D.Double left = new Point2D.Double(x-0.2y,0.1y);
+	Point2D.Double right = new Point2D.Double(x+0.2*y,0.4 * y);
+	Point2D.Double left = new Point2D.Double(x-0.2*y,0.1*y);
 	
 	Line2D.Double cupTop = new Line2D.Double(upper,right);
 	Line2D.Double cupRight = new Line2D.Double(right,lower);
