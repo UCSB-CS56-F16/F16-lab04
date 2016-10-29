@@ -47,14 +47,26 @@ public class AllMyDrawings
     }
     
     
-    /** Draw a picture of a brown spotted cow, and a black cow facing each other.
+    /** Draw a picture of a brown spotted cow, and a black cow facing away  from each other.
      */
     public static void drawPicture2(Graphics2D g2) {
 	
-	// Draw a brown spotted cow, and a black cow facing each other.
+	// Draw a brown spotted cow, and a black cow facing away from other.
+		Color brn = new Color(0x8B4513);
+		g2.setColor(brn);
+		CowSpots brnCow = new CowSpots(100, 100, 100, 50);
+		g2.draw(brnCow);
+
+		Shape blkCow = ShapeTransforms.horizontallyFlippedCopyOf(brnCow);
+		blkCow = ShapeTransforms.translatedCopyOf(blkCow, 400, 25);
+		blkCow = ShapeTransforms.scaledCopyOf(blkCow, .75, .75);
+
+		g2.setColor(Color.black);
+		g2.draw(blkCow);
+
 
 	g2.setColor(Color.BLACK); 
-	g2.drawString("Brown Spot and Black face to face, By Richard Young", 20,20);
+	g2.drawString("Brown Spot and Black looking away, By Richard Young", 20,20);
     }
     
     /** Draw a different picture with a few houses and coffee cups
