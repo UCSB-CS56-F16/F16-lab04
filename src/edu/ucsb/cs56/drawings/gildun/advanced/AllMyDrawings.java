@@ -69,23 +69,35 @@ public class AllMyDrawings
 	g2.drawString("Brown Spot and Black looking away, By Richard Young", 20,20);
     }
     
-    /** Draw a different picture with a few houses and coffee cups
+    /** Draw a pasture of cows looking to the west
      */
     
     public static void drawPicture3(Graphics2D g2) {
 	
 	// label the drawing
 	
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
-	
-	
-	// Draw some coffee cups.
-	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	
+	g2.drawString("Cows looking west, By Richard Young", 20,20);
+
+		CowSpots spotDad = new CowSpots(150, 100, 150, 100);
+		g2.setColor(Color.black);
+		g2.draw(spotDad);
+
+		Shape spotMom = ShapeTransforms.scaledCopyOf(spotDad, .8, .8);
+		Color brn = new Color(0x8B4513);
+		g2.setColor(brn);
+		spotMom = ShapeTransforms.translatedCopyOf(spotMom, 25, 180);
+		g2.draw(spotMom);
+
+		Shape spotBabyA = ShapeTransforms.scaledCopyOf(spotDad, .5, .5);
+		Color drkbrn = new Color(0x8B400000);
+		g2.setColor(drkbrn);
+		spotBabyA = ShapeTransforms.translatedCopyOf(spotBabyA, 250, 115);
+		g2.draw(spotBabyA);
+
+		Cow BabyB = new Cow(500, 150, 75, 30);
+		g2.draw(BabyB);
+
+
+
     }       
 }
