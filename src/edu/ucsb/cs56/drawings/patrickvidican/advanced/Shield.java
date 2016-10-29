@@ -27,13 +27,26 @@ public class Shield extends GeneralPathWrapper implements Shape
     public Shield(double x, double y, double radius){
 
         // Cut the wood out
-        Ellipse2D.Double edge = new Ellipse2D.Double( x-radius, y-radius, 2*radius,  2*radius );
+        Ellipse2D.Double edge =
+          new Ellipse2D.Double( x-radius,
+                                y-radius,
+                                2*radius,
+                                2*radius );
 
         // hammer out the boss
         double bossOuterRadius = radius/4.5;
         double bossInnerRadius = bossOuterRadius/1.667;
-        Ellipse2D.Double bossOuter = new Ellipse2D.Double( x-bossOuterRadius, y-bossOuterRadius, 2*bossOuterRadius,  2*bossOuterRadius );
-        Ellipse2D.Double bossInner = new Ellipse2D.Double( x-bossInnerRadius, y-bossInnerRadius, 2*bossInnerRadius,  2*bossInnerRadius );
+        Ellipse2D.Double bossOuter =
+          new Ellipse2D.Double( x-bossOuterRadius,
+                                y-bossOuterRadius,
+                                2*bossOuterRadius,
+                                2*bossOuterRadius );
+
+        Ellipse2D.Double bossInner =
+          new Ellipse2D.Double( x-bossInnerRadius,
+                                y-bossInnerRadius,
+                                2*bossInnerRadius,
+                                2*bossInnerRadius );
 
         // rivet the boss onto the wood
         GeneralPath wholeShield = this.get();

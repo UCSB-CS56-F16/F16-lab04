@@ -25,18 +25,28 @@ public class WarShield extends Shield implements Shape
 
       // add two iron bars to hold the wood together
 	    Rectangle2D.Double bar1 =
-        new Rectangle2D.Double(x+radius/2-12, y-radius/2, radius/10, radius);
+        new Rectangle2D.Double( x+radius/2,
+                                y-radius/2,
+                                radius/10,
+                                radius        );
 	    Rectangle2D.Double bar2 =
-	      new Rectangle2D.Double(x-radius/2, y-radius/2, radius/10, radius);
+	      new Rectangle2D.Double( x-radius/2-12,
+                                y-radius/2,
+                                radius/10,
+                                radius     );
 
+      double rimRadius = radius + (radius/8);
       Ellipse2D.Double rim =
-        new Ellipse2D.Double( (x-radius)+(radius/10), (y-radius)+(radius/10), (2*radius)+(radius/10),  (2*radius)+(radius/10) );
-
+        new Ellipse2D.Double( x-rimRadius,
+                              y-rimRadius,
+                              2*rimRadius,
+                              2*rimRadius );
 
       // rivet the bars onto the shield face
       GeneralPath wholeShield = this.get();
-      wholeShield.append(bar1, false);
+      wholeShield.append(bar1, false);     //false means dont continue the path
+      wholeShield.append(bar2, false);
+      // add a rim to prevent splintering
       wholeShield.append(rim, false);
-      wholeShield.append(bar2, false); //false means dont continue the path
     }
 }
