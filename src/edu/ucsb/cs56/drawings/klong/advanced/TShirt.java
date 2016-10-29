@@ -46,13 +46,13 @@ public class TShirt extends GeneralPathWrapper implements Shape
 		Line2D.Double(x +width, y+ heightOfSleeves, x+width+sleeveLength, y+ heightOfSleeves);
 	//sleeveRise
 	Line2D.Double leftSleeveRise = new 
-		Line2D.Double(x-sleeveLength, y+ heightOfSleeves, x -sleeveLength, y+ heightTop+sleeveHeight);
+		Line2D.Double(x-sleeveLength, y+ heightOfSleeves, x -sleeveLength, y+ heightOfSleeves+sleeveHeight);
 	Line2D.Double rightSleeveRise = new 
 		Line2D.Double(x +width+sleeveLength, y+ heightOfSleeves, x+width+sleeveLength, y+ heightOfSleeves+sleeveHeight);		
 	//TopLine
 	Line2D.Double top = new 
-		Line2D.Double(x-sleeveLength, y+ heightTop+sleeveHeight, 
-				x+width+sleeveLength, y+ sleeveHeight+sleeveHeight);
+		Line2D.Double(x-sleeveLength, y+ heightOfSleeves+sleeveHeight, 
+				x+width+sleeveLength, y+ heightOfSleeves+sleeveHeight);
 		
 	GeneralPath wholeShirt = this.get();
 	wholeShirt.append(leftSide, false);
