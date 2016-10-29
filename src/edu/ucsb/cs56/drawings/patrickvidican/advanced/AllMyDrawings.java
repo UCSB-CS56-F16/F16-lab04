@@ -48,6 +48,7 @@ public class AllMyDrawings
       g2.setColor(Color.BLACK);
       g2.drawString("Shieldwall! by Patrick Vidican", 20,20);
     }
+
     public static void drawPicture2(Graphics2D g2) {
       Stroke orig = g2.getStroke();
       Stroke thinner =
@@ -82,7 +83,26 @@ public class AllMyDrawings
       g2.draw(whoosh1); g2.draw(whoosh2); g2.draw(whoosh3);
       g2.drawString("Shield Bash! by Patrick Vidican", 20,20);
     }
+
     public static void drawPicture3(Graphics2D g2) {
-      // stub
+      Stroke orig = g2.getStroke();
+      Stroke thin =
+        new BasicStroke (2.0f,
+                           BasicStroke.CAP_BUTT,
+                           BasicStroke.JOIN_BEVEL);
+      g2.setStroke(thin);
+      WarShield bottom = new WarShield( 320, 340, 80 );
+        g2.setColor(new Color(0x333333)); g2.draw(bottom);
+
+      WarShield s1 = new WarShield( 400, 180, 80 );
+      Shape top1 = ShapeTransforms.rotatedCopyOf(s1, Math.PI/4.0);
+        g2.setColor(new Color(0x993300)); g2.draw(top1);
+
+      Shield top2 = new Shield( 230-10, 190-2, 90 );
+        g2.setColor(new Color(0x663300)); g2.draw(top2);
+
+      g2.setStroke(orig);
+      g2.setColor(Color.BLACK);
+      g2.drawString("Protect the King! by Patrick Vidican", 20,20);
     }
 }
