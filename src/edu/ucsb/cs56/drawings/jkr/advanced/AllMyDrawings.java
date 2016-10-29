@@ -26,18 +26,18 @@ public class AllMyDrawings
     /** Draw a picture with a few PlayButtons 
      */
     public static Color randomColor() {
-        int r = 255 * Math.Random();
-        int g = 255 * Math.Random();
-        int b = 255 * Math.Random();
-        return Color(r, g, b);
+        int r = 255 * Math.random();
+        int g = 255 * Math.random();
+        int b = 255 * Math.random();
+        return new Color(r, g, b);
     }
     public static void drawPicture1(Graphics2D g2) {
         PlayButton playButton = new PlayButton(0,0,50);
         for(int i = 0; i < 20; i++) {
             g2.setColor(AllMyDrawings.randomColor());
             g2.draw(playButton);
-            playButton = ShapeTransforms.translatedCopyOf(playButton,38,38);
-            playButton = ShapeTransforms.rotatedCopyOf(playButton, Math.PI/8.0);
+            playButton = (PlayButton)ShapeTransforms.translatedCopyOf(playButton,38,38);
+            playButton = (PlayButton)ShapeTransforms.rotatedCopyOf(playButton, Math.PI/8.0);
             
         }
         g2.setColor(AllMyDrawings.randomColor());
@@ -61,7 +61,7 @@ public class AllMyDrawings
             if(i%2 == 0) {
                 g2.setStroke(thickStroke);
                 g2.setColor(AllMyDrawings.randomColor());
-                g2.draw(new PlayButton(Math.sin(i*3.1415/20.0)));
+                g2.draw(new PlayButton(i * 50, 200*Math.sin(i*3.1415/20.0), 50));
             } else {
                 g2.setStroke(originalStroke);
                 g2.setColor(new Color(0xFF0000));
@@ -88,9 +88,9 @@ public class AllMyDrawings
         g2.setColor(new Color(0x8F00FF));
         
         // Rotate the second PlayButton 45/2 degrees around its center.
-        Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/8.0);
+        Shape playButton3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/8.0);
         
-        g2.draw(playButton2);
+        g2.draw(playButton3);
         
         g2.drawString("PlayButtons again again by John Rehbein", 20,20);
 	
