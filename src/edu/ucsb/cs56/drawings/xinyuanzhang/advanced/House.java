@@ -18,6 +18,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    
 */
 public class House extends GeneralPathWrapper implements Shape
+
 {
     /**
        Constructor
