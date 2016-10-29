@@ -36,7 +36,7 @@ public class ChestOfDrawers extends Drawer implements Shape
             new Rectangle2D.Double(x, y + height ,
 				   width, height);
 	
-        // make the inner outline
+        // makes the inner outline
         
         Rectangle2D.Double innerOutline2 = 
             new Rectangle2D.Double (x + .05 * width, y + 1.05 * height,
