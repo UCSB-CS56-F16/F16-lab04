@@ -15,7 +15,6 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 	@version for CS56, F16, UCSB
 */
 public class Cup extends GeneralPathWrapper implements Shape{
-	
 	/**
 		Constructor
 		@param x x coord of lower left corner of cup
@@ -26,19 +25,19 @@ public class Cup extends GeneralPathWrapper implements Shape{
 	public Cup(double x, double y, double width, double height){
 		double topwidth = width;
 		double bottomwidth = .8*width;
-		double bx = 1*width;
+		double bx = x+.1*width;
 
-		Line2D.Double bottom =
-			new Line2D.Double(bx, y, bx+width, y);
 		Line2D.Double top =
-			new Line2D.Double(x, y+height, x+width,
+			new Line2D.Double(x, y, x+topwidth, y);
+		Line2D.Double bottom =
+			new Line2D.Double(bx, y+height, bx+bottomwidth,
 			y+height);
 		
 		Line2D.Double leftside =
-			new Line2D.Double(bx, y, x, y+height);
+			new Line2D.Double(bx, y+height, x, y);
 		Line2D.Double rightside = 
-			new Line2D.Double(bx+bottomwidth, y,
-			x+width, y+height);
+			new Line2D.Double(bx+bottomwidth, y+height,
+			x+width, y);
 
 		//assemble Cup componenets
 		GeneralPath cup = this.get();
@@ -47,4 +46,7 @@ public class Cup extends GeneralPathWrapper implements Shape{
 		cup.append(leftside,false);
 		cup.append(rightside,false);
 	}
+	
+
+	
 }
