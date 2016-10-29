@@ -4,52 +4,36 @@ import java.awt.Shape;
 import java.awt.geom.Rectangle2D;
 
 /**
-   A House
+   A Playbutton
       
-   @author Phill Conrad 
-   @version for CS56, W16, UCSB
+   @author John Rehbein
+   @version for CS56, F16, UCSB
    
 */
-public class HouseWithWindows extends House implements Shape
+public class BetterPlayButton extends PlayButton implements Shape
 {
     /**
-     * Constructor for objects of class CoffeeCup
+     Constructor
+     
+     @param x x coord of lower left corner of house
+     @param y y coord of lower left corner of house
+     @param radius radius of button
      */
-    public HouseWithWindows(double x, double y, double width, double height)
+    public PlayButton(int x, int y, int radius)
     {
-	// construct the basic house shell
-	super(x,y,width,height);
-	
-	// get the GeneralPath that we are going to append stuff to
-	GeneralPath gp = this.get();
-	
-	// Make three windows, spaced like this, where w=width/10.0;
-	// | +--+ +--+ +--+ |
-	// | |  | |  | |  | |
-	// | +--+ +--+ +--+ |
-	// |w 2w w 2w w w2 w|
-	//
-	// The top of window will be at y + 0.5*height and the
-	// height of the window is 0.25height;
-	
-	double w = 0.10 * width;
-	double winTop = y + 0.5 * height;
-	double winHt =  0.25 * height;
-	
-	Rectangle2D.Double win1 =
-	    new Rectangle2D.Double(x + w, winTop, 2.0 * w, winHt);
-	Rectangle2D.Double win2 =
-	    new Rectangle2D.Double(x + 4.0*w, winTop, 2.0 * w, winHt);
-	Rectangle2D.Double win3 =
-	    new Rectangle2D.Double(x + 7.0*w, winTop, 2.0 * w, winHt);
-	
-	// add the windows to the house
-	// Look up the meaning of the second parameter of append
-	// (Hint--is a method of "GeneralPath")
-	
-        GeneralPath wholeHouse = this.get();
-        wholeHouse.append(win1, false);
-        wholeHouse.append(win2, false);
-        wholeHouse.append(win3, false); 
-    }    
+        super(x, y, radius);
+        Point2D[] point = {new Point2D(x+radius/3.0+radius/20.0, y+radius/3.0+radius/20.0),
+            new Point2D(x+radius*2.0/3.0-radius/20.0, y+radius/2.0)) };
+        
+        // An extra circle cause it looks cooler
+        Ellipse2D.Double innerCircle = new Ellipse2D.Double(x+radius/10.0, y+radius/10.0, radius * 9/10.0, radius * 9/10.0);
+        
+        
+        Line2D.Double accentLine =
+        new Line2D.Double (point[0], point[1]);
+        
+        GeneralPath playButtonPath = this.get();
+        playButtonPath.append(innerCircle, false);
+        playButtonPath.append(accentLine, false);
+    }
 }

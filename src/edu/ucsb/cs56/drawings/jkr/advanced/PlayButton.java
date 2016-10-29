@@ -5,7 +5,7 @@ import java.awt.Point;
 
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
-import java.awt.geom.Circle;
+import java.awt.geom.Ellipse2D;
 
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
@@ -34,21 +34,20 @@ public class PlayButton extends GeneralPathWrapper implements Shape
 	Point2D[] point = {new Point2D(x+radius/3.0, y+radius/3.0),
 			 new Point2D(x+radius/3.0, y+radius*2.0/3.0),
 			 new Point2D(x+radius*2.0/3.0, y+radius/2.0)) };
-    
+        // The circle that contains the triangle
+        Ellipse2D.Double circle = new Ellipse2D.Double(x, y, radius, radius);
+        
          Line2D.Double line1 = 
 	     new Line2D.Double (point[0], point[1]);
          Line2D.Double line2 = 
 	     new Line2D.Double (point[1], point[2]);
          Line2D.Double line3 = 
 	     new Line2D.Double (point[2], point[0]);
-
-    
-    
-      
 	
         GeneralPath playButtonPath = this.get();
-        wholeHouse.append(line1, false);
-        wholeHouse.append(line2, false);
-        wholeHouse.append(line3, false);    
+        playButtonPath.append(circle, false);
+        playButtonPath.append(line1, false);
+        playButtonPath.append(line2, false);
+        playButtonPath.append(line3, false);
     }
 }
