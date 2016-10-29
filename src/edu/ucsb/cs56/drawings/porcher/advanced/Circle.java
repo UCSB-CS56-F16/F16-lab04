@@ -1,11 +1,11 @@
-package edu.ucsb.cs56.drawings.jstaahl.simple;
+package edu.ucsb.cs56.drawings.porcher.advanced;
 
 /**
  * Circle extends Ellipse2D to make it easier to draw circles
  * because the parameters to the constructor are more convenient
  * 
  * @author P. Conrad 
- * @version CS56, W16, UCSB
+ * @version CS56, F16, UCSB
  */
 
 public class Circle 

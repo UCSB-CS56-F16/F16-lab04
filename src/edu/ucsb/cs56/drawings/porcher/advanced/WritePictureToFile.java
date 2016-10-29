@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.drawings.andrewberls.advanced;
+package edu.ucsb.cs56.drawings.porcher.advanced;
 
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
@@ -55,11 +55,11 @@ public class WritePictureToFile
        
        if (whichPicture.equals("1")) {
 	   AllMyDrawings.drawPicture1(g2);
-       } else if (whichPicture.equals("2")) {
-	   AllMyDrawings.drawPicture2(g2);
-       } else if (whichPicture.equals("3")) {
-	   AllMyDrawings.drawPicture3(g2);
-       }
+       } //else if (whichPicture.equals("2")) {
+	  // AllMyDrawings.drawPicture2(g2);
+      // } else if (whichPicture.equals("3")) {
+	  // AllMyDrawings.drawPicture3(g2);
+       //}
        
        final String imageType = "png"; // choices: "gif", "png", "jpg"
 
