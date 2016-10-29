@@ -153,9 +153,9 @@ public class AllMyDrawings
 	g2.drawString("Tree trees by Simon Wong",20,20);
 
 	// draw three trees
-	Tree t1 = new Tree(0,50,100,25,50);
-	Tree t2 = new Tree(200,75,75,20,30);
-	Tree t3 = new Tree(100,200,50,40,25);
+	Tree t1 = new Tree(20,50,100,25,50);
+	Tree t2 = new Tree(250,75,75,20,30);
+	Tree t3 = new Tree(175,200,50,40,25);
 	g2.setColor(Color.GREEN);
 	g2.draw(t1);
 	g2.draw(t2);
@@ -167,9 +167,9 @@ public class AllMyDrawings
 	g2.drawString("Three trees with fruits by Simon Wong",20,20);
 
 	// draw three trees with fruits
-	TreeWithFruits twf1 = new TreeWithFruits(0,50,100,25,50);
-	TreeWithFruits twf2 = new TreeWithFruits(200,75,75,20,30);
-	TreeWithFruits twf3 = new TreeWithFruits(100,200,50,40,25);
+	TreeWithFruits twf1 = new TreeWithFruits(20,50,100,25,50);
+	TreeWithFruits twf2 = new TreeWithFruits(250,75,75,20,30);
+	TreeWithFruits twf3 = new TreeWithFruits(275,200,50,40,25);
 	g2.setColor(Color.GREEN);
 	g2.draw(twf1);
 	g2.draw(twf2);
