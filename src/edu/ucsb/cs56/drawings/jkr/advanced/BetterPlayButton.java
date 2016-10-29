@@ -29,7 +29,7 @@ public class BetterPlayButton extends PlayButton implements Shape
             new Point2D.Double(x+radius*2.0/3.0-radius/20.0, y+radius/2.0) };
         
         // An extra circle cause it looks cooler
-        Ellipse2D.Double innerCircle = new Ellipse2D.Double(x+radius/10.0, y+radius/10.0, radius * 9/10.0, radius * 9/10.0);
+        Ellipse2D.Double innerCircle = new Ellipse2D.Double(x+radius/20.0, y+radius/20.0, radius * 9/10.0, radius * 9/10.0);
         
         
         Line2D.Double accentLine =
