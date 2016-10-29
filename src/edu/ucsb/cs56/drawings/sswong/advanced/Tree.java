@@ -34,13 +34,7 @@ public class Tree extends GeneralPathWrapper implements Shape
 		double trunk_width, 
 		double trunk_height)
     {
-	
-        // Rather than having to scale at the end, we can just
-        // draw things the right way to begin with, using the
-        // x, y, width and height.   If you haven't already
-        // hard coded a particular drawing, this may be an easier
-        // way.
-        
+    
 	// Make the leaves
 
 	Ellipse2D.Double leaves =
