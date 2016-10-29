@@ -8,6 +8,7 @@ import java.awt.BasicStroke;
 
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
+import sun.security.provider.SHA;
 
 /**
  * A class with static methods for drawing various pictures
@@ -18,133 +19,103 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /**
+	 * Demonstrates how buses can be used in a pattern.
+	 * Alternates thick stroke buses with regular stroke buses
      */
     
     public static void drawPicture1(Graphics2D g2) {
-	
-	House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
-	
-	// Make a black house that's half the size, 
-	// and moved over 150 pixels in x direction
-	
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
-	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
-	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
-	
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
-	
-	// Draw two houses with Windows
-	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-	
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
-	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	
-	g2.setStroke(orig);
-	g2.setColor(Color.BLACK); 
-	g2.drawString("A few houses by Phill Conrad", 20,20);
+		// label the drawing
+		g2.setColor(Color.black);
+		g2.drawString("Alternating double-decker buses by Peter Ginty", 20,20);
+
+		//save the normal stroke, create a thick stroke
+		Stroke normal = g2.getStroke();
+		Stroke thick = new BasicStroke(4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
+
+		//create a double-decker bus
+		DoubleDeckerBus d1 = new DoubleDeckerBus(50, 150, 60, 50);
+
+		//Shape used to hold transformations of the bus
+		Shape s1;
+
+		//Repeat 3 times: draw a thick bus then a normal bus, incrementing the x coordinate each time
+		int xoffset = 0;
+		for (int i = 0; i < 3; ++i) {
+			s1 = ShapeTransforms.translatedCopyOf(d1, xoffset, 0);
+			g2.setStroke(thick);
+			g2.draw(s1);
+			xoffset += 80;
+			s1 = ShapeTransforms.translatedCopyOf(d1, xoffset, 0);
+			g2.setStroke(normal);
+			g2.draw(s1);
+			xoffset += 80;
+
+		}
+
     }
     
     
-    /** Draw a picture with a few houses and coffee cups
+    /**
+	 * Demonstrates Shape properties of Bus and DoubleDeckerBus objects.
+	 * Creates new buses as translated, rotated, and resized copies.
      */
     public static void drawPicture2(Graphics2D g2) {
-	
-	// Draw some coffee cups.
-	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	CoffeeCup tallSkinny = new CoffeeCup(20,150,20,40);
-	CoffeeCup shortFat = new CoffeeCup(20,250,40,20);
-	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	g2.setColor(Color.BLUE);    g2.draw(tallSkinny);
-	g2.setColor(Color.MAGENTA); g2.draw(shortFat);
-	
-	House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
-	
-	// Make a black house that's half the size, 
-	// and moved over 150 pixels in x direction
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
-	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
-	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
-	
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
-	
-	// Draw two houses with Windows
-	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-	
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); 
-	
-	// Rotate the second house 45 degrees around its center.
-	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
+		// label the drawing
 
-	g2.draw(hw3);
-	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	
-	g2.setStroke(orig);
-	g2.setColor(Color.BLACK); 
-	g2.drawString("A bunch of Coffee Cups and a few houses by Phill Conrad", 20,20);
+		g2.setColor(Color.black);
+		g2.drawString("Lots of double-decker buses by Peter Ginty", 20,20);
+
+		// make a double-decker bus
+
+		DoubleDeckerBus d1 = new DoubleDeckerBus(50, 300, 200, 150);
+		g2.draw(d1);
+
+		//make another double-decker bus, half the size, and moved 225 pixels to the right
+
+		Shape d2 = ShapeTransforms.scaledCopyOf(d1, 0.5, 0.5);
+		d2 = ShapeTransforms.translatedCopyOf(d2, 225, 0);
+		g2.draw(d2);
+
+		//make another double-decker bus, this time rotated 180deg (upside-down) and translated vertically
+
+		Shape d3 = ShapeTransforms.rotatedCopyOf(d2,Math.toRadians(180));
+		d3 = ShapeTransforms.translatedCopyOf(d3, 0, 150);
+		g2.draw(d3);
+
+		//make a normal bus, then create a larger bus around it (double dimensions) in a different color
+
+		Bus b1 = new Bus(425, 150, 50, 50);
+		Shape b2 = ShapeTransforms.scaledCopyOf(b1, 2, 2);
+		g2.draw(b1);  g2.setColor(Color.green); g2.draw(b2);
     }
     
-    /** Draw a different picture with a few houses and coffee cups
+    /**
+	 * Most simple example - declaring and drawing some buses and double-decker buses in different colors
      */
     
     public static void drawPicture3(Graphics2D g2) {
 	
-	// label the drawing
-	
-	g2.drawString("Some buses by Peter Ginty", 20,20);
-	
-	
-	// Draw some coffee cups.
-	
-	Bus large = new Bus(50,250,300,150);
-	//CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	
-	g2.setColor(Color.RED);     g2.draw(large);
-	//g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	
-    }       
+		// label the drawing
+
+		g2.drawString("Some buses in different colors by Peter Ginty", 20,20);
+
+
+		// Draw some buses.
+
+		Bus large = new Bus(50,250,300,150);
+		Bus little = new Bus(220,50,40,30);
+
+		g2.setColor(Color.red);     g2.draw(large);
+		g2.setColor(Color.green);   g2.draw(little);
+
+		//Draw some double decker buses.
+
+		DoubleDeckerBus bigDouble = new DoubleDeckerBus(400, 300, 150, 150);
+		DoubleDeckerBus bigDouble2 = new DoubleDeckerBus(400, 450, 150, 150);
+		g2.setColor(Color.blue);   g2.draw(bigDouble);
+		g2.setColor(Color.magenta);   g2.draw(bigDouble2);
+    }
+
+
 }
