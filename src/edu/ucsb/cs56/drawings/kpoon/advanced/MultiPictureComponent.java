@@ -6,10 +6,11 @@ import java.awt.Graphics2D;
 import javax.swing.JComponent;
 
 /**
- * A component that draws a Picture by Phill Conrad
+ * A component that draws a Picture by Phill Conrad, modified by Kin Kwan Poon.
  * 
  * @author Phill Conrad (original drawing)
- * @version CS56, W16, UCSB
+ * @author Kin Kwan Poon
+ * @version CS56, F16, UCSB
  */
 
 public class MultiPictureComponent extends JComponent {

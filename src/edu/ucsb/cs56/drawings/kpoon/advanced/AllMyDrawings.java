@@ -13,7 +13,7 @@ import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
  * 
  * @author Phill Conrad
  * @author Kin Kwan Poon
- * @version for UCSB CS56, W16
+ * @version for UCSB CS56, F16
  */
 
 public class AllMyDrawings {
