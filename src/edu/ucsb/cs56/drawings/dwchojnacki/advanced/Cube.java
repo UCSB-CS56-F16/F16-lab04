@@ -22,27 +22,33 @@ public class Cube extends GeneralPathWrapper implements Shape
     /**
        Constructor
        
-       @param x x coord of top left corner of the cube
-       @param y y coord of top left corner of the cube
-       @param length length of one side of the cube
+       @param inputX x coord of top left corner of the cube
+       @param inputY y coord of top left corner of the cube
+       @param inputLength length of one side of the cube
        @param angle between the line that extends from the front face of the cube to the back face of the cube and the x axis (in degrees)
+       @param degree the degree at which you would like to recursively create quadrilaterals
     */
-    public Cube(double x, double y, double length, double angle)
+    public Cube(double inputX, double inputY, double inputLength, double angle, int degree)
     {
-
 	// make the front face of the cube
-	double xVertex;
-	double yVertex;
-	double x1Reference;
-	double y1Reference;
-	double x2Reference;
-	double y2Reference;
+	int x = (int) inputX;
+	int y = (int) inputY;
+	int length = (int) inputLength;
+	/*
+	int x1Reference;
+	int y1Reference;
+	int x2Reference;
+	int y2Reference;
 	angle = angle%360;
-	
-        Quadrilateral frontFace = 
-            new Quadrilateral (x, y, x+length, y+length);
-
+	*/
+	int [] frontFaceXCoordinates = new int[]{x,x+length,x+length,x};
+	int [] frontFaceYCoordinates = new int[]{y,y,y+length,y+length};
+        RecursiveQuadrilateral frontFace = 
+            new RecursiveQuadrilateral(frontFaceXCoordinates, frontFaceYCoordinates, degree);
+	/*
+	double hypotenuse = (0.75*length);
 	if (((angle>=0)&&(angle<90))||((angle>=180)&&(angle<270))) {
+	    
 	    x1Reference = x;
 	    y1Reference = y;
 	    x2Reference = x+length;
@@ -56,7 +62,6 @@ public class Cube extends GeneralPathWrapper implements Shape
 		yVertex = y+length;
 	    }
 	}
-
 	else {
 	    x1Reference = x+length;
 	    y1Reference = y;
@@ -75,19 +80,20 @@ public class Cube extends GeneralPathWrapper implements Shape
 	angle = Math.toRadians(angle);
 	double quadSharedX = xVertex + (hypotenuse * (Math.cos(angle)));
 	double quadSharedY = yVertex - (hypotenuse * (Math.sin(angle)));
-        
-        Quadrilateral secondFace =
-	    new Quadrilateral (x1Reference, y1Reference, quadSharedX, quadSharedY);
-            
-        Quadrilateral thirdFace =
-            new Quadrilateral (x2Reference, y2Reference, quadSharedX, quadSharedY);
-	
+	int [] secondFaceXCoordinates = new int[4];
+	int [] thirdFaceYCoordinates = new int[4];
+        RecursiveQuadrilateral secondFace =
+	    new RecursiveQuadrilateral (secondFaceXCoordinates, secondFaceYCoordinates, degree);
+        RecursiveQuadrilateral thirdFace =
+            new RecursiveQuadrilateral (thirdFaceXCoordinates, thirdFaceYCoordinates, degree);
+	*/
         // put the cube together
-	
         GeneralPath wholeCube = this.get();
         wholeCube.append(frontFace, false);
+	/*
         wholeCube.append(secondFace, false);
-        wholeCube.append(thirdFace, false);    
+        wholeCube.append(thirdFace, false);   
+	*/
     }
     
 }
