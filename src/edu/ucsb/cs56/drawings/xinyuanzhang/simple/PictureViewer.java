@@ -23,7 +23,7 @@ public class PictureViewer
 	
 	// Set your own title
 	frame.setTitle("XYZ's Drawing"); // @@@ MODIFY THIS LINE
-	
+
 	// Always do this so that the red X (or red circle) works
 	// to close the window. 
 	
