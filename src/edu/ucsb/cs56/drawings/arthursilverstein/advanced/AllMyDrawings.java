@@ -12,34 +12,34 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 /**
  * A class with static methods for drawing various pictures
  * 
- * @author Phill Conrad 
- * @version for UCSB CS56, W16 
+ * @author Arthur Silverstein
+ * @version for UCSB CS56, F16 
  */
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw laptops 
      */
     
     public static void drawPicture1(Graphics2D g2) {
 	
-	House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
+	Laptop l1 = new Laptop(100,250,80,75);
+	g2.setColor(Color.CYAN); g2.draw(l1);
 	
-	// Make a black house that's half the size, 
+	// Make a black laptop that's half the size, 
 	// and moved over 150 pixels in x direction
 	
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
+	Shape h2 = ShapeTransforms.scaledCopyOfLL(l1,0.5,0.5);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 	g2.setColor(Color.BLACK); g2.draw(h2);
 	
-	// Here's a house that's 4x as big (2x the original)
+	// Here's a laptop that's 4x as big (2x the original)
 	// and moved over 150 more pixels to right.
 	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 	
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
+	// We'll draw this with a thinner stroke
+	Stroke thick = new BasicStroke (1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
 	
 	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
 	// #002FA7 is "International Klein Blue" according to Wikipedia
@@ -50,10 +50,10 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(h2); 
 	
-	// Draw two houses with Windows
+	// Draw two windows laptops
 	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
+	WindowsLaptop hw1 = new WindowsLaptop(50,350,40,75);
+	WindowsLaptop hw2 = new WindowsLaptop(200,350,200,100);
 	
 	g2.draw(hw1);
 	g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
@@ -62,7 +62,7 @@ public class AllMyDrawings
 	
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
-	g2.drawString("A few houses by Phill Conrad", 20,20);
+	g2.drawString("Laptops, digital media, Arthur Silverstein(2016)", 20,20);
     }
     
     
@@ -70,48 +70,22 @@ public class AllMyDrawings
      */
     public static void drawPicture2(Graphics2D g2) {
 	
-	// Draw some coffee cups.
+	// Draw some laptops.
 	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	CoffeeCup tallSkinny = new CoffeeCup(20,150,20,40);
-	CoffeeCup shortFat = new CoffeeCup(20,250,40,20);
+	Laptop large = new Laptop(50,250,200,200);
+	Laptop medium = new Laptop(300,250,150,150);
+	Laptop small = new Laptop(500,250,100,100);
+	Laptop tiny = new Laptop(650,250,50,50);
 	
 	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	g2.setColor(Color.BLUE);    g2.draw(tallSkinny);
-	g2.setColor(Color.MAGENTA); g2.draw(shortFat);
-	
-	House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
-	
-	// Make a black house that's half the size, 
-	// and moved over 150 pixels in x direction
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
-	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
-	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
-	
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
+	g2.setColor(Color.GREEN);   g2.draw(medium);
+	g2.setColor(Color.BLUE);    g2.draw(small);
+	g2.setColor(Color.MAGENTA); g2.draw(tiny);
 	
 	// Draw two houses with Windows
 	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
+	WindowsLaptop hw1 = new WindowsLaptop(50,350,40,75);
+	WindowsLaptop hw2 = new WindowsLaptop(200,350,200,100);
 	
 	g2.draw(hw1);
 	g2.setColor(new Color(0x8F00FF)); 
@@ -122,10 +96,11 @@ public class AllMyDrawings
 	g2.draw(hw3);
 	
 	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
+	Stroke orig=g2.getStroke();
 	
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
-	g2.drawString("A bunch of Coffee Cups and a few houses by Phill Conrad", 20,20);
+	g2.drawString("Laptops by Arthur Silverstein", 20,20);
     }
     
     /** Draw a different picture with a few houses and coffee cups
@@ -135,16 +110,22 @@ public class AllMyDrawings
 	
 	// label the drawing
 	
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
+	g2.drawString("Windows laptops by Arthur S", 20,20);
 	
 	
-	// Draw some coffee cups.
+	// Draw some laptops.
 	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
+	WindowsLaptop large = new WindowsLaptop(100,500,225,400);
+	WindowsLaptop small = new WindowsLaptop(20,50,40,30);
 	
 	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
+	g2.setColor(Color.GREEN);   g2.draw(small);
 	
+	//draw some rotated ones
+	Shape wl3 = ShapeTransforms.rotatedCopyOf(small, Math.PI/2.0);
+	Shape wl4 = ShapeTransforms.translatedCopyOf(wl3, 200, 50);
+	g2.draw(wl3);
+	g2.draw(wl4);
+
     }       
 }
