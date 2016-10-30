@@ -37,6 +37,13 @@ public class RecursiveQuadrilateral extends GeneralPathWrapper implements Shape
 	}
     }
 
+    /** 
+	Another Constructor
+
+	@param xbounds the xbounds of the quadrilateral in which we will be recursively printing smaller quadrilaterals
+	@param ybounds the ybounds of the quadrilateral in which we will be recursively printing smaller quadrilaterals
+	@param degree the degree at which we will be printing these quadrilaterals
+    */
     public RecursiveQuadrilateral(int[] xbounds, int[] ybounds, int degree) {
 	if ((xbounds.length==4)&&(ybounds.length==4)) {
 	    if (degree == 0) {

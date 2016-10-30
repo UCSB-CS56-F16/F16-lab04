@@ -12,6 +12,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    A drawing of a cube that implements
    the Shape interface, and so can be drawn, as well as
    rotated, scaled, etc.
+   It is able to draw various degrees of a Menger Sponge
       
    @author Daniel Chojnacki
    @version for CS56, F16, UCSB
@@ -26,7 +27,7 @@ public class Cube extends GeneralPathWrapper implements Shape
        @param inputY y coord of top left corner of the cube
        @param inputLength length of one side of the cube
        @param angle between the line that extends from the front face of the cube to the back face of the cube and the x axis (in degrees)
-       @param degree the degree at which you would like to recursively create quadrilaterals
+       @param degree the degree at which you would like to recursively create quadrilaterals (for creating a Menger Sponge's face)
     */
     public Cube(double inputX, double inputY, double inputLength, double angle, int degree)
     {

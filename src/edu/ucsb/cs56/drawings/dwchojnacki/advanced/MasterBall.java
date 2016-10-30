@@ -5,15 +5,22 @@ import java.awt.geom.Rectangle2D;
 import java.awt.geom.Line2D;
 
 /**
-   A MasterBall (from Pokemon)
+   Draws a MasterBall (from Pokemon)
       
-   @author Phill Conrad 
+   @author Daniel Chojnacki
    @version for CS56, F16, UCSB
    
 */
 public class MasterBall extends PokeBall implements Shape
 {
 
+    /**
+       Constructor
+       
+       @param x x coord of the center of the master ball
+       @param y y coord of the center of the master ball
+       @param radius radius of the master ball
+    */
     public MasterBall(double x, double y, double radius)
     {
 	// construct the basic pokeball
@@ -35,7 +42,7 @@ public class MasterBall extends PokeBall implements Shape
 	double pointy5 = y - innerRadius - ((0.2)*radius);
 	double pointx6 = x;
 	double pointy6 = y - innerRadius - ((0.1)*radius);
-
+	// add the various lines of the "M" on the master ball
 	Line2D.Double mLine1 =
 	    new Line2D.Double(pointx1, pointy1, pointx2, pointy2);
 	Line2D.Double mLine2 =
