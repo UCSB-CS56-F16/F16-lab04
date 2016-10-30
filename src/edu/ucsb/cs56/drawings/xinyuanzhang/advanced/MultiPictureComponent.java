@@ -5,10 +5,10 @@ import java.awt.Graphics2D;
 import javax.swing.JComponent;
 
 /**
-   A component that draws a Picture by Phill Conrad
+   A component that draws a Picture by Xinyuan Zhang
    
-   @author Phill Conrad (original drawing)
-   @version CS56, W16, UCSB
+   @author XInyuan Zhang
+   @version CS56, F16, UCSB
 */
 
 

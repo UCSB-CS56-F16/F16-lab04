@@ -4,8 +4,8 @@ import java.awt.Shape;
 import java.awt.Rectangle;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
-import java.awt.geom.Recantagle2D;
-import java.awt.geom.PathInerator;
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.PathIterator;
 import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
@@ -32,29 +32,40 @@ public class ToothBrush extends GeneralPathWrapper implements Shape
 
     public ToothBrush(double x,double y,double width,double height)
     { 
-	double tHeadHeight = 0.2 * height;
-	double tHeadWidth = 0.8*width;
-	double tNeckWidth = 0.2 * width;
-	double lineSpace = 0.1 * toothbrushHeadh;
+	double tHeadHeight = height*0.2;
+	double tHeadWidth = 0.98*width;
+	double tNeckWidth = 0.02 * width;
+	double lineSpace = 0.2 * tHeadHeight;
 
 	//Make teh first toothbrush
 
 	Rectangle2D.Double tNeck =
-	    new Rectangle2D.Double(x,y,tNeckWidth,height);
+	    new Rectangle2D.Double(x,y+height,tNeckWidth,height);
 
 	//make the head
 	Rectangle2D.Double tHead =
-	    new Rectangle2D.Double(x+tNeckWidth,0.95*y,tHeadWidth,tHeadHeight);     
-	Rectangle2D.Double [] tHeads = new Rectangle2D.Double[5] ;
-	for(double i=0;i<5 ;i++)
-	    tHeads[i]= new Rectangle2D.Double(x+tNeckWidth,0.95*y-0.2*(i+1),tHeadWidth,lineSpace);
+	    new Rectangle2D.Double(x+tNeckWidth,y+height+0.2*tHeadHeight,tHeadWidth,tHeadHeight);
+	//	int number = 4;
+	//Line2D.Double [] tHeads = new Line2D.Double[number] ;
+	//	for(int i=0;i<number;i++)
+	Line2D.Double line1 = new Line2D.Double(x+tNeckWidth,y+height+0.4*tHeadHeight,
+						x+tHeadWidth,y+height+0.4*tHeadHeight);
+	Line2D.Double line2 = new Line2D.Double(x+tNeckWidth,y+height+0.6*tHeadHeight,
+						x+tHeadWidth,y+height+0.6*tHeadHeight);
+	Line2D.Double line3 = new Line2D.Double(x+tNeckWidth,y+height+0.8*tHeadHeight,
+						x+tHeadWidth,y+height+0.8*tHeadHeight);
+	Line2D.Double line4 = new Line2D.Double(x+tNeckWidth,y+height+tHeadHeight,
+						x+tHeadWidth,y+height+tHeadHeight);
 
 	//put the all components together
 	GeneralPath toothBrush = this.get();
 	toothBrush.append(tNeck,false);
 	toothBrush.append(tHead,false);
-	for(int j=0;j<5;j++)
-	    toothBrush.append(tHeads[j],false);
+	toothBrush.append(line1,false);
+	toothBrush.append(line2,false);
+	toothBrush.append(line3,false);
+	toothBrush.append(line4,false);
+	
     }
 }
 
