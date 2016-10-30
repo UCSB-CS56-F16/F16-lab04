@@ -18,7 +18,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
  * @version for CS56, F16, UCSB
  */
 public class Table extends GeneralPathWrapper implements Shape {
-
+	// Declare them as global variable so they can be used in the class inherited from.
 	protected double topLeftX;
 	protected double topY;
 	protected double topRightX;
