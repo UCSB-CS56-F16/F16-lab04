@@ -23,28 +23,28 @@ public class AllMyDrawings
     
     public static void drawPicture1(Graphics2D g2) {
 	
-	StickFigure h1 = new StickFigure(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
+	StickFigure s1 = new StickFigure(100,250,50);
+	g2.setColor(Color.CYAN); g2.draw(s1);
 	
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
+	Shape s2 = ShapeTransforms.scaledCopyOfLL(s1,0.5,0.5);
+	s2 = ShapeTransforms.translatedCopyOf(s2,150,0);
+	g2.setColor(Color.BLACK); g2.draw(s2);
 
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
+	s2 = ShapeTransforms.scaledCopyOfLL(s2,4,4);
+	s2 = ShapeTransforms.translatedCopyOf(s2,150,0);
 
 	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
 	
 	Stroke orig=g2.getStroke();
 	g2.setStroke(thick);
 	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
+	g2.draw(s2); 
 	
-	FashionableStickFigure hw1 = new FashionableStickFigure(50,350,40,75);
-	FashionableStickFigure hw2 = new FashionableStickFigure(200,350,200,100);
+	FashionableStickFigure fs1 = new FashionableStickFigure(50,350,40,75);
+	FashionableStickFigure fs2 = new FashionableStickFigure(200,150,200,100);
 	
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
+	g2.draw(fs1);
+	g2.setColor(new Color(0x8F00FF)); g2.draw(fs2);
 	
 	
 	g2.setStroke(orig);
@@ -69,36 +69,36 @@ public class AllMyDrawings
 	g2.setColor(Color.BLUE);    g2.draw(tiny);
 	g2.setColor(Color.MAGENTA); g2.draw(small2);
 	
-	StickFigure h1 = new StickFigure(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
+	StickFigure s1 = new StickFigure(100,250,50);
+	g2.setColor(Color.CYAN); g2.draw(s1);
 	
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
+	Shape s2 = ShapeTransforms.scaledCopyOfLL(s1,0.5,0.5);
+	s2 = ShapeTransforms.translatedCopyOf(s2,150,0);
+	g2.setColor(Color.BLACK); g2.draw(s2);
 	
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
+	s2 = ShapeTransforms.scaledCopyOfLL(s2,4,4);
+	s2 = ShapeTransforms.translatedCopyOf(s2,150,0);
 	
 	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
 	
 	Stroke orig=g2.getStroke();
 	g2.setStroke(thick);
 	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
+	g2.draw(s2); 
 	
-	FashionableStickFigure hw1 = new FashionableStickFigure(50,350,40,75);
-	FashionableStickFigure hw2 = new FashionableStickFigure(200,350,200,100);
+	FashionableStickFigure fs1 = new FashionableStickFigure(50,350,40,75);
+	FashionableStickFigure fs2 = new FashionableStickFigure(200,350,200,100);
 	
-	g2.draw(hw1);
+	g2.draw(fs1);
 	g2.setColor(new Color(0x8F00FF)); 
-	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
+	Shape fs3 = ShapeTransforms.rotatedCopyOf(fs2, Math.PI/4.0);
 	
-	g2.draw(hw3);
+	g2.draw(fs3);
 	
 	
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
-	g2.drawString("A bunch of stick figures, both with hats and not, by Peter Master", 20,20);
+	g2.drawString("A bunch of stick figures, some with hats some without, by Peter Master", 20,20);
     }
     
     /** Draw a different picture with a stick
@@ -112,7 +112,7 @@ public class AllMyDrawings
 	g2.drawString("A couple of stick figures by Peter Master", 20,20);
 	
 	StickFigure hatlessLargePerson = new StickFigure(100,50,225);
-	FashionableStickFigure hattedSmallPerson = new FashionableStickFigure(20,50,225,90);
+	FashionableStickFigure hattedSmallPerson = new FashionableStickFigure(300,200,225,90);
 	
 	g2.setColor(Color.RED);     g2.draw(hatlessLargePerson);
 	g2.setColor(Color.GREEN);   g2.draw(hattedSmallPerson);

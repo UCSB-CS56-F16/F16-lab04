@@ -39,7 +39,7 @@ public class StickFigure extends GeneralPathWrapper implements Shape
 
         Ellipse2D.Double head =
             new Ellipse2D.Double (x - headHeight/2, y,
-                                 x + headHeight/2, y + headHeight)
+                                 headHeight, headHeight);
 
         Line2D.Double body = 
             new Line2D.Double (x, y + headHeight,
@@ -57,12 +57,11 @@ public class StickFigure extends GeneralPathWrapper implements Shape
             new Line2D.Double (x - legHorizontalLength, y + height,
                               x, y + headHeight + bodyHeight);
 
-        Line2D.Double leftLeg =
+        Line2D.Double rightLeg =
             new Line2D.Double (x, y + headHeight + bodyHeight,
-                              x + legHorizontalLength, y + height)
+                              x + legHorizontalLength, y + height);
 	
         // put the whole stick figure together
-	
         GeneralPath stickFigure = this.get();
         stickFigure.append(head, false);
         stickFigure.append(body, false);
