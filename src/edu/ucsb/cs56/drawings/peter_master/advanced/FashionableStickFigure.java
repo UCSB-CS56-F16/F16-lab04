@@ -14,7 +14,12 @@ import java.awt.geom.Line2D;
 public class FashionableStickFigure extends StickFigure implements Shape
 {
     /**
-     * Constructor for objects of class FashionableStickFigure
+    Constructor
+       
+       @param x x coord of the center of the stick figure (its body and the top of its head)
+       @param y y coord of top of head
+       @param height of stick figure
+       @param height of stick figure's hat
      */
     public FashionableStickFigure(double x, double y, double height, double hatHeight) {
 		// construct the stick figure
