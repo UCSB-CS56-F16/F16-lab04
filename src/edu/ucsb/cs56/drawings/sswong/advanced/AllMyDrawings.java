@@ -18,153 +18,64 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw a picture with a few trees
      */
     
     public static void drawPicture1(Graphics2D g2) {
-	
-	House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
-	
-	// Make a black house that's half the size, 
-	// and moved over 150 pixels in x direction
-	
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
-	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
-	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
-	
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
-	
-	// Draw two houses with Windows
-	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-	
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
-	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	
-	g2.setStroke(orig);
-	g2.setColor(Color.BLACK); 
-	g2.drawString("A few houses by Phill Conrad", 20,20);
-    }
-    
-    
-    /** Draw a picture with a few houses and coffee cups
-     */
-    public static void drawPicture2(Graphics2D g2) {
-	
-	// Draw some coffee cups.
-	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	CoffeeCup tallSkinny = new CoffeeCup(20,150,20,40);
-	CoffeeCup shortFat = new CoffeeCup(20,250,40,20);
-	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	g2.setColor(Color.BLUE);    g2.draw(tallSkinny);
-	g2.setColor(Color.MAGENTA); g2.draw(shortFat);
-	
-	House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
-	
-	// Make a black house that's half the size, 
-	// and moved over 150 pixels in x direction
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
-	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
-	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
-	
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
-	
-	// Draw two houses with Windows
-	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-	
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); 
-	
-	// Rotate the second house 45 degrees around its center.
-	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
-	
-	g2.draw(hw3);
-	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	
-	g2.setStroke(orig);
-	g2.setColor(Color.BLACK); 
-	g2.drawString("A bunch of Coffee Cups and a few houses by Phill Conrad", 20,20);
-    }
-    
-    /** Draw a different picture with a few houses and coffee cups
-     */
-    
-    public static void drawPicture3(Graphics2D g2) {
-	
-	// label the drawing
-	
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
-	
-	// Draw some coffee cups.
-	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	
-    }
-    
-    public static void drawPicture4(Graphics2D g2){
-
+		
 	// labeling the drawing
-	g2.drawString("Tree trees by Simon Wong",20,20);
+	g2.drawString("Some trees by Simon Wong",20,20);
 
 	// draw three trees
 	Tree t1 = new Tree(20,50,100,25,50);
 	Tree t2 = new Tree(250,75,75,20,30);
 	Tree t3 = new Tree(200,220,50,40,25);
+	    
+	// rotated 45 degrees around center
+	Shape t4 = ShapeTransforms.rotatedCopyOf(t2, Math.PI/4.0);
 	g2.setColor(Color.GREEN);
 	g2.draw(t1);
+	g2.setColor(Color.BLUE);
 	g2.draw(t2);
+	g2.setColor(Color.RED);
 	g2.draw(t3);
+	g2.setColor(Color.BLACK);
+	g2.draw(t4);
+	    
+	
+	// Make a black tree that's half the size of t4, 
+	// and moved over 150 pixels in x direction
+	
+	Shape t5 = ShapeTransforms.scaledCopyOfLL(t4,0.5,0.5);
+	t5 = ShapeTransforms.translatedCopyOf(t5,150,0);
+	g2.setColor(Color.BLACK); 
+	g2.draw(t5);
+	
+	// Here's a tree that's 4x as big (2x the original)
+	// and moved over 150 more pixels to right.
+	t5 = ShapeTransforms.scaledCopyOfLL(t5,4,4);
+	t5 = ShapeTransforms.translatedCopyOf(t5,150,0);
+	
+	// We'll draw this with a thicker stroke
+	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
+	
+	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
+	// #002FA7 is "International Klein Blue" according to Wikipedia
+	// In HTML we use #, but in Java (and C/C++) its 0x
+	
+	Stroke orig=g2.getStroke();
+	g2.setStroke(thick);
+	g2.setColor(new Color(0x002FA7)); 
+	g2.draw(t5); 
     }
-    public static void drawPicture5(Graphics2D g2){
-
+    
+    
+    /** Draw a picture with some trees with fruits
+     */
+    public static void drawPicture2(Graphics2D g2) {
+	
 	// labeling the drawing
-	g2.drawString("Three trees with fruits by Simon Wong",20,20);
+	g2.drawString("Some trees with fruits by Simon Wong",20,20);
 
 	// draw three trees with fruits
 	TreeWithFruits twf1 = new TreeWithFruits(20,50,100,25,50);
@@ -172,9 +83,63 @@ public class AllMyDrawings
 	TreeWithFruits twf3 = new TreeWithFruits(200,220,50,40,25);
 	g2.setColor(Color.GREEN);
 	g2.draw(twf1);
+	g2.setColor(Color.BLACK);
 	g2.draw(twf2);
+	g2.setColor(Color.PINK);
 	g2.draw(twf3);
-
+	
+	// Make an orange tree that's half the size of twf3, 
+	// and moved over 150 pixels in x direction
+	Shape twf4 = ShapeTransforms.scaledCopyOfLL(twf3,0.5,0.5);
+	twf4 = ShapeTransforms.translatedCopyOf(twf4,150,0);
+	g2.setColor(Color.ORANGE); g2.draw(twf4);
+	
+	// Here's a tree that's 4x as big (2x the original)
+	// and moved over 150 more pixels to right.
+	twf4 = ShapeTransforms.scaledCopyOfLL(twf4,4,4);
+	twf4 = ShapeTransforms.translatedCopyOf(twf4,150,0);
+	
+	// We'll draw this with a thicker stroke
+	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
+	
+	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
+	// #002FA7 is "International Klein Blue" according to Wikipedia
+	// In HTML we use #, but in Java (and C/C++) its 0x
+	
+	Stroke orig=g2.getStroke();
+	g2.setStroke(thick);
+	g2.setColor(new Color(0x002FA7)); 
+	g2.draw(twf4); 
+	
+	// draw a 180 rotated twf4
+	Shape twf5 = ShapeTransforms.rotatedCopyOf(twf4, Math.PI/2.0);
+	g2.draw(twf5);
+	
     }
     
+     /** Draw a picture with some trees, some with fruit
+     */
+    public static void drawPicture3(Graphics2D g2) {
+	
+	// label the drawing
+	
+	g2.drawString("Some green trees by Simon Wong", 20,20);
+	
+	// Draw some trees.
+	
+	Tree t1 = new Tree(50,50,100,25,50);
+	Tree t2 = new TreeWithFruits(250,50,100,25,50);
+	Tree t3 = new Tree(450,50,100,25,50);
+	Tree t1 = new TreeWithFruits(50,150,100,25,50);
+	Tree t2 = new Tree(250,150,100,25,50);
+	Tree t3 = new TreeWithFruits(450,150,100,25,50);
+	
+	g2.setColor(Color.GREEN);   
+	g2.draw(t1);
+	g2.draw(t2);
+	g2.draw(t3);
+	g2.draw(t4);
+	g2.draw(t5);
+	g2.draw(t6);
+    }    
 }
