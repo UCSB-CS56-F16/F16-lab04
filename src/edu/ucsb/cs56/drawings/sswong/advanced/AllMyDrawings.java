@@ -127,12 +127,12 @@ public class AllMyDrawings
 	
 	// Draw some trees.
 	
-	Tree t1 = new Tree(50,50,100,25,50);
-	Tree t2 = new TreeWithFruits(250,50,100,25,50);
-	Tree t3 = new Tree(450,50,100,25,50);
-	Tree t4 = new TreeWithFruits(50,150,100,25,50);
-	Tree t5 = new Tree(250,150,100,25,50);
-	Tree t6 = new TreeWithFruits(450,150,100,25,50);
+	Tree t1 = new Tree(50,50,50,12.5,25);
+	Tree t2 = new TreeWithFruits(250,50,50,12.5,25);
+	Tree t3 = new Tree(450,50,50,12.5,25);
+	Tree t4 = new TreeWithFruits(50,150,50,12.5,25);
+	Tree t5 = new Tree(250,150,50,12.5,25);
+	Tree t6 = new TreeWithFruits(450,150,50,12.5,25);
 	
 	g2.setColor(Color.GREEN);   
 	g2.draw(t1);
