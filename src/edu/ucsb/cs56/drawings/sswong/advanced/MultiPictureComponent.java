@@ -42,12 +42,6 @@ public class MultiPictureComponent extends JComponent{
 	case 3:
 	    AllMyDrawings.drawPicture3(g2);
 	    break;
-	case 4:
-	    AllMyDrawings.drawPicture4(g2);
-	    break;
-	case 5:
-	    AllMyDrawings.drawPicture5(g2);
-	    break;
 	default:
 	    throw new IllegalArgumentException("Unknown value for whichPicture in MultiPictureComponent" + this.whichPicture);
 	} // switch
