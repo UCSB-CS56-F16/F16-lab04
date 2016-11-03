@@ -66,11 +66,11 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
 	
 	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	
+	*/
 	g2.setStroke(orig);
 	g2.setColor(Color.BLACK); 
-	g2.drawString("A few houses by Phill Conrad", 20,20);
-	*/
+	g2.drawString("A few cones by Margaret Schmit", 20,20);
+       
 }
     
     

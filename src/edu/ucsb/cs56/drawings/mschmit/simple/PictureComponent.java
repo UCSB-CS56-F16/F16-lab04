@@ -13,7 +13,7 @@ import java.awt.geom.Rectangle2D;
    A component that draws a Picture by Phill Conrad
    
    @author Phill Conrad (original drawing)
-   @author @@@ ADD YOUR NAME (fixed the snowmans's head)
+   @author Margaret Schmit
    @version for UCSB CS56, W16
 */
 
@@ -100,10 +100,9 @@ public class PictureComponent extends JComponent
 	g2.draw(snowManTopCircle);
 
 
-        // @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	// @@@ 20, 20 are suggested coordinates, but you may change them
-
-        // g2.drawString("Description and your name go here", 20,20);
+        //FINALLY, SIGN AND LABEL YOUR DRAWING
+       
+         g2.drawString("Maggie's Snowman", 20,20);
 	
     }
 }
