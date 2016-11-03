@@ -1,0 +1,78 @@
+package edu.ucsb.cs56.drawings.qwertyuiop5040.advanced;
+import java.awt.geom.GeneralPath; // combinations of lines and curves
+import java.awt.Shape; // general class for shapes
+
+import java.awt.geom.Line2D; 
+import java.awt.geom.Rectangle2D;
+
+import edu.ucsb.cs56.drawings.utilities.ShapeTransforms;
+import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
+
+/**
+   A vector drawing of a house that implements
+   the Shape interface, and so can be drawn, as well as
+   rotated, scaled, etc.
+      
+   @author Hanqing Wang 
+   @version for CS56, W16, UCSB
+   
+*/
+public class TriangularFlag extends GeneralPathWrapper implements Shape
+{
+	public static final double DEFAULT_WIDTH_RATIO=1.5;
+	public static final double DEFAULT_HEIGHT_RATIO=0.03;
+	/**
+       Constructor
+
+       @param x x coord of top left corner of flag
+       @param y y coord of top left corner of flag
+       @param width of the flag
+       @param height of flag
+    */
+
+	public  TriangularFlag(double x,double y, double width, double height){
+		this(x,y,width,height,DEFAULT_WIDTH_RATIO, DEFAULT_HEIGHT_RATIO);
+	}
+    /**
+       Constructor
+       
+       @param x x coord of top left corner of flag
+       @param y y coord of top left corner of flag
+       @param width of the flag (including the flag pole, if there is one)
+       @param height of flag (including the flag pole, if there is one)
+	@param hasFlagPole determines whether flag will be drawn with a flagpole
+	@param flagPoleHeightRatio ratio of the height of the flagpole to the height of the flag, cannot be negative
+	@param flagPoleWidthRatio ratio of the width of the flagpole to the width of the flag, cannot be negative
+    */
+    public TriangularFlag(double x, double y, double width, double height, double flagPoleWidthRatio,double flagPoleHeightRatio)
+    {
+	
+        // Rather than having to scale at the end, we can just
+        // draw things the right way to begin with, using the
+        // x, y, width and height.   If you haven't already
+        // hard coded a particular drawing, this may be an easier
+        // way.
+	double flagWidth=width;
+	double flagHeight=height;
+	double flagStartY=y;
+	double flagStartX=x;
+	Rectangle2D.Double pole=null;
+        if(hasFlagPole){
+		flagWidth=width*(1.0)/(1.0+flagPoleWidthRatio);
+		flagHeight=height*(1.0)/(1.0+flagPoleHeightRatio);
+		flagStartX+=width*(flagPoleWidthRatio)/(1.0+flagPoleWidthRatio);
+		pole= new Rectangle2D.Double(x,y, width-flagWidth, height);
+	}
+	Line2D.Double flagUpperBoundary=
+	    new Line2D.Double(flagStartX, flagStartY, flagStartX+flagWidth, flagStartY+flagHeight/2.0);
+	Line2D.Double flagLowerBoundary=
+	    new Line2D.Double(flagStartX, flagStartY+flagHeight, flagStartX+flagWidth,flagStartY+flagHeight/2.0);
+         Line2D.Double flagLeftBoundary=
+	    new Line2D.Double(flagStartX, flagStartY, flagStartX, flagStartY+flagHeight);
+	GeneralPath flagPath=this.get();
+	if(hasFlagPole)flagPath.append(pole,false);
+	flagPath.append(flagUpperBoundary,false);
+	flagPath.append(flagLowerBoundary,false);
+	flagPath.append(flagLeftBoundary,false);
+    }
+}
