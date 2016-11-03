@@ -33,7 +33,7 @@ public class CarWithWindowsandAnt extends Car implements Shape
 	GeneralPath gp= this.get();
 
 	double gap = .10 * (.5 *length);
-	doublewinTop = y -(.435 * height);
+	double winTop = y -(.435 * height);
 	double winHt = .4 *(height);
 
 	Rectangle2D.Double win1 = new Rectangle2D.Double(x+ (.25*length)+ gap, winTop, 3*gap, winHt);

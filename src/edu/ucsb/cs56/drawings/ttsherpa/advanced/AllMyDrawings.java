@@ -45,11 +45,9 @@ public class AllMyDrawings
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 
 	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStr\
-					oke.JOIN_BEVEL);
+	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
 
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_c\
-	olors
+	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
 	    // #002FA7 is "International Klein Blue" according to Wikipedia
 	    // In HTML we use #, but in Java (and C/C++) its 0x
 
@@ -88,11 +86,9 @@ public class AllMyDrawings
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 
 	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStr\
-					oke.JOIN_BEVEL);
+	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
 
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_c\
-	olors
+	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
 	    // #002FA7 is "International Klein Blue" according to Wikipedia
 	    // In HTML we use #, but in Java (and C/C++) its 0x
 
@@ -103,8 +99,7 @@ public class AllMyDrawings
 	// Draw two cars with Windows
 
 	CarWithWindowsandAnt hw1 = new CarWithWindowsandAnt(50,350,200,75);
-	CarWithWindowsandAnt hw2 = new CarWithWindowsandAnt(200,100,200,100)\
-	    ;
+	CarWithWindowsandAnt hw2 = new CarWithWindowsandAnt(200,100,200,100);
 
 	g2.draw(hw1);
 	g2.setColor(new Color(0x8F00FF));
