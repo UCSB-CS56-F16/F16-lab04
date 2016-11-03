@@ -11,7 +11,7 @@
    <property name="packagePrefix" value="edu.ucsb.cs56.drawings" />
    <property name="pconradPackage" value="${packagePrefix}.pconrad" />
    <property name="myPackage" 
-	     value="${packagePrefix}.mschmit" />
+	     value="${packagePrefix}.${username}" />
    
    <property name="webRoot" value="${env.HOME}/public_html/cs56" />
    <property name="webBaseURL" value="http://www.cs.ucsb.edu/~${env.USER}/cs56" />
@@ -24,7 +24,7 @@
    <!-- The following property will be used by the grader; grader
 	can change it from csilusername to whomever grader is grading in that
 	moment. -->
-   <property name="studentName" value="mschmit"/>
+   <property name="studentName" value="csilusername"/>
    
    <path id="project.class.path">
          <pathelement location="build"/>
@@ -232,7 +232,7 @@
 	  description="run from PictureViewer from ${env.USER} subdirectory">
     <java fork="true" 
 	  classpathref="project.class.path" 
-	  classname="mschmit.simple.PictureViewer" />
+	  classname="${myPackage}.simple.PictureViewer" />
   </target>
 
   <target name="myMPV" depends="compile" 
