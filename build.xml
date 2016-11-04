@@ -107,6 +107,12 @@
 	  classname="${myPackage}.SimpleGui1" />
   </target>
 
+  <target name="runSun" depends="compile" 
+	  description="run sun from ${env.USER} subdirectory">
+    <java fork="true" classpathref="project.class.path" 
+	  classname="${myPackage}.advanced.Sun" />
+  </target>
+
   <target name="pconradPV" depends="compile" 
 	  description="run  from PictureViewer from pconrad subdirectory">
     <java fork="true" classpathref="project.class.path" classname="${pconradPackage}.simple.PictureViewer" />
