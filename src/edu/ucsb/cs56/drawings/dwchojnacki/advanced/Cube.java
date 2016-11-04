@@ -13,6 +13,8 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    the Shape interface, and so can be drawn, as well as
    rotated, scaled, etc.
    It is able to draw various degrees of a Menger Sponge
+   
+   Incomplete, WIP
       
    @author Daniel Chojnacki
    @version for CS56, F16, UCSB
