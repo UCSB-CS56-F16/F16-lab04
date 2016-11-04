@@ -1,0 +1,44 @@
+package edu.ucsb.cs56.drawings.millanbatra.advanced;
+import java.awt.geom.GeneralPath;  
+import java.awt.Shape; 
+import java.awt.geom.Rectangle2D;
+
+/**
+   A Drum With Legs
+      
+   @author MillanBatra 
+   @version for CS56, F16, UCSB
+   
+*/
+public class DrumTwo extends Drum implements Shape
+{
+    /**
+     * Constructor for objects of class CoffeeCup
+     */
+    public DrumTwo(double x, double y, double width, double height)
+    {
+	// construct the basic house shell
+	super(x,y,width,height);
+	
+	// get the GeneralPath that we are going to append stuff to
+	GeneralPath gp = this.get();
+	
+     	
+	
+	Rectangle2D.Double base =
+	    new Rectangle2D.Double(100, y+, 2.0 * w, winHt);
+	Rectangle2D.Double ontopbase =
+	    new Rectangle2D.Double(x + 4.0*w, winTop, 2.0 * w, winH);
+	Line2D.Double  leg1=
+	    new Line2D.Double(100+(height*3)/2, 2.5*height,(100+height*3)/2, 4.5*height);
+	
+	// add the windows to the house
+	// Look up the meaning of the second parameter of append
+	// (Hint--is a method of "GeneralPath")
+	
+        GeneralPath wholeHouse = this.get();
+        wholeHouse.append(win1, false);
+        wholeHouse.append(win2, false);
+        wholeHouse.append(win3, false); 
+    }    
+}
