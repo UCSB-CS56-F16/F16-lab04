@@ -1,0 +1,45 @@
+package edu.ucsb.cs56.drawings.mlobins.advanced;
+import java.awt.geom.GeneralPath;  
+import java.awt.Shape; 
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.Line2D;
+
+/**
+   A House
+      
+   @author Miclos Lobins
+   @version for CS56, W16, UCSB
+   
+*/
+public class Diamond extends SquareAngles implements Shape
+{
+    /**
+     * Constructor for objects of class CoffeeCup
+     */
+    public Diamond(double x, double y, double side)
+    {
+	// construct the basic house shell
+	super(x, y, side);
+	
+	// get the GeneralPath that we are going to append stuff to
+	GeneralPath gp = this.get();
+
+	//Create the threes lines of the interior triangle
+	
+	Line2D.Double leftLine = new Line2D.Double (x, y + side/2.0, x + side/2.0, y);
+	
+        Line2D.Double rightLine = new Line2D.Double (x + side/2.0, y, x + side, y + side/2.0);
+
+	Line2D.Double topLine = new Line2D.Double (x, y + side/2.0, x + side, y + side/2.0);
+
+
+	// add the windows to the house
+	// Look up the meaning of the second parameter of append
+	// (Hint--is a method of "GeneralPath")
+	
+        GeneralPath wholeSquareAngle = this.get();
+        wholeSquareAngle.append(leftLine, false);
+        wholeSquareAngle.append(rightLine, false);
+        wholeSquareAngle.append(topLine, false); 
+    }    
+}
