@@ -6,7 +6,7 @@
 
 
    <property environment="env"/> <!-- load the environment variables --> 
-   <property name="username" value="${env.USER}"/> <!-- username -->
+   <property name="username" value="cristobal_caballero"/> <!-- username -->
 
    <property name="packagePrefix" value="edu.ucsb.cs56.drawings" />
    <property name="pconradPackage" value="${packagePrefix}.pconrad" />
