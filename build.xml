@@ -6,7 +6,7 @@
 
 
    <property environment="env"/> <!-- load the environment variables --> 
-   <property name="username" value="${env.USER}"/> <!-- username -->
+   <property name="username" value="cristobal_caballero"/> <!-- username -->
 
    <property name="packagePrefix" value="edu.ucsb.cs56.drawings" />
    <property name="pconradPackage" value="${packagePrefix}.pconrad" />
@@ -24,7 +24,7 @@
    <!-- The following property will be used by the grader; grader
 	can change it from csilusername to whomever grader is grading in that
 	moment. -->
-   <property name="studentName" value="csilusername"/>
+   <property name="studentName" value="jleeong"/>
    
    <path id="project.class.path">
          <pathelement location="build"/>
@@ -105,6 +105,12 @@
 	  description="run simpleGui1 from ${env.USER} subdirectory">
     <java fork="true" classpathref="project.class.path" 
 	  classname="${myPackage}.SimpleGui1" />
+  </target>
+
+  <target name="runSun" depends="compile" 
+	  description="run sun from ${env.USER} subdirectory">
+    <java fork="true" classpathref="project.class.path" 
+	  classname="${myPackage}.advanced.Sun" />
   </target>
 
   <target name="pconradPV" depends="compile" 
