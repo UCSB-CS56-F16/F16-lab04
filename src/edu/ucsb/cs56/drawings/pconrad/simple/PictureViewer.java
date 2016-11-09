@@ -6,7 +6,7 @@ import javax.swing.JFrame;
  *  Rectangle, Line2D.Double, Ellipse2D.Double
  *  
  * @author P. Conrad
- * @author Max de Visser
+ * @author   ADD YOUR NAME @@@
  * @version CS56, W16, UCSB
  */
 
