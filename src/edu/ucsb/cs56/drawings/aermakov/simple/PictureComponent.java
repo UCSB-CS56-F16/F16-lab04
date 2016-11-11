@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.drawings.pconrad.simple;
+package edu.ucsb.cs56.drawings.aermakov.simple;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -13,7 +13,7 @@ import java.awt.geom.Rectangle2D;
    A component that draws a Picture by Phill Conrad
    
    @author Phill Conrad (original drawing)
-
+   @author @@@ Alex Ermakov (fixed the snowmans's head)
    @version for UCSB CS56, W16
 */
 
@@ -49,16 +49,20 @@ public class PictureComponent extends JComponent
         // Now the fun part---we draw stuff!
         // @@@ YOU'LL CUSTOMIZE EVERYTHING BELOW THIS LINE
 	
-        Rectangle2D.Double house = new Rectangle2D.Double(100, 200, 100, 100);
+        Rectangle2D.Double house = new Rectangle2D.Double(100, 200, 110, 110);
         g2.draw( house);
 	
         // lroof and rroof are the left and right sides of the roof,
-        Line2D.Double lroof = new Line2D.Double(100, 200, 150, 150);
-        Line2D.Double rroof = new Line2D.Double(150,150, 200,200);
-	
+        Line2D.Double lroof = new Line2D.Double(90, 200, 155, 155);
+        Line2D.Double rroof = new Line2D.Double(155,155, 220,200);
+		Line2D.Double luroof = new Line2D.Double(90, 200, 100, 200);
+        Line2D.Double ruroof = new Line2D.Double(200,200, 220,200);
         g2.draw(lroof);
         g2.draw(rroof);
-	
+		g2.draw(luroof);
+        g2.draw(ruroof);
+		
+		
         // now a snowman: three circles
         // here we use constants, so that if we want to change 
         // the dimensions later, or move the snowman around,
@@ -89,13 +93,20 @@ public class PictureComponent extends JComponent
         g2.draw(snowManMiddleCircle);
 	
         // @@@ ADD CODE HERE TO DRAW THE TOP CIRCLE
-
+		Circle snowManTopCircle = 
+            new Circle
+            (
+	     snowManCenterBottomX,
+	     snowManCenterBottomY - bottomRadius * 2 - middleRadius * 2 - topRadius,
+	     topRadius
+	     );
+        g2.draw(snowManTopCircle);
 
 
         // @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	// @@@ 20, 20 are suggested coordinates, but you may change them
 
-        // g2.drawString("Description and your name go here", 20,20);
+         g2.drawString("le bonhomme de neige by Alex Ermakov", 20,20);
 	
     }
 }

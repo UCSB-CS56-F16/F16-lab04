@@ -250,13 +250,13 @@
   <target name="jakeAnim" depends="compile" 
 	  description="Jake's example Pencil animation (jstaahl)">
     <java fork="true" classpathref="project.class.path" 
-	  classname="edu.ucsb.cs56.w16.drawings.jstaahl.advanced.AnimatedPictureViewer" />
+	  classname="edu.ucsb.cs56.drawings.jstaahl.advanced.AnimatedPictureViewer" />
   </target>
 
   <target name="andrewAnim" depends="compile" 
 	  description="Andrews' example iPod animation (andrewberls)">
     <java fork="true" classpathref="project.class.path" 
-	  classname="edu.ucsb.cs56.w16.drawings.andrewberls.advanced.AnimatedPictureViewer" />
+	  classname="edu.ucsb.cs56.drawings.andrewberls.advanced.AnimatedPictureViewer" />
   </target>
   
   <target name="myMPV2" depends="compile" 

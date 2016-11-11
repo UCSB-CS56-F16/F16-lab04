@@ -27,7 +27,7 @@ public class IpodDetail extends Ipod implements Shape {
        Constructor
        @param x the coordinate of the left edge
        @param y the coordinate of the top
-       @param width the width of the iPod
+       @param bodyWidth the width of the iPod
     */
     public IpodDetail(double x, double y, double bodyWidth)
     {	
