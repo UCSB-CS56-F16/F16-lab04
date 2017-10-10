@@ -1,6 +1,6 @@
-# F16_lab04
+# F17_lab04
 
-Base repository for CS56 F16 lab04 (Open Source)
+Base repository for CS56 F17 lab04 (Open Source)
 
 # Student Instructions
 
@@ -54,10 +54,10 @@ You can test this with studentName set to <code>pconrad</code>, <code>andrewberl
 </tr>
 </table>
 
-This is sample output from the program [src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java).
+This is sample output from the program [src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureViewer.java).
 
 It shows code that was drawn by:
-[edu.ucsb.cs56.drawings.pconrad.simple.PictureComponent](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureComponent.java).  This code draws a simple house, and an incomplete snowman.
+[edu.ucsb.cs56.drawings.pconrad.simple.PictureComponent](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/pconrad/simple/PictureComponent.java).  This code draws a simple house, and an incomplete snowman.
 
 One of your "warmup exercises" for the lab is to try to complete your own version of this snowman (or, if you prefer, "person of snow".)  This requires you to understand the Circle class which is in that same directory, and is just a simple wrapper around the built-in Ellipse2D class provided by that Java libraries.
 
@@ -75,9 +75,9 @@ Now try these commands:
 
 What you should see in the first three cases are three pictures defined by three methods of the class `edu.ucsb.cs56.drawings.andrewberls.advanced.AllMyDrawings`
 
-* [drawPicture1()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L31)
-* [drawPicture2()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L49)
-* [drawPicture3()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L70)
+* [drawPicture1()](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L31)
+* [drawPicture2()](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L49)
+* [drawPicture3()](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/AllMyDrawings.java#L70)
 
 Here are screenshots of the images that result from running those commands:
 
@@ -91,21 +91,21 @@ Here are screenshots of the images that result from running those commands:
 
 All of those are the result of the two iPod images defined in these classes, one of which inherits from the other:
 
-* [`edu.ucsb.cs56.drawings.andrewberls.advanced.IPod`](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/Ipod.java)
-* [`edu.ucsb.cs56.drawings.andrewberls.advanced.IPodDetail`](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/IpodDetail.java)
+* [`edu.ucsb.cs56.drawings.andrewberls.advanced.IPod`](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/Ipod.java)
+* [`edu.ucsb.cs56.drawings.andrewberls.advanced.IPodDetail`](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/andrewberls/advanced/IpodDetail.java)
 
 
 Similarly, the second three images are the result of the methods of the class
 `edu.ucsb.cs56.drawings.jstaahl.advanced.AllMyDrawings`
 
-* [drawPicture1()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/AllMyDrawings.java#L31)
-* [drawPicture2()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/AllMyDrawings.java#L71)
-* [drawPicture3()](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/AllMyDrawings.java#L121)
+* [drawPicture1()](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/AllMyDrawings.java#L31)
+* [drawPicture2()](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/AllMyDrawings.java#L71)
+* [drawPicture3()](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/AllMyDrawings.java#L121)
 
 All of those are the result of the two pencil images defined in these classes, one of which inherits from the other:
 
-* [`edu.ucsb.cs56.drawings.jstaahl.advanced.Pencil`](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/Pencil.java)
-* [`edu.ucsb.cs56.drawings.jstaahl.advanced.SharpenedPencil`](https://github.com/UCSB-CS56-F16/F16-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/SharpenedPencil.java)
+* [`edu.ucsb.cs56.drawings.jstaahl.advanced.Pencil`](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/Pencil.java)
+* [`edu.ucsb.cs56.drawings.jstaahl.advanced.SharpenedPencil`](https://github.com/UCSB-CS56-F17/F17-lab04/blob/master/src/edu/ucsb/cs56/drawings/jstaahl/advanced/SharpenedPencil.java)
 
 
 Here are screenshots of the images that result from running those commands:
