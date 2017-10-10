@@ -4,7 +4,7 @@ Base repository for CS56 F17 lab04 (Open Source)
 
 # Student Instructions
 
-See: https://ucsb-cs56-f16.github.io/lab/lab04/
+See: https://ucsb-cs56-f17.github.io/lab/lab04/
 
 # How to run this code (originally: grader hints)
 
