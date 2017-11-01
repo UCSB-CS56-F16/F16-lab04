@@ -29,30 +29,30 @@ public class SwirlyLollipop extends Lollipop implements Shape
 	// get the GeneralPath that we are going to append stuff to
 	GeneralPath gp = this.get();
 
-	double diameter1 = (1/1.41) * diameter;
-	double diameter2 = (1/1.41) * diameter1;
-	//double diameter3 = (1/1.41) * diameter2;
-	//double diameter4 = (1/1.41) * diameter3;
+	double diameter1 = 0.75 * diameter;
+	double diameter2 = 0.50 * diameter1;
+	double diameter3 = 0.25 * diameter2;
+	double diameter4 = 0.13 * diameter3;
 	
 	Ellipse2D.Double swirl1 =
-	    new Ellipse2D.Double(x-((diameter-diameter1)/2)*(1/Math.sqrt(2)), y-((diameter-diameter1)/2)*(1/Math.sqrt(2)),
+	    new Ellipse2D.Double(x - diameter1/2, y,
 				 diameter1, diameter1);
 	Ellipse2D.Double swirl2 =
-	    new Ellipse2D.Double(x, y,
+	    new Ellipse2D.Double(x - diameter2/2, y,
 				 diameter2, diameter2);
-	/*Ellipse2D.Double swirl3 =
-	    new Ellipse2D.Double(-(x-((diameter-diameter3)/2)*(1/Math.sqrt(2))), -(y-((diameter-diameter3)/2)*(1/Math.sqrt(2))),
+	Ellipse2D.Double swirl3 =
+	    new Ellipse2D.Double(x - diameter3/3, y,
 				 diameter3, diameter3);
 	Ellipse2D.Double swirl4 =
-	    new Ellipse2D.Double(x-((diameter-diameter4)/2)*(1/Math.sqrt(2)), y-((diameter-diameter4)/2)*(1/Math.sqrt(2)),
-	    diameter4, diameter4);*/
+	    new Ellipse2D.Double(x - diameter4/2, y,
+				 diameter4, diameter4);
 	
 	// put the swirls together to form
 	
         GeneralPath wholeSwirl = this.get();
         wholeSwirl.append(swirl1, false);
 	wholeSwirl.append(swirl2, false);
-	//wholeSwirl.append(swirl3, false);
-	//wholeSwirl.append(swirl4, false);	
+	wholeSwirl.append(swirl3, false);
+	wholeSwirl.append(swirl4, false);	
     }    
 }
