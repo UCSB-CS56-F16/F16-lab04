@@ -1,55 +1,58 @@
 package edu.ucsb.cs56.drawings.jackjunliu.advanced;
 import java.awt.geom.GeneralPath;  
-import java.awt.Shape; 
-import java.awt.geom.Rectangle2D;
+import java.awt.Shape;
+
+import java.lang.Math; // to find root
+import java.awt.geom.Ellipse2D;// only need ellipse for swirls
 
 /**
-   A House
+   A Swirly Lollipop
       
-   @author Phill Conrad 
-   @version for CS56, W16, UCSB
+   @author Jack Liu
+   @version for CS56, F17, UCSB
    
 */
-public class HouseWithWindows extends House implements Shape
+public class SwirlyLollipop extends Lollipop implements Shape
 {
     /**
-     * Constructor for objects of class CoffeeCup
+     * Constructor
+       @param x x cord of top left of circle
+       @param y y coord of top left of circle
+       @param diameter diameter of the circle
+       @param height height of stick (not used here, but is in super)
      */
-    public HouseWithWindows(double x, double y, double width, double height)
+    public SwirlyLollipop(double x, double y, double diameter, double height)
     {
-	// construct the basic house shell
-	super(x,y,width,height);
+	// construct the basic lollipop
+	super(x,y,diameter,height);
 	
 	// get the GeneralPath that we are going to append stuff to
 	GeneralPath gp = this.get();
+
+	double diameter1 = (1/1.41) * diameter;
+	double diameter2 = (1/1.41) * diameter1;
+	//double diameter3 = (1/1.41) * diameter2;
+	//double diameter4 = (1/1.41) * diameter3;
 	
-	// Make three windows, spaced like this, where w=width/10.0;
-	// | +--+ +--+ +--+ |
-	// | |  | |  | |  | |
-	// | +--+ +--+ +--+ |
-	// |w 2w w 2w w w2 w|
-	//
-	// The top of window will be at y + 0.5*height and the
-	// height of the window is 0.25height;
+	Ellipse2D.Double swirl1 =
+	    new Ellipse2D.Double(x-((diameter-diameter1)/2)*(1/Math.sqrt(2)), y-((diameter-diameter1)/2)*(1/Math.sqrt(2)),
+				 diameter1, diameter1);
+	Ellipse2D.Double swirl2 =
+	    new Ellipse2D.Double(x, y,
+				 diameter2, diameter2);
+	/*Ellipse2D.Double swirl3 =
+	    new Ellipse2D.Double(-(x-((diameter-diameter3)/2)*(1/Math.sqrt(2))), -(y-((diameter-diameter3)/2)*(1/Math.sqrt(2))),
+				 diameter3, diameter3);
+	Ellipse2D.Double swirl4 =
+	    new Ellipse2D.Double(x-((diameter-diameter4)/2)*(1/Math.sqrt(2)), y-((diameter-diameter4)/2)*(1/Math.sqrt(2)),
+	    diameter4, diameter4);*/
 	
-	double w = 0.10 * width;
-	double winTop = y + 0.5 * height;
-	double winHt =  0.25 * height;
+	// put the swirls together to form
 	
-	Rectangle2D.Double win1 =
-	    new Rectangle2D.Double(x + w, winTop, 2.0 * w, winHt);
-	Rectangle2D.Double win2 =
-	    new Rectangle2D.Double(x + 4.0*w, winTop, 2.0 * w, winHt);
-	Rectangle2D.Double win3 =
-	    new Rectangle2D.Double(x + 7.0*w, winTop, 2.0 * w, winHt);
-	
-	// add the windows to the house
-	// Look up the meaning of the second parameter of append
-	// (Hint--is a method of "GeneralPath")
-	
-        GeneralPath wholeHouse = this.get();
-        wholeHouse.append(win1, false);
-        wholeHouse.append(win2, false);
-        wholeHouse.append(win3, false); 
+        GeneralPath wholeSwirl = this.get();
+        wholeSwirl.append(swirl1, false);
+	wholeSwirl.append(swirl2, false);
+	//wholeSwirl.append(swirl3, false);
+	//wholeSwirl.append(swirl4, false);	
     }    
 }
