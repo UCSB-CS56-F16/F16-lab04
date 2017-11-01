@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.drawings.pconrad.simple;
+package edu.ucsb.cs56.drawings.jackjunliu.simple;
 import javax.swing.JFrame;
 
 /** A viewer class to see a picture I drew with 
@@ -6,8 +6,8 @@ import javax.swing.JFrame;
  *  Rectangle, Line2D.Double, Ellipse2D.Double
  *  
  * @author P. Conrad
- * @author   ADD YOUR NAME @@@
- * @version CS56, W16, UCSB
+ * @author  Jack Liu
+ * @version CS56, F17, UCSB
  */
 
 public class PictureViewer
@@ -22,7 +22,7 @@ public class PictureViewer
 	frame.setSize(640,480); // @@@ MODIFY THIS LINE IF YOU LIKE
 	
 	// Set your own title
-	frame.setTitle("YOUR NAME HERE's Drawing"); // @@@ MODIFY THIS LINE
+	frame.setTitle("Jack's Amazing Drawing in 2D!"); // @@@ MODIFY THIS LINE
 	
 	// Always do this so that the red X (or red circle) works
 	// to close the window. 
