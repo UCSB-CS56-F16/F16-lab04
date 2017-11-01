@@ -23,7 +23,7 @@ public class Lollipop extends GeneralPathWrapper implements Shape
        
        @param x x coord of top left of circle
        @param y y coord of top left of circle
-       @param radius radius of the circle
+       @param diameter diameter of the circle
        @param height height of the stick
     */
     public Lollipop(double x, double y, double diameter, double height)
@@ -32,14 +32,14 @@ public class Lollipop extends GeneralPathWrapper implements Shape
         //Draw the circle of lollipop
         
         Ellipse2D.Double pop = 
-            new Ellipse2D.Double(x, y,
+            new Ellipse2D.Double(x - diameter/2, y,
 				 diameter, diameter);
 	//Ellipse requires rectWidth and rectHeight, thus we can simply
 	//call it twice to recognize that rectWidth=rectHeight=daimeter
         
         Line2D.Double stick = 
-            new Line2D.Double (x+diameter/2, y+2*diameter,
-                               x+diameter/2, y + height);
+            new Line2D.Double (x, y + diameter,
+                               x, y + diameter + height);
 	//Since x is the corner, you must set stick to be middle
 	//so we add radius to x. y is harder, as you would want to
 	//have a longer stick so 2*diameter, and have end point
