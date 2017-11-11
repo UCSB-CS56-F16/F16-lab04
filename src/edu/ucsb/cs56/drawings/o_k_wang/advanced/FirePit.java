@@ -15,7 +15,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    rotated, scaled, etc.
       
    @author Oscar Wang 
-   @version for CS56, W16, UCSB
+   @version for CS56, W17, UCSB
    
 */
 public class FirePit extends GeneralPathWrapper implements Shape
@@ -26,7 +26,7 @@ public class FirePit extends GeneralPathWrapper implements Shape
        @param x x coord of lower left corner of FirePit
        @param y y coord of lower left corner of FirePit
        @param width width of the FirePit
-       @param height of FirePit
+       @param height height of FirePit
     */
     public FirePit(double x, double y, double width, double height)
     {

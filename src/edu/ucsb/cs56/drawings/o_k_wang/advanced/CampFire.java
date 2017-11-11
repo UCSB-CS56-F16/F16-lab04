@@ -4,16 +4,16 @@ import java.awt.Shape;
 import java.awt.geom.Rectangle2D;
 
 /**
-   A CampFire
+   A Camp Fire
       
    @author Oscar Wang 
-   @version for CS56, W16, UCSB
+   @version for CS56, W17, UCSB
    
 */
 public class CampFire extends FirePit implements Shape
 {
     /**
-      
+      Camp Fire contructor
      */
     public CampFire(double x, double y, double width, double height)
     {
