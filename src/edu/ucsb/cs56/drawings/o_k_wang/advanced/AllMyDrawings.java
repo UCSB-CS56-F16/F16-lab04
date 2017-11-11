@@ -27,17 +27,20 @@ public class AllMyDrawings
 	g2.setColor(Color.CYAN);
 	g2.draw(h1);
 	
-	// Make a black house that's half the size, 
+	// Make a black fire pit that's half the size, 
 	// and moved over 150 pixels in x direction
 	
 	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
+	//h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 	g2.setColor(Color.BLACK);
 	g2.draw(h2);
 	
 	// Here's a fire pit that's 4x as big (2x the original)
 	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
+	//h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4); 
+	h2 = ShapeTransforms.scaledCopyOfLL(h2,2,2);
+        //h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
 	
 	// We'll draw this with a thicker stroke
@@ -55,7 +58,8 @@ public class AllMyDrawings
 	
 	// Draw two fire pits with camp fires 
 	
-	CampFire hw1 = new CampFire(50.0,200,100,200);
+	//CampFire hw1 = new CampFire(50.0,200,100,200);
+       	CampFire hw1 = new CampFire(50.0,200,1000,900);
 	CampFire hw2 = new CampFire(200,200,1000,1500);
 	
 	g2.draw(hw1);
