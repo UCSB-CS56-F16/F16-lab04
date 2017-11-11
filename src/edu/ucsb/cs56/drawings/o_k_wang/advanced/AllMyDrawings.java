@@ -79,10 +79,10 @@ public class AllMyDrawings
 	
 	// Draw some camp fires.
 	
-	CampFire large = new CampFire(100,50,225,150);
-	CampFire smallCC = new CampFire(20,50,40,30);
-	CampFire tallSkinny = new CampFire(20,150,20,40);
-	CampFire shortFat = new CampFire(20,250,40,20);
+	CampFire large = new CampFire(100,50,900,1000);
+	CampFire smallCC = new CampFire(20,50,1000,1000);
+	CampFire tallSkinny = new CampFire(20,150,1000,1000);
+	CampFire shortFat = new CampFire(20,250,1000,1000);
 	
 	g2.setColor(Color.RED);     g2.draw(large);
 	g2.setColor(Color.GREEN);   g2.draw(smallCC);
@@ -117,13 +117,13 @@ public class AllMyDrawings
 	
 	// Draw two fire pits  with camp fires
 	
-	CampFire hw1 = new CampFire(50,350,40,75);
-	CampFire hw2 = new CampFire(200,350,200,100);
+	CampFire hw1 = new CampFire(50,350,800,1000);
+	CampFire hw2 = new CampFire(200,350,800,800);
 	
 	g2.draw(hw1);
 	g2.setColor(new Color(0x8F00FF)); 
 	
-	// Rotate the second house 45 degrees around its center.
+	// Rotate the second fire pit 45 degrees around its center.
 	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
 	
 	g2.draw(hw3);
