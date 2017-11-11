@@ -143,8 +143,10 @@ public class AllMyDrawings
 	
 	// Draw some camp fires.
 	
-	CampFire large = new CampFire(100,50,225,150);
-	CampFire smallCC = new CampFire(20,50,40,30);
+	//CampFire large = new CampFire(100,50,225,150);
+	CampFire large = new CampFire(100,50,975,900);
+	// CampFire smallCC = new CampFire(20,50,40,30);
+	CampFire smallCC = new CampFire(20,50,900,800);
 	
 	g2.setColor(Color.RED);     g2.draw(large);
 	g2.setColor(Color.GREEN);   g2.draw(smallCC);
